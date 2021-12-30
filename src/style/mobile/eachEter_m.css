@@ -1,0 +1,93 @@
+@media screen and (max-width: 768px) {
+  .eterZero_grid_container {
+    grid-gap: 4px;
+    grid-template-columns: 60px 60px 60px;
+    grid-template-rows: 90px 90px 90px 90px;
+    margin: 0px 16px;
+  }
+  .eterOne_grid_container {
+    grid-gap: 4px;
+    grid-template-columns: 60px 60px 60px 60px 60px;
+    grid-template-rows: 90px 90px 90px 90px;
+    margin: 0px 16px;
+  }
+  .eterTwo_grid_container {
+    grid-gap: 4px;
+    grid-template-columns: 60px 60px 60px 60px 60px;
+    grid-template-rows: 90px 90px 90px 90px;
+    margin: 0px 16px;
+  }
+  .eterThree_grid_container {
+    grid-gap: 4px;
+    grid-template-columns: 60px 60px 60px 60px 60px;
+    grid-template-rows: 90px 90px 90px 90px;
+    margin: 0px 16px;
+  }
+  .eterFour_grid_container {
+    grid-gap: 4px;
+    grid-template-columns: 60px 60px 60px 60px 60px 60px;
+    grid-template-rows: 90px 90px 90px 90px;
+    margin: 0px 16px;
+  }
+  .eterFive_grid_container {
+    grid-gap: 4px;
+    grid-template-columns: 60px 60px 60px 60px 60px;
+    grid-template-rows: 90px 90px 90px 90px;
+    margin: 0px 16px;
+  }
+  .eterSix_grid_container {
+    grid-gap: 4px;
+    grid-template-columns: 60px 60px 60px;
+    grid-template-rows: 90px 90px 90px 90px;
+    margin: 0px 16px;
+  }
+  .eterSeven_grid_container {
+    grid-gap: 4px;
+    grid-template-columns: 60px 60px 60px 60px;
+    grid-template-rows: 90px 90px 90px 90px;
+    margin: 0px 16px;
+  }
+  .eterEight_grid_container {
+    grid-gap: 4px;
+    grid-template-columns: 60px 60px 60px 60px 60px;
+    grid-template-rows: 90px 90px 90px 90px;
+    margin: 0px 16px;
+  }
+  .eterNine_grid_container {
+    grid-gap: 4px;
+    grid-template-columns: 60px 60px 60px 60px;
+    grid-template-rows: 90px 90px 90px 90px;
+    margin: 0px 16px;
+  }
+  .eterTen_grid_container {
+    grid-gap: 4px;
+    grid-template-columns: 60px 60px 60px 60px;
+    grid-template-rows: 90px 90px 90px 90px;
+    margin: 0px 16px;
+  }
+
+  .dragablImg {
+    width: 60px;
+    height: 90px;
+  }
+
+  .grid_container2 {
+    grid-template-columns: 60px 60px 60px 60px 60px 60px 60px 60px 60px 60px;
+    grid-template-rows: 90px 90px 90px 90px;
+  }
+
+  .drag_box {
+    width: 60px;
+    height: 90px;
+  }
+  .drag_handle {
+    width: 60px;
+    height: 90px;
+  }
+  .dragImg {
+    width: 60px;
+    height: 90px;
+  }
+}
+@media screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
+}

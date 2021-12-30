@@ -1,0 +1,49 @@
+@media screen and (max-width: 768px) {
+  .eachDetail {
+    width: 100%;
+    height: 80vh;
+  }
+  .detailImg_img {
+    margin-top: 20px;
+  }
+  .detailImg_btn {
+    width: 100%;
+    position: absolute;
+    top: 22%;
+  }
+  .eachBtn {
+    padding: 14px 7px;
+    font-size: var(--font-small);
+  }
+  .detailImg_dot {
+    display: none;
+  }
+  .detailPaper {
+    margin: 20px;
+    line-height: 20px;
+  }
+  .detailPaper_title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+  .eachDetail_out {
+    width: 20px;
+    height: 20px;
+    font-size: var(--font-min);
+  }
+  .detailPaper_title h1 {
+    font-size: var(--font-regular);
+  }
+  .detailPaper h3 {
+    text-align: right;
+    font-size: var(--font-medium);
+  }
+  .detailPaper p {
+    font-size: var(--font-small);
+  }
+}
+@media screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
+}
