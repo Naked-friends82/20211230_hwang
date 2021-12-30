@@ -1,0 +1,75 @@
+.section_penet {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.penet_title {
+  height: 90px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.penet_title h1 {
+  margin-left: 30px;
+  font-size: var(--font-mmax);
+}
+.penet_title button {
+  width: 30px;
+  height: 30px;
+  margin-right: 20px;
+  border: none;
+  background-color: var(--color-white);
+  border-radius: 5rem;
+  cursor: pointer;
+}
+.penet_title button:hover {
+  transform: scale(1.16);
+  transition: all 200ms ease-in-out;
+}
+.penet_reck {
+  height: 560px;
+  width: 100vw;
+  white-space: nowrap;
+  overflow-x: scroll;
+  padding: 0px 10px;
+  margin-bottom: 10px;
+}
+.penet_reck::-webkit-scrollbar {
+  display: none;
+}
+.penet_reck_video {
+  height: 540px;
+  margin-left: 40px;
+  margin-right: 30px;
+}
+.penet_reck_each {
+  height: 540px;
+  margin: 0px 8px;
+}
+.img_info {
+  text-align: center;
+  font-size: var(--font-medium);
+}
+.penet_thumbnail {
+  height: 140px;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 16px 0px;
+  white-space: nowrap;
+  overflow-x: scroll;
+  background-color: lightgray;
+}
+.penet_thumbnail::-webkit-scrollbar {
+  display: none;
+}
+.penet_thumbnail_each {
+  height: 120px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.filter {
+  filter: contrast(50%);
+}

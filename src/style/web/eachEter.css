@@ -1,0 +1,119 @@
+.eterZero_grid_container {
+  display: grid;
+  grid-gap: 6px;
+  grid-template-columns: 80px 80px 80px;
+  grid-template-rows: 120px 120px 120px 120px;
+  margin: 0px 30px;
+}
+.eterOne_grid_container {
+  display: grid;
+  grid-gap: 6px;
+  grid-template-columns: 80px 80px 80px 80px 80px;
+  grid-template-rows: 120px 120px 120px 120px;
+  margin: 0px 30px;
+}
+.eterTwo_grid_container {
+  display: grid;
+  grid-gap: 6px;
+  grid-template-columns: 80px 80px 80px 80px 80px;
+  grid-template-rows: 120px 120px 120px 120px;
+  margin: 0px 30px;
+}
+.eterThree_grid_container {
+  display: grid;
+  grid-gap: 6px;
+  grid-template-columns: 80px 80px 80px 80px 80px;
+  grid-template-rows: 120px 120px 120px 120px;
+  margin: 0px 30px;
+}
+.eterFour_grid_container {
+  display: grid;
+  grid-gap: 6px;
+  grid-template-columns: 80px 80px 80px 80px 80px 80px;
+  grid-template-rows: 120px 120px 120px 120px;
+  margin: 0px 30px;
+}
+.eterFive_grid_container {
+  display: grid;
+  grid-gap: 6px;
+  grid-template-columns: 80px 80px 80px 80px 80px;
+  grid-template-rows: 120px 120px 120px 120px;
+  margin: 0px 30px;
+}
+.eterSix_grid_container {
+  display: grid;
+  grid-gap: 6px;
+  grid-template-columns: 80px 80px 80px;
+  grid-template-rows: 120px 120px 120px 120px;
+  margin: 0px 30px;
+}
+.eterSeven_grid_container {
+  display: grid;
+  grid-gap: 6px;
+  grid-template-columns: 80px 80px 80px 80px;
+  grid-template-rows: 120px 120px 120px 120px;
+  margin: 0px 30px;
+}
+.eterEight_grid_container {
+  display: grid;
+  grid-gap: 6px;
+  grid-template-columns: 80px 80px 80px 80px 80px;
+  grid-template-rows: 120px 120px 120px 120px;
+  margin: 0px 30px;
+}
+.eterNine_grid_container {
+  display: grid;
+  grid-gap: 6px;
+  grid-template-columns: 80px 80px 80px 80px;
+  grid-template-rows: 120px 120px 120px 120px;
+  margin: 0px 30px;
+}
+.eterTen_grid_container {
+  display: grid;
+  grid-gap: 6px;
+  grid-template-columns: 80px 80px 80px 80px;
+  grid-template-rows: 120px 120px 120px 120px;
+  margin: 0px 30px;
+}
+
+.dragablImg {
+  width: 80px;
+  height: 120px;
+  position: relative;
+  cursor: move;
+}
+
+.grid_container2 {
+  position: relative;
+  left: 6%;
+  display: grid;
+  /* grid-gap: 10px; */
+  grid-template-columns: 80px 80px 80px 80px 80px 80px 80px 80px 80px 80px;
+  grid-template-rows: 120px 120px 120px 120px;
+}
+
+.drag_box {
+  position: relative;
+  width: 80px;
+  height: 120px;
+  float: left;
+}
+.drag_handle {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 80px;
+  height: 120px;
+  cursor: grab;
+}
+.dragImg {
+  width: 80px;
+  height: 120px;
+}
+
+.no-cursor {
+  cursor: auto;
+}
+.cursor {
+  cursor: move;
+}
