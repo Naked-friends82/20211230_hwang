@@ -3,8 +3,9 @@
   display: flex;
   flex-direction: column;
 }
+/* responsive를 위해 80px에서 10%로 바꿈 */
 .works_title {
-  height: 90px;
+  height: 10%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -27,12 +28,14 @@
   transform: scale(1.16);
   transition: all 200ms ease-in-out;
 }
+/* responsive를 위해 560px에서 70%로 바꿈 */
 .works_exhi {
-  height: 560px;
+  height: 70%;
   width: 100vw;
   white-space: nowrap;
   overflow-x: scroll;
   padding: 0px 10px;
+  margin-bottom: 0.9rem;
 }
 .works_exhi::-webkit-scrollbar {
   display: none;
@@ -42,13 +45,13 @@
   display: inline;
 }
 .works_exhi_index1 {
-  height: 540px;
+  height: 100%;
   margin: 0px 10px;
 }
 .works_exhi_index2 {
   position: absolute;
   left: 0;
-  height: 540px;
+  height: 100%;
   margin: 0px 10px;
   opacity: 0;
 }
@@ -56,8 +59,9 @@
   opacity: 1;
   transition: all 500ms ease-in-out;
 }
+/* responsive를 위해 140px에서 16%로 바꿈 */
 .works_info {
-  height: 140px;
+  height: 16%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;

@@ -4,7 +4,7 @@
   flex-direction: column;
 }
 .omma_title {
-  height: 90px;
+  height: 10%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -28,7 +28,7 @@
   transition: all 200ms ease-in-out;
 }
 .omma_reck {
-  height: 560px;
+  height: 70%;
   width: 100vw;
   display: flex;
   flex-direction: row;
@@ -42,11 +42,11 @@
   display: none;
 }
 .omma_reck_each {
-  height: 540px;
+  height: 100%;
   padding: 0px 8px;
 }
 .omma_reck_each_print {
-  height: 160px;
+  height: 25%;
   margin-left: 0px;
   padding-right: 4px;
   /* margin-right: 6px; */
@@ -58,7 +58,7 @@
   font-size: var(--font-medium);
 }
 .omma_thumbnail {
-  height: 140px;
+  height: 16%;
   width: 100vw;
   display: flex;
   flex-direction: row;

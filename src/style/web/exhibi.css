@@ -4,7 +4,7 @@
   flex-direction: column;
 }
 .exhibi_title {
-  height: 90px;
+  height: 10%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -28,6 +28,7 @@
   transition: all 200ms ease-in-out;
 }
 .exhibi_reck {
+  height: 86%;
   display: flex;
   flex-direction: row;
   overflow-x: scroll;
