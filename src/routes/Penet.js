@@ -23,9 +23,6 @@ import spo_3 from '../asset/penet/spotlight3.png'
 
 import gra_1 from '../asset/penet/grass.jpg'
 
-// import penet_video from '../asset/penet/penet.mp4';
-import penetStone from '../asset/penet/penet.jpg'
-
 import penet_exhi_2 from '../asset/exhi/penet_exhi_2.jpg';
 import penet_exhi_4 from '../asset/exhi/penet_exhi_4.jpg';
 import penet_exhi_5 from '../asset/exhi/penet_exhi_5.jpg';
@@ -280,12 +277,6 @@ const Penet = () =>  {
         <button onClick={showPenetDetail}>i</button>
       </div>
       <div className="penet_reck">
-        {/* <video 
-          className="penet_reck_video"
-          controls
-          src={penet_video} 
-          poster={penetStone}
-          type="video/mp4" />  */}
         <iframe className='penet_reck_video' src="https://www.youtube.com/embed/0xzx0hLralY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         {PENET_RECK.map((each) => {
             return <img className="penet_reck_each" src={each.src} alt={each.title+each.caption} ref={each.ref} />
