@@ -286,6 +286,7 @@ const Penet = () =>  {
           src={penet_video} 
           poster={penetStone}
           type="video/mp4" />  */}
+        <iframe className='penet_reck_video' src="https://www.youtube.com/embed/0xzx0hLralY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         {PENET_RECK.map((each) => {
             return <img className="penet_reck_each" src={each.src} alt={each.title+each.caption} ref={each.ref} />
           })}

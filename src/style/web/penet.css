@@ -39,7 +39,8 @@
   display: none;
 }
 .penet_reck_video {
-  height: 540px;
+  height: 100%;
+  width: 290px;
   margin-left: 40px;
   margin-right: 30px;
 }
