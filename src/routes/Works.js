@@ -6,6 +6,8 @@ import penet_main from '../asset/main/penet_main.jpg';
 import penet_sec from '../asset/main/penet_sec.jpg';
 import eternal_main from '../asset/main/eternal_main.jpg';
 import eternal_sec from '../asset/main/eternal_sec.jpg';
+import group_death from '../asset/main/group_death.jpg';
+import group_hang from '../asset/main/group_hang.jpg';
 import exhibi_main from '../asset/main/exhibi_main.jpg';
 import '../style/web/works.css';
 import '../style/mobile/works_m.css';
@@ -30,16 +32,16 @@ const EXHI = [
     donat: "OCI 2021 YOUNG CREATIVES"
   },
   {
+    title: "Group Exhibitions",
+    date: "나의 사인이 너와 같다면 외 3회",
+    place: "",
+    donat: ""
+  },
+  {
     title: "Exhibition Detail",
     date: "Statement",
     place: "Installation View",
     donat: "Review"
-  },
-  {
-    title: "어쨌든 아주 배가 고팠던 모양이구나",
-    date: "2020.01.22(수) - 01.30(목)",
-    place: "SPACE 55 - 서울시 은평구 증산로19길 9-3",
-    donat: "서울문화재단"
   },
 ];
 
@@ -56,6 +58,8 @@ const Works = () =>  {
       setInfo(EXHI[2])
     } else if(alt === EXHI[3].title){
       setInfo(EXHI[3])
+    } else if(alt === EXHI[4].title){
+      setInfo(EXHI[4])
     }
   };
 
@@ -82,6 +86,12 @@ const Works = () =>  {
           <div className="img_index">
             <img className="works_exhi_index1" src={eternal_main} alt="Eternal classics" onMouseEnter={shiftInfo} />
             <img className="works_exhi_index2" src={eternal_sec} alt="Eternal classics" onMouseEnter={shiftInfo} />
+          </div>
+        </Link>
+        <Link to='/group_exhibitions' className='link_index'>
+          <div className="img_index">
+            <img className="works_exhi_index1" src={group_death} alt="Group Exhibitions" onMouseEnter={shiftInfo} />
+            <img className="works_exhi_index2" src={group_hang} alt="Group Exhibitions" onMouseEnter={shiftInfo} />
           </div>
         </Link>
         <Link to='/exhibition'>

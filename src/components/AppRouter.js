@@ -4,6 +4,7 @@ import Works from '../routes/Works.js';
 import Omma from '../routes/Omma.js';
 import Penet from '../routes/Penet.js';
 import Eternal2 from '../routes/Eternal2.js';
+import Group from '../routes/Group.js';
 import Exhibi from '../routes/Exhibi.js';
 
 
@@ -15,6 +16,7 @@ const AppRouter = () =>  {
         <Route exact path='/muhmdapinammo' element={<Omma />} />
         <Route exact path='/penetrating_stone' element={<Penet />} />
         <Route exact path='/eternal_classics' element={<Eternal2 />} />
+        <Route exact path='/group_exhibitions' element={<Group />} />
         <Route exact path='/exhibition' element={<Exhibi />} />
       </Routes>
     </Router>
