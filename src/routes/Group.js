@@ -4,6 +4,7 @@ import sing from '../asset/group/poster_sing.jpg';
 import hang from '../asset/group/poster_hang.jpg';
 import death from '../asset/group/poster_death.jpg';
 import '../style/web/group.css'
+import '../style/mobile/group_m.css'
 
 const GROUP = [
   {
