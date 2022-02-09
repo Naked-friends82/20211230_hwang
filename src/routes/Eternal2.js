@@ -122,7 +122,7 @@ const showSpread = () => {
   return (
     <section className="section_eter">
       <div className="eter_title">
-        <h1>Hwang's Manual of Eternal Classics</h1>
+        <h1><span>Hwang's Manual of</span> Eternal Classics</h1>
         <button onClick={showEterDetail}>i</button>
       </div>
       <div className="eter_spreadH" ref={ref}>

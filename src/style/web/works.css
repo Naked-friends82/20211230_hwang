@@ -51,7 +51,9 @@
 .works_exhi_index2 {
   position: absolute;
   left: 0;
-  height: 100%;
+  /* 아 일단 바꿔놓긴 했는데 뭐가 문젠지 모르겠네... */
+  /* height: 100%; */
+  width: 95.4%;
   margin: 0px 10px;
   opacity: 0;
 }

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Draggable from 'react-draggable';
+import Media from 'react-media';
 
 const Spread = ({savedReck}) => {
 
@@ -22,10 +23,23 @@ const Spread = ({savedReck}) => {
   };
   const dragHandlers = {onStart: onStart, onStop: onStop};
 
+
+  // 반응형 그리드를 위함
+  // 즉각적으로 바뀌는 걸로 수정해야 해.
+  const grid_web = [80,120]
+  const grid_mobile = [70,105]
+  const match = window.matchMedia('(max-width: 768px)').matches
+  console.log(match);
   return(
     <div className="grid_container2">
       {savedReck.map((section, index) => (
-        <Draggable key={index} handle="strong" grid={[80,120]} {...dragHandlers}>
+        // <Media query="(max-width: 768px)">
+        <Draggable 
+          className="drag_tag"
+          key={index}
+          handle="strong"
+          grid={match? grid_mobile:grid_web}
+          {...dragHandlers}>
               <div className="drag_box" >
                 <strong><div className="drag_handle"></div></strong>
                 <img 
@@ -34,7 +48,9 @@ const Spread = ({savedReck}) => {
                   alt="saved Img" />
               </div>
         </Draggable>
+        // </Media>
       ))}
+      
         {/* <Draggable {...dragHandlers}>
           <div className="demo"> 1. yeeeeh! I can Move!!!! </div>
         </Draggable>
