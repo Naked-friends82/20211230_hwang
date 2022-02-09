@@ -10,6 +10,9 @@
     margin-left: 20px;
     font-size: var(--font-max);
   }
+  .eter_title h1 span {
+    display: none;
+  }
   .eter_title button {
     width: 20px;
     height: 20px;
@@ -62,16 +65,21 @@
 
   .screenshot_reck {
     height: 22vh;
+    width: 100vw;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    white-space: nowrap;
+    overflow-x: scroll;
+    background-color: darkgray;
   }
   .screenshot {
-    width: 240px;
+    height: 90%;
     margin: 0px 20px;
   }
   .clicked_reck {
+    width: 100%;
     height: 22vh;
     display: flex;
     flex-direction: row;
@@ -84,8 +92,8 @@
     display: none;
   }
   .clicked_reck .clicked_img {
-    width: 80px;
-    height: 120px;
+    width: 70px;
+    height: 105px;
     margin: 0px 4px;
   }
 }
