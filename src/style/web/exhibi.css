@@ -38,8 +38,10 @@
 .eachExhibi {
   width: 530px;
   height: 100%;
-  position: relative;
   margin: 0px 30px;
+}
+.eachExhibi_img_reck {
+  position: relative;
 }
 .eachExhibi_img {
   width: 530px;
@@ -49,10 +51,8 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  /* position: relative;
-  top: -220px; */
   position: absolute;
-  top: 23%;
+  top: 52%;
   transform: translate(0%, -50%);
 }
 .btn {
@@ -80,11 +80,15 @@
 }
 .eachExhibi_Paper h1 {
   font-size: var(--font-big);
+  font-family: var(--typo-nanum);
+  font-weight: var(--weight-Extra-bold);
   padding-top: 6px;
   margin-bottom: 30px;
 }
 .eachExhibi_Paper h3 {
   font-size: var(--font-regular);
+  font-family: var(--typo-nanum);
+  font-weight: var(--weight-Extra-bold);
   margin-bottom: 20px;
 }
 .eachExhibi_Paper p {
