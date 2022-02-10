@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.a854b481.css",
-    "main.js": "/static/js/main.1e5e1a37.js",
+    "main.css": "/static/css/main.edfd7a5b.css",
+    "main.js": "/static/js/main.1e5a781f.js",
     "static/media/entrances3.png": "/static/media/entrances3.f61fe5a2325d1718554b.png",
     "static/media/boundaries3.png": "/static/media/boundaries3.f590a9abb7c62c94942a.png",
     "static/media/boundaries1.jpg": "/static/media/boundaries1.0cf955132213ed64811c.jpg",
@@ -220,11 +220,11 @@
     "static/media/one_16.jpg": "/static/media/one_16.506368fb68911878d5ed.jpg",
     "static/media/eter_exhi_1.jpg": "/static/media/eter_exhi_1.62576a557acabcbd8ca1.jpg",
     "index.html": "/index.html",
-    "main.a854b481.css.map": "/static/css/main.a854b481.css.map",
-    "main.1e5e1a37.js.map": "/static/js/main.1e5e1a37.js.map"
+    "main.edfd7a5b.css.map": "/static/css/main.edfd7a5b.css.map",
+    "main.1e5a781f.js.map": "/static/js/main.1e5a781f.js.map"
   },
   "entrypoints": [
-    "static/css/main.a854b481.css",
-    "static/js/main.1e5e1a37.js"
+    "static/css/main.edfd7a5b.css",
+    "static/js/main.1e5a781f.js"
   ]
 }
