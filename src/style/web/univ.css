@@ -18,12 +18,13 @@
   --font-sangmin: 10px;
   /* Font weight */
   --weight-Extra-bold: 700;
-  --weight-bold: 600;
+  --weight-bold: 500;
   --weight-medium: 400;
   --weight-light: 300;
   /* Font family */
   /* Google */
   --typo-nanum: "Nanum Myeongjo", serif;
+  --typo-roboto: "Roboto", sans-serif;
 }
 /* universe */
 * {
@@ -45,6 +46,7 @@ h3 {
 }
 p {
   margin: 0px;
+  font-family: var(--typo-nanum);
 }
 button {
   appearance: none;
