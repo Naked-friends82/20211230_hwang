@@ -35,11 +35,11 @@ body {
 /* only Head on project_content */
 h1 {
   margin: 0px;
+  font-family: var(--typo-roboto);
+  font-weight: var(--weight-bold);
+  font-size: var(--font-mmax);
 }
 /* only name on About */
-h2 {
-  margin: 0px;
-}
 h3 {
   margin: 0px;
 }
@@ -53,20 +53,8 @@ button {
   border-radius: 0;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
+  color: var(--color-black);
 }
 .App {
   background-color: var(--color-gray);
-}
-.imgs {
-  height: 350px;
-}
-.reckImgs {
-  height: 400px;
-}
-.thumbnail {
-  height: 200px;
-}
-footer {
-  margin-left: 30px;
-  color: var(--color-darkgray);
 }
