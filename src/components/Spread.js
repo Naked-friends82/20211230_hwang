@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Draggable from 'react-draggable';
-import Media from 'react-media';
+// import Media from 'react-media';
 
 const Spread = ({savedReck}) => {
 
