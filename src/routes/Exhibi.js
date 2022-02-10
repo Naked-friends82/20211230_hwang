@@ -135,13 +135,15 @@ const Exhibi = () =>  {
         <button onClick={showexhibiCV}>&#10094;</button>
       </div>
       <div className="exhibi_reck">
-        
           <div className="eachExhibi">
-            <img className="eachExhibi_img" src={EXHI_RECK[0].detailExhi[exhibiOmma]} alt="exhi detail"/>
-            <div className="eachExhibi_btn">
-              <button className="btn" value="prev" onClick={shiftExhibiOmma}>&#10094;</button>
-              <button className="btn" value="next" onClick={shiftExhibiOmma}>&#10095;</button>
+            <div className='eachExhibi_img_reck'>
+              <img className="eachExhibi_img" src={EXHI_RECK[0].detailExhi[exhibiOmma]} alt="exhi detail"/>
+              <div className="eachExhibi_btn">
+                <button className="btn" value="prev" onClick={shiftExhibiOmma}>&#10094;</button>
+                <button className="btn" value="next" onClick={shiftExhibiOmma}>&#10095;</button>
+              </div>
             </div>
+
             <div className="eachExhibi_Paper">
               <h1>{EXHI_RECK[0].title}</h1>
               <h3>{EXHI_RECK[0].author}</h3>
@@ -151,10 +153,12 @@ const Exhibi = () =>  {
 
 
           <div className="eachExhibi">
-            <img className="eachExhibi_img" src={EXHI_RECK[1].detailExhi[exhibiPenet]} alt="exhi detail"/>
-            <div className="eachExhibi_btn">
-              <button className="btn" value="prev" onClick={shiftExhibiPenet}>&#10094;</button>
-              <button className="btn" value="next" onClick={shiftExhibiPenet}>&#10095;</button>
+            <div className="eachExhibi_img_reck">
+              <img className="eachExhibi_img" src={EXHI_RECK[1].detailExhi[exhibiPenet]} alt="exhi detail"/>
+              <div className="eachExhibi_btn">
+                <button className="btn" value="prev" onClick={shiftExhibiPenet}>&#10094;</button>
+                <button className="btn" value="next" onClick={shiftExhibiPenet}>&#10095;</button>
+              </div>
             </div>
             <div className="eachExhibi_Paper">
               <h1>{EXHI_RECK[1].title}</h1>
@@ -165,10 +169,12 @@ const Exhibi = () =>  {
 
 
           <div className="eachExhibi">
-            <img className="eachExhibi_img" src={EXHI_RECK[2].detailExhi[exhibiEter]} alt="exhi detail"/>
-            <div className="eachExhibi_btn">
-              <button className="btn" value="prev" onClick={shiftExhibiEter}>&#10094;</button>
-              <button className="btn" value="next" onClick={shiftExhibiEter}>&#10095;</button>
+            <div className="eachExhibi_img_reck">
+              <img className="eachExhibi_img" src={EXHI_RECK[2].detailExhi[exhibiEter]} alt="exhi detail"/>
+              <div className="eachExhibi_btn">
+                <button className="btn" value="prev" onClick={shiftExhibiEter}>&#10094;</button>
+                <button className="btn" value="next" onClick={shiftExhibiEter}>&#10095;</button>
+              </div>
             </div>
             <div className="eachExhibi_Paper">
               <h1>{EXHI_RECK[2].title}</h1>
