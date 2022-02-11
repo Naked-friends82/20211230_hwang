@@ -46,7 +46,7 @@ h3 {
 }
 p {
   margin: 0px;
-  font-family: var(--typo-nanum);
+  /* font-family: var(--typo-nanum); */
 }
 button {
   appearance: none;

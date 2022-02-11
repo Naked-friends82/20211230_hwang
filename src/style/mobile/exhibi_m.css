@@ -14,8 +14,8 @@
     width: 20px;
     height: 20px;
     margin-right: 10px;
+    font-size: var(--font-min);
   }
-
   .exhibi_reck {
     width: 90%;
     display: flex;
@@ -36,8 +36,6 @@
   }
   .eachExhibi_btn {
     width: 100%;
-    position: absolute;
-    top: 16%;
   }
   .btn {
     padding: 10px 5px;
@@ -45,10 +43,14 @@
   }
 
   .eachExhibi_Paper {
-    height: 44vh;
+    height: 30vh;
     margin: 20px 0px;
     line-height: 20px;
     padding-bottom: 12px;
+    overflow: scroll;
+  }
+  .eachExhibi_Paper::-webkit-scrollbar {
+    display: none;
   }
   .eachExhibi_Paper h1 {
     padding-top: 6px;

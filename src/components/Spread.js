@@ -29,7 +29,6 @@ const Spread = ({savedReck}) => {
   const grid_web = [80,120]
   const grid_mobile = [70,105]
   const match = window.matchMedia('(max-width: 768px)').matches
-  console.log(match);
   return(
     <div className="grid_container2">
       {savedReck.map((section, index) => (

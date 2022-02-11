@@ -34,7 +34,7 @@ const EachDetail = ({detailDeck, showDetail}) => {
       </div>
       <div className="detailPaper">
         <div className="detailPaper_title">
-          <h1>{detailDeck.title}</h1>
+          <h2>{detailDeck.title}</h2>
           <button className="eachDetail_out" onClick={showDetail}>&#10094;</button>
         </div>
         <h3>{detailDeck.author}</h3>

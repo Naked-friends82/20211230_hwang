@@ -80,15 +80,28 @@ const showSpread = () => {
       const newScreenshotReck = [...screenshotReck, screenshot];
       setScreenshotReck(newScreenshotReck);
     } else{
-      alert("That's enough. fuck")
+      alert("Sorry, You can only get 3 screenshot Images")
     }
   },[screenshot]);
 
   // 이미지 저장
-  const saveScreenshotImg = (e) => {
-    const link = document.createElement('a');
+  const [loadImg, setLoadImg] = useState(null);
+  const [toLoad, setToLoad] = useState();
 
+  const setClickedImgToLoad = (e) => {
+    const {target:{src,alt}} = e;
+    setLoadImg(src)
+    setToLoad(alt)
   }
+  const banEmpty = () => {
+    console.log("hahahaha",screenshot)
+    if (screenshot === null){
+      alert("Take screenshot with camera button")
+    } else if (loadImg === null){
+      alert("Choose one of them")
+    }
+  }
+
 
   const [eterDetail,setEterDetail] = useState(false)
   const showEterDetail = (e) => {
@@ -153,14 +166,19 @@ const showSpread = () => {
             <button className="eter_btn" onClick={takeescreenshot}>
               <i className="fontAwesome fas fa-camera" />
             </button> 
-            <button className="eter_btn" onClick={saveScreenshotImg}>
+            {/* <a className="eter_btn a_btn" href={eter_exhi_1} download>
               <i className="fontAwesome far fa-save" />
+            </a> */}
+            <button className="eter_btn">
+              <a className='btn_a' href={loadImg} download onClick={banEmpty}>
+                <i className="fontAwesome far fa-save" />
+              </a>
             </button>
         </div>
       <div className="eter_spreadH" ref={screenshot_ref}>
-        {screenshotReck[1] ? <img className="screenshot" src={screenshotReck[1]} alt="hello" /> : <></>}
-        {screenshotReck[2] ? <img className="screenshot" src={screenshotReck[2]} alt="hello" /> : <></>}
-        {screenshotReck[3] ? <img className="screenshot" src={screenshotReck[3]} alt="hello" /> : <></>}
+        {screenshotReck[1] ? <img className={toLoad === "screenshot_1"? "screenshot clickedForLoad":"screenshot"} src={screenshotReck[1]} alt="screenshot_1" onClick={setClickedImgToLoad}/> : <></>}
+        {screenshotReck[2] ? <img className={toLoad === "screenshot_2"? "screenshot clickedForLoad":"screenshot"} src={screenshotReck[2]} alt="screenshot_2" onClick={setClickedImgToLoad}/> : <></>}
+        {screenshotReck[3] ? <img className={toLoad === "screenshot_3"? "screenshot clickedForLoad":"screenshot"} src={screenshotReck[3]} alt="screenshot_3" onClick={setClickedImgToLoad}/> : <></>}
       </div>
       <div className="clicked_reck" ref={clicked_ref}>
       {savedReck.map((section,index) => 
