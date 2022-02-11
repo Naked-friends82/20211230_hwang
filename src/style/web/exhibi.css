@@ -80,14 +80,14 @@
 }
 .eachExhibi_Paper h1 {
   font-size: var(--font-big);
-  font-family: var(--typo-nanum);
+  /* font-family: var(--typo-nanum); */
   font-weight: var(--weight-Extra-bold);
   padding-top: 6px;
   margin-bottom: 30px;
 }
 .eachExhibi_Paper h3 {
   font-size: var(--font-regular);
-  font-family: var(--typo-nanum);
+  /* font-family: var(--typo-nanum); */
   font-weight: var(--weight-Extra-bold);
   margin-bottom: 20px;
 }

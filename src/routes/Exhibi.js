@@ -132,7 +132,7 @@ const Exhibi = () =>  {
     <section className="section_exhibi">
       <div className="exhibi_title">
         <h1>Exhibitions</h1>
-        <button onClick={showexhibiCV}>&#10094;</button>
+        <button onClick={showexhibiCV}>i</button>
       </div>
       <div className="exhibi_reck">
           <div className="eachExhibi">
