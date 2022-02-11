@@ -74,9 +74,15 @@
   background-color: var(--color-red);
   color: var(--color-white);
 }
-
+.btn_a {
+  position: relative;
+  padding: 13px;
+  left: -6px;
+  border-radius: 5rem;
+}
 .fontAwesome {
   font-size: var(--font-medium);
+  color: var(--color-black);
 }
 /* 통일성을 위해 22vh에서 16%로 변경 */
 .screenshot_reck {
@@ -92,6 +98,9 @@
   height: 90%;
   /* width: 240px; */
   margin: 0px 20px;
+}
+.clickedForLoad {
+  border: 2px solid black;
 }
 /* 통일성을 위해 22vh에서 16%로 변경 */
 .clicked_reck {
