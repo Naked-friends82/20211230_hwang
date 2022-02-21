@@ -32,6 +32,7 @@ import "../style/mobile/penet_m.css";
 
 // 함수_리펙토링
 import ShiftThumb from '../function/ShiftThumb.js';
+import ToggleDetail from '../function/ToggleDetail.js';
 
 const Penet = () =>  {
   const ent1 = useRef();
@@ -174,12 +175,12 @@ const Penet = () =>  {
   const shiftThumbPack = ShiftThumb(initial_value, ref_deck);
 
 
+  // ToggleDetail 사용
+  // shiftThumbPack[0]은 현재 detail
+  // shiftThumbPack[1]은 detail 바꾸는 함수
+  const toggleDetailPack = ToggleDetail();
 
-  const [penetDetail,setPenetDetail] = useState(false)
-  const showPenetDetail = (e) => {
-    setPenetDetail(!penetDetail)
-    console.log(penetDetail);
-  }
+
   const penet_detailDeck = 
     {
       detailExhi:[
@@ -215,7 +216,7 @@ const Penet = () =>  {
     <section className="section_penet">
       <div className="penet_title">
         <h1>Penetrating Stone</h1>
-        <button onClick={showPenetDetail}>i</button>
+        <button onClick={toggleDetailPack[1]}>i</button>
       </div>
       <div className="penet_reck">
         <iframe className='penet_reck_video' src="https://www.youtube.com/embed/0xzx0hLralY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ref={penet_video} alt="Penetrating Stone"></iframe>
@@ -232,7 +233,7 @@ const Penet = () =>  {
           })}
       </div>
       {
-      penetDetail ? <EachDetail detailDeck={penet_detailDeck} showDetail={showPenetDetail} />
+      toggleDetailPack[0] ? <EachDetail detailDeck={penet_detailDeck} showDetail={toggleDetailPack[1]} />
       :(
       <></>
       )}

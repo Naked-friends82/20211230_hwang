@@ -22,6 +22,11 @@ import "../style/mobile/eternal2_m.css";
 import "../style/web/eachEter.css";
 import "../style/mobile/eachEter_m.css";
 
+// 함수_리펙토링
+import ToggleDetail from '../function/ToggleDetail.js';
+
+
+
 // 방법1 리렌더링 안되게 className으로 보였다 안보였다 하기
 // 방법2 그냥 화면 나누기 => 안이쁘다.
 
@@ -40,7 +45,6 @@ const Eternal2 = () =>  {
   };
   useEffect(() => {
     console.log("savedReck 감지",savedReck);
-    console.log("savedReck 갯수", savedReck.length);
   }, [savedReck])
 
 const showSpread = () => {
@@ -102,12 +106,11 @@ const showSpread = () => {
     }
   }
 
+  // ToggleDetail 사용
+  // shiftThumbPack[0]은 현재 detail
+  // shiftThumbPack[1]은 detail 바꾸는 함수
+  const toggleDetailPack = ToggleDetail();
 
-  const [eterDetail,setEterDetail] = useState(false)
-  const showEterDetail = (e) => {
-    setEterDetail(!eterDetail)
-    console.log(eterDetail);
-  }
   const eter_detailDeck = 
     {
       detailExhi:[
@@ -136,10 +139,10 @@ const showSpread = () => {
     <section className="section_eter">
       <div className="eter_title">
         <h1><span>Hwang's Manual of</span> Eternal Classics</h1>
-        <button onClick={showEterDetail}>i</button>
+        <button onClick={toggleDetailPack[1]}>i</button>
       </div>
       <div className="eter_spreadH" ref={ref}>
-        <Spread savedReck={savedReck}/ >
+        <Spread savedReck={savedReck} setSavedReck={setSavedReck} / >
       </div>
       <div className="eter_reck" ref={ref2}>
         <EterZero saveReck={saveReck}/>
@@ -190,7 +193,7 @@ const showSpread = () => {
       )}
       </div>
       {
-      eterDetail ? <EachDetail detailDeck={eter_detailDeck} showDetail={showEterDetail} />
+        toggleDetailPack[0] ? <EachDetail detailDeck={eter_detailDeck} showDetail={toggleDetailPack[1]} />
       :(
       <></>
       )}

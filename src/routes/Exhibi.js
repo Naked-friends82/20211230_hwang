@@ -12,6 +12,8 @@ import eter_exhi_3 from '../asset/exhi/eter_exhi_3.jpg';
 import '../style/web/exhibi.css';
 import '../style/mobile/exhibi_m.css';
 
+// 함수_리펙토링
+import ToggleDetail from '../function/ToggleDetail.js';
 
 const Exhibi = () =>  {
   const EXHI_RECK = [
@@ -120,19 +122,18 @@ const Exhibi = () =>  {
       setExhibiEter(exhibiEter +1);
     }
   };
-  // i 디테일_CV
-  const [exhibiCV,setExhibiCV] = useState(false)
-  const showexhibiCV = (e) => {
-    setExhibiCV(!exhibiCV)
-    console.log(exhibiCV);
-  }
+
+  // ToggleDetail 사용
+  // shiftThumbPack[0]은 현재 detail
+  // shiftThumbPack[1]은 detail 바꾸는 함수
+  const toggleDetailPack = ToggleDetail();
 
 
   return (
     <section className="section_exhibi">
       <div className="exhibi_title">
         <h1>Exhibitions</h1>
-        <button onClick={showexhibiCV}>i</button>
+        <button onClick={toggleDetailPack[1]}>i</button>
       </div>
       <div className="exhibi_reck">
           <div className="eachExhibi">
@@ -184,7 +185,7 @@ const Exhibi = () =>  {
           </div>
       </div>
       {
-      exhibiCV ? <CV showDetail={showexhibiCV} />
+        toggleDetailPack[0] ? <CV showDetail={toggleDetailPack[1]} />
       :(
       <></>
       )}

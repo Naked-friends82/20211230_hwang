@@ -81,6 +81,7 @@ import "../style/mobile/omma_m.css";
 
 // 함수_리펙토링
 import ShiftThumb from '../function/ShiftThumb.js';
+import ToggleDetail from '../function/ToggleDetail.js';
 
 const Omma = () =>  {
   const fog1 = useRef();
@@ -532,11 +533,11 @@ const Omma = () =>  {
   // shiftThumbPack[1]은 thumb 바꾸는 함수
   const shiftThumbPack = ShiftThumb(initial_value, ref_deck);
 
+  // ToggleDetail 사용
+  // shiftThumbPack[0]은 현재 detail
+  // shiftThumbPack[1]은 detail 바꾸는 함수
+  const toggleDetailPack = ToggleDetail();
 
-  const [ommaDetail,setOmmaDetail] = useState(false)
-  const showOmmaDetail = (e) => {
-    setOmmaDetail(!ommaDetail)
-  }
   const omma_detailDeck = 
     {
       detailExhi:[
@@ -569,7 +570,7 @@ const Omma = () =>  {
     <section className="section_omma">
       <div className="omma_title">
         <h1>MUH EMDAP INAM MO</h1>
-        <button onClick={showOmmaDetail}>i</button>
+        <button onClick={toggleDetailPack[1]}>i</button>
       </div>
       <div className="omma_reck">
         {FOG_RECK.map((each) => {
@@ -614,8 +615,7 @@ const Omma = () =>  {
         </div>
       </div>
       {
-      ommaDetail ? <EachDetail detailDeck={omma_detailDeck} showDetail={showOmmaDetail} />
-      // ommaDetail ? <EachDetail detailDeck={omma_detailDeck} showDetail={showOmmaDetail} />
+      toggleDetailPack[0] ? <EachDetail detailDeck={omma_detailDeck} showDetail={toggleDetailPack[1]} />
       :(
       <></>
       )}
