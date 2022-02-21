@@ -72,7 +72,6 @@ import stone_30 from '../asset/omma/stone_30.jpg';
 import stone_31 from '../asset/omma/stone_31.jpg';
 import stone_32 from '../asset/omma/stone_32.jpg';
 
-
 // 전시전경
 import omma_exhi_1 from '../asset/exhi/omma_exhi_1.jpg';
 import omma_exhi_2 from '../asset/exhi/omma_exhi_2.jpg';
@@ -80,8 +79,8 @@ import omma_exhi_3 from '../asset/exhi/omma_exhi_3.jpg';
 import "../style/web/omma.css";
 import "../style/mobile/omma_m.css";
 
-
-
+// 함수_리펙토링
+import ShiftThumb from '../function/ShiftThumb.js';
 
 const Omma = () =>  {
   const fog1 = useRef();
@@ -520,40 +519,23 @@ const Omma = () =>  {
       ref: paper,
     },
   ]
-  const [thumb, setThumb] = useState("");
 
-  useEffect(() => {
-    setThumb("Beyond the Stone. 한지에 수묵채색. 162.2 × 130.3cm. 2019");
-  }, []);
-  useEffect(() => {
-    console.log(thumb, fog1.current.alt);
-    if (thumb === fog1.current.alt){
-      fog1.current.scrollIntoView({behavior: "smooth"});
-    } else if (thumb === fog2.current.alt){
-      fog2.current.scrollIntoView({behavior: "smooth", inline: "center"});
-    } else if (thumb === stone1.current.alt){
-      stone1.current.scrollIntoView({behavior: "smooth", inline: "center"});
-    } else if (thumb === stone2.current.alt){
-      stone2.current.scrollIntoView({behavior: "smooth", inline: "center"});
-    } else if (thumb === stone3.current.alt){
-      stone3.current.scrollIntoView({behavior: "smooth", inline: "center"});
-    } else if (thumb === mdf.current.alt){
-      mdf.current.scrollIntoView({behavior: "smooth", inline: "center"});
-    } else if (thumb === paper.current.alt){
-      paper.current.scrollIntoView({behavior: "smooth", inline: "center"});
-    }
-  }, [thumb])
-  
 
-  const shiftThumb = (e) => {
-    const {target:{alt}} = e;
-    setThumb(alt)
-  }
+  // ShiftThumb 사용
+  const initial_value = "Beyond the Stone. 한지에 수묵채색. 162.2 × 130.3cm. 2019";
+  const ref_deck = [
+    fog1,fog2,
+    stone1,stone2,stone3,
+    mdf,paper
+  ]
+  // shiftThumbPack[0]은 현재 thumb
+  // shiftThumbPack[1]은 thumb 바꾸는 함수
+  const shiftThumbPack = ShiftThumb(initial_value, ref_deck);
+
 
   const [ommaDetail,setOmmaDetail] = useState(false)
   const showOmmaDetail = (e) => {
     setOmmaDetail(!ommaDetail)
-    console.log(ommaDetail);
   }
   const omma_detailDeck = 
     {
@@ -583,7 +565,6 @@ const Omma = () =>  {
       </div>
     };
 
-
   return (
     <section className="section_omma">
       <div className="omma_title">
@@ -608,32 +589,33 @@ const Omma = () =>  {
         })}
       </div>
       <div className="img_info">
-        <span>{thumb}</span>
+        <span>{shiftThumbPack[0]}</span>
         </div>
       <div className="omma_thumbnail">
         <div className="omma_thumbnail_black">
           {FOG_RECK.map((each) => {
-            return <img className={thumb === each.title+each.caption ? "omma_thumbnail_each": "omma_thumbnail_each filter"} src={each.src} alt={each.title+each.caption} onClick={shiftThumb} />
+            return <img className={shiftThumbPack[0] === each.title+each.caption ? "omma_thumbnail_each": "omma_thumbnail_each filter"} src={each.src} alt={each.title+each.caption} onClick={shiftThumbPack[1]} />
           })}
           {PRINT_MDF_RECK.map((each) => {
-            return <img className={thumb === each.title+each.caption ? "omma_print_thumbnail_each": "omma_print_thumbnail_each filter"} src={each.src} alt={each.title+each.caption} onClick={shiftThumb} />
+            return <img className={shiftThumbPack[0] === each.title+each.caption ? "omma_print_thumbnail_each": "omma_print_thumbnail_each filter"} src={each.src} alt={each.title+each.caption} onClick={shiftThumbPack[1]} />
           })}
           {FOG_RECK2.map((each) => {
-            return <img className={thumb === each.title+each.caption ? "omma_thumbnail_each": "omma_thumbnail_each filter"} src={each.src} alt={each.title+each.caption} onClick={shiftThumb} />
+            return <img className={shiftThumbPack[0] === each.title+each.caption ? "omma_thumbnail_each": "omma_thumbnail_each filter"} src={each.src} alt={each.title+each.caption} onClick={shiftThumbPack[1]} />
           })}
         </div>
         <div className="omma_thumbnail_white">
           {PRINT_PAPER_RECK.map((each) => {
-            return <img className={thumb === each.title+each.caption ? "omma_print_thumbnail_each": "omma_print_thumbnail_each filter"} src={each.src} alt={each.title+each.caption} onClick={shiftThumb} />
+            return <img className={shiftThumbPack[0] === each.title+each.caption ? "omma_print_thumbnail_each": "omma_print_thumbnail_each filter"} src={each.src} alt={each.title+each.caption} onClick={shiftThumbPack[1]} />
           })}
           {STONE_RECK.map((each) => {
-            return <img className={thumb === each.title+each.caption ? "omma_thumbnail_each": "omma_thumbnail_each filter"} src={each.src} alt={each.title+each.caption} onClick={shiftThumb} />
+            return <img className={shiftThumbPack[0] === each.title+each.caption ? "omma_thumbnail_each": "omma_thumbnail_each filter"} src={each.src} alt={each.title+each.caption} onClick={shiftThumbPack[1]} />
           })}
 
         </div>
       </div>
       {
       ommaDetail ? <EachDetail detailDeck={omma_detailDeck} showDetail={showOmmaDetail} />
+      // ommaDetail ? <EachDetail detailDeck={omma_detailDeck} showDetail={showOmmaDetail} />
       :(
       <></>
       )}

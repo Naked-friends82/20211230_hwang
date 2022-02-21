@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useRef, useState } from 'react';
 import EachDetail from '../components/EachDetail';
 
 import ent_1 from '../asset/penet/entrances1.jpg'
@@ -23,40 +23,15 @@ import spo_3 from '../asset/penet/spotlight3.png'
 
 import gra_1 from '../asset/penet/grass.jpg'
 
+// 전시전경
 import penet_exhi_2 from '../asset/exhi/penet_exhi_2.jpg';
 import penet_exhi_4 from '../asset/exhi/penet_exhi_4.jpg';
 import penet_exhi_5 from '../asset/exhi/penet_exhi_5.jpg';
 import "../style/web/penet.css";
 import "../style/mobile/penet_m.css";
 
-// const IMG_RECK = [
-//   {
-//     title:'Entrances',
-//     caption: '. 한지에 수묵. 180.0 × 130.3cm. 2020',
-//     src: ent_1,
-//   },
-//   {
-//     title:'하던대로 해주세요',
-//     caption: '. 한지에 수묵채색. 130.3 × 180.0cm. 2020',
-//     src: sam_1,
-//   },
-//   {
-//     title:'Spotlight',
-//     caption: '. 한지에 수묵채색. 130.3 × 180.0cm. 2020',
-//     src: spo_1,
-//   },
-//   {
-//     title:'그림자놀이',
-//     caption: '. 한지에 수묵채색. 130.3 × 180.0cm. 2020',
-//     src: sha_1,
-//   },
-//   {
-//     title:'Boundaries',
-//     caption: '. 한지에 수묵채색. 130.3 × 180.0cm. 2020',
-//     src: bou_1,
-//   },
-// ];
-
+// 함수_리펙토링
+import ShiftThumb from '../function/ShiftThumb.js';
 
 const Penet = () =>  {
   const ent1 = useRef();
@@ -78,6 +53,7 @@ const Penet = () =>  {
   const spo3 = useRef();
 
   const gra1 = useRef();
+  const penet_video = useRef();
 
 
   const PENET_RECK = [
@@ -181,58 +157,23 @@ const Penet = () =>  {
         src: sha_1,
         ref: sha1,
       },
-
-
-
   ];
   
-  const [penetThumb, setPenetThumb] = useState();
+  // ShiftThumb 사용
+  const initial_value = "Penetrating Stone";
+  const ref_deck = [
+    ent1,ent2,ent3,
+    sam1,sam2,sam3,
+    bou1, bou2, bou3,
+    sha1, sha2, sha3,
+    spo1, spo2, spo3,
+    gra1, penet_video
+  ]
+  // shiftThumbPack[0]은 현재 thumb
+  // shiftThumbPack[1]은 thumb 바꾸는 함수
+  const shiftThumbPack = ShiftThumb(initial_value, ref_deck);
 
-  useEffect(() => {
-    setPenetThumb("Entrances. 한지에 수묵. 180.0 × 130.3cm. 2020")
-  }, [])
-  // ref 정해놓은거 바꾸는 작업
-  useEffect(() => {
-    console.log(penetThumb, );
-    if (penetThumb === ent1.current.alt){
-      ent1.current.scrollIntoView({behavior: "smooth", inline: "center"});
-    } else if (penetThumb === ent2.current.alt){
-      ent2.current.scrollIntoView({behavior: "smooth", inline: "center"}); 
-    } else if (penetThumb === ent3.current.alt){
-      ent3.current.scrollIntoView({behavior: "smooth", inline: "center"}); 
-    } else if (penetThumb === sam1.current.alt){
-      sam1.current.scrollIntoView({behavior: "smooth", inline: "center"}); 
-    } else if (penetThumb === sam2.current.alt){
-      sam2.current.scrollIntoView({behavior: "smooth", inline: "center"}); 
-    } else if (penetThumb === sam3.current.alt){
-      sam3.current.scrollIntoView({behavior: "smooth", inline: "center"}); 
-    } else if (penetThumb === bou1.current.alt){
-      bou1.current.scrollIntoView({behavior: "smooth", inline: "center"}); 
-    } else if (penetThumb === bou2.current.alt){
-      bou2.current.scrollIntoView({behavior: "smooth", inline: "center"}); 
-    } else if (penetThumb === bou3.current.alt){
-      bou3.current.scrollIntoView({behavior: "smooth", inline: "center"}); 
-    } else if (penetThumb === sha1.current.alt){
-      sha1.current.scrollIntoView({behavior: "smooth", inline: "center"}); 
-    } else if (penetThumb === sha2.current.alt){
-      sha2.current.scrollIntoView({behavior: "smooth", inline: "center"}); 
-    } else if (penetThumb === sha3.current.alt){
-      sha3.current.scrollIntoView({behavior: "smooth", inline: "center"}); 
-    } else if (penetThumb === spo1.current.alt){
-      spo1.current.scrollIntoView({behavior: "smooth", inline: "center"}); 
-    } else if (penetThumb === spo2.current.alt){
-      spo2.current.scrollIntoView({behavior: "smooth", inline: "center"}); 
-    } else if (penetThumb === spo3.current.alt){
-      spo3.current.scrollIntoView({behavior: "smooth", inline: "center"}); 
-    } else if (penetThumb === gra1.current.alt){
-      gra1.current.scrollIntoView({behavior: "smooth", inline: "center"}); 
-    }
-  }, [penetThumb])
 
-  const shiftPenetThumb = (e) => {
-    const {target:{alt}} = e;
-    setPenetThumb(alt)
-  };
 
   const [penetDetail,setPenetDetail] = useState(false)
   const showPenetDetail = (e) => {
@@ -277,17 +218,17 @@ const Penet = () =>  {
         <button onClick={showPenetDetail}>i</button>
       </div>
       <div className="penet_reck">
-        <iframe className='penet_reck_video' src="https://www.youtube.com/embed/0xzx0hLralY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe className='penet_reck_video' src="https://www.youtube.com/embed/0xzx0hLralY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ref={penet_video} alt="Penetrating Stone"></iframe>
         {PENET_RECK.map((each) => {
             return <img className="penet_reck_each" src={each.src} alt={each.title+each.caption} ref={each.ref} />
           })}
       </div>
       <div className="img_info">
-        <span>{penetThumb}</span>
+        <span>{shiftThumbPack[0]}</span>
       </div>
       <div className="penet_thumbnail">
         {PENET_RECK.map((each) => {
-            return <img className={penetThumb === each.title+each.caption ? "penet_thumbnail_each":"penet_thumbnail_each filter"} src={each.src} alt={each.title+each.caption} onClick={shiftPenetThumb} />
+            return <img className={shiftThumbPack[0] === each.title+each.caption ? "penet_thumbnail_each":"penet_thumbnail_each filter"} src={each.src} alt={each.title+each.caption} onClick={shiftThumbPack[1]} />
           })}
       </div>
       {
