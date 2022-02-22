@@ -1,5 +1,6 @@
 import React, { useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
+import ExhiInfo from '../components/ExhiInfo';
 import omma_main from '../asset/main/omma_main.png';
 import omma_sec from '../asset/main/omma_sec.png';
 import penet_main from '../asset/main/penet_main.jpg';
@@ -104,19 +105,7 @@ const Works = () =>  {
           </div>
         </Link>
       </div>
-      <div className="works_info">
-        <div className="title">
-          <div className="title_title">{info.title}</div>
-          <span className="title_detail">{info.date}</span> <br />
-          <span className="title_detail">{info.place}</span> <br />
-          <span className="title_detail">{info.donat}</span> <br />
-        </div>
-        <div className="contact">
-          skedmask@naver.com <br />
-          <a href="https://www.instagram.com/kyuminq/"> @kyuminq <br /></a>
-          © 2021. kyumin Hwang. All Rights Reserved.
-        </div>
-      </div>
+      <ExhiInfo info={info} />
     </section>
   );
 }

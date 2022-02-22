@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import ExhiInfo from '../components/ExhiInfo';
 import hungry from '../asset/group/poster_hungry.jpg';
 import sing from '../asset/group/poster_sing.jpg';
 import hang from '../asset/group/poster_hang.jpg';
@@ -76,19 +77,7 @@ const Group = () =>  {
             <img className="group_img_s" src={hungry} alt="어쨌든 아주 배가 고팠던 모양이구나" onMouseEnter={shiftInfo} />
           </div>
       </div>
-      <div className="group_info">
-        <div className="title">
-          <div className="title_title">{info.title}</div>
-          <span className="title_detail">{info.date}</span> <br />
-          <span className="title_detail">{info.place}</span> <br />
-          <span className="title_detail">{info.donat}</span> <br />
-        </div>
-        <div className="contact">
-          skedmask@naver.com <br />
-          <a href="https://www.instagram.com/kyuminq/"> @kyuminq <br /></a>
-          © 2021. kyumin Hwang. All Rights Reserved.
-        </div>
-      </div>
+      <ExhiInfo info={info} />
     </section>
   );
 }
