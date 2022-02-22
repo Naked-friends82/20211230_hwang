@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import omma_main from '../asset/main/omma_main.png';
 import omma_sec from '../asset/main/omma_sec.png';
@@ -11,6 +11,8 @@ import group_hang from '../asset/main/group_hang.jpg';
 import exhibi_main from '../asset/main/exhibi_main.jpg';
 import '../style/web/works.css';
 import '../style/mobile/works_m.css';
+// function
+import { useHorizontalScroll } from "../function/scroll";
 
 const EXHI = [
   {
@@ -63,13 +65,15 @@ const Works = () =>  {
     }
   };
 
+  const scrollRef = useHorizontalScroll();
+
   return (
     <section className="section_works">
       <div className="works_title">
         <h1>HWANG KYU MIN</h1>
         <button>i</button>
       </div>
-      <div className="works_exhi">
+      <div className="works_exhi" ref={scrollRef}>
         <Link to='/muhmdapinammo'>
           <div className="img_index">
             <img className="works_exhi_index1" src={omma_main} alt="MUH EMDAP INAM MO" onMouseEnter={shiftInfo} />
