@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import ExhiInfo from '../components/ExhiInfo';
 import omma_main from '../asset/main/omma_main.png';
@@ -14,41 +14,11 @@ import '../style/web/works.css';
 import '../style/mobile/works_m.css';
 // function
 import { useHorizontalScroll } from "../function/scroll";
-
-const EXHI = [
-  {
-    title: "MUH EMDAP INAM MO",
-    date: "2019.08.01-2019.08.11",
-    place: "서교예술실험센터 - 서울 마포구 잔다리로6길 33 지하",
-    donat: "서울문화재단 서교예술실험센터"
-  },
-  {
-    title: "Penetrating Stone",
-    date: "2020.04.23-2020.05.27",
-    place: "KSD 갤러리 - 서울시 영등포구 여의나루로4길 23",
-    donat: "서울문화재단 서교예술실험센터",
-  },
-  {
-    title: "Eternal classics",
-    date: "준비 중",
-    place: "OCI 미술관",
-    donat: "OCI 2021 YOUNG CREATIVES"
-  },
-  {
-    title: "Group Exhibitions",
-    date: "나의 사인이 너와 같다면 외 3회",
-    place: "",
-    donat: ""
-  },
-  {
-    title: "Exhibition Detail",
-    date: "Statement",
-    place: "Installation View",
-    donat: "Review"
-  },
-];
+//data
+import Exhi_INFO from '../data/Exhi_INFO';
 
 const Works = () =>  {
+  const EXHI = Exhi_INFO(0);
   const [info, setInfo] = useState('');
 
   const shiftInfo = async(e) => {
