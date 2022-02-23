@@ -1,6 +1,5 @@
 import React, { useRef, useEffect, useState } from 'react';
 import Exhi_RECK from '../data/Exhi_RECK';
-import { useScreenshot } from 'use-react-screenshot'
 import EachDetail from '../components/EachDetail';
 import EterZero from '../components/eters/EterZero';
 import EterOne from '../components/eters/EterOne';
@@ -23,6 +22,8 @@ import "../style/mobile/eachEter_m.css";
 
 // 함수_리펙토링
 import ToggleDetail from '../function/ToggleDetail.js';
+import TakeScreenshot from '../function/TakeScreenshot';
+import SaveScreenshot from '../function/SaveScreenshot';
 
 
 
@@ -60,50 +61,25 @@ const showSpread = () => {
   };
 }
 
-  //스크린 샷
-  const [screenshot, takeScreenShot] = useScreenshot();
-  const [screenshotReck, setScreenshotReck] = useState([]);
+const ref = useRef(null);
+const ref2 = useRef(null);
+const clicked_ref = useRef(null);
+const screenshot_ref = useRef(null);
 
-  const ref = useRef(null);
-  const ref2 = useRef(null);
-  const clicked_ref = useRef(null);
-  const screenshot_ref = useRef(null);
-
-
-  const takeescreenshot = () => {
-    if (ref.current.className === "eter_spreadH"){
-      alert("Change Mode");
-    }else{
-      takeScreenShot(ref.current);
-    }
-  };
-
-  useEffect(()=>{
-    if(screenshotReck.length < 4){
-      const newScreenshotReck = [...screenshotReck, screenshot];
-      setScreenshotReck(newScreenshotReck);
-    } else{
-      alert("Sorry, You can only get 3 screenshot Images")
-    }
-  },[screenshot]);
+  //스크린 샷 찍기
+  // TakeScreenshot 사용
+  // takeScreenshotPack[0]은 현재 찍은 screenshot
+  // takeScreenshotPack[1]은 현재 들어있는 screenshot들
+  // takeScreenshotPack[2]은 screenshot 찍는 함수
+  const takeScreenshotPack = TakeScreenshot(ref);
 
   // 이미지 저장
-  const [loadImg, setLoadImg] = useState(null);
-  const [toLoad, setToLoad] = useState();
-
-  const setClickedImgToLoad = (e) => {
-    const {target:{src,alt}} = e;
-    setLoadImg(src)
-    setToLoad(alt)
-  }
-  const banEmpty = () => {
-    console.log("hahahaha",screenshot)
-    if (screenshot === null){
-      alert("Take screenshot with camera button")
-    } else if (loadImg === null){
-      alert("Choose one of them")
-    }
-  }
+  // SaveScreenshot 사용
+  // saveScreenshotPack[0]은 현재 찍은 screenshot
+  // saveScreenshotPack[1]은 다운받을 이미지 선택
+  // saveScreenshotPack[2]은 비어있는거 방지 함수
+  // saveScreenshotPack[3]은 다운받을 이미지 src
+  const saveScreenshotPack = SaveScreenshot(takeScreenshotPack[0]);
 
   // ToggleDetail 사용
   // shiftThumbPack[0]은 현재 detail
@@ -145,22 +121,19 @@ const showSpread = () => {
                 : <></>}
               <i className="fontAwesome fas fa-exchange-alt" />
             </button>
-            <button className="eter_btn" onClick={takeescreenshot}>
+            <button className="eter_btn" onClick={takeScreenshotPack[2]}>
               <i className="fontAwesome fas fa-camera" />
             </button> 
-            {/* <a className="eter_btn a_btn" href={eter_exhi_1} download>
-              <i className="fontAwesome far fa-save" />
-            </a> */}
             <button className="eter_btn">
-              <a className='btn_a' href={loadImg} download onClick={banEmpty}>
+              <a className='btn_a' href={saveScreenshotPack[3]} download onClick={saveScreenshotPack[2]}>
                 <i className="fontAwesome far fa-save" />
               </a>
             </button>
         </div>
       <div className="eter_spreadH" ref={screenshot_ref}>
-        {screenshotReck[1] ? <img className={toLoad === "screenshot_1"? "screenshot clickedForLoad":"screenshot"} src={screenshotReck[1]} alt="screenshot_1" onClick={setClickedImgToLoad}/> : <></>}
-        {screenshotReck[2] ? <img className={toLoad === "screenshot_2"? "screenshot clickedForLoad":"screenshot"} src={screenshotReck[2]} alt="screenshot_2" onClick={setClickedImgToLoad}/> : <></>}
-        {screenshotReck[3] ? <img className={toLoad === "screenshot_3"? "screenshot clickedForLoad":"screenshot"} src={screenshotReck[3]} alt="screenshot_3" onClick={setClickedImgToLoad}/> : <></>}
+        {takeScreenshotPack[1][1] ? <img className={saveScreenshotPack[0] === "screenshot_1"? "screenshot clickedForLoad":"screenshot"} src={takeScreenshotPack[1][1]} alt="screenshot_1" onClick={saveScreenshotPack[1]}/> : <></>}
+        {takeScreenshotPack[1][2] ? <img className={saveScreenshotPack[0] === "screenshot_2"? "screenshot clickedForLoad":"screenshot"} src={takeScreenshotPack[1][2]} alt="screenshot_2" onClick={saveScreenshotPack[1]}/> : <></>}
+        {takeScreenshotPack[1][3] ? <img className={saveScreenshotPack[0] === "screenshot_3"? "screenshot clickedForLoad":"screenshot"} src={takeScreenshotPack[1][3]} alt="screenshot_3" onClick={saveScreenshotPack[1]}/> : <></>}
       </div>
       <div className="clicked_reck" ref={clicked_ref}>
       {savedReck.map((section,index) => 
@@ -171,11 +144,7 @@ const showSpread = () => {
             alt="saved Img" />
       )}
       </div>
-      {
-        toggleDetailPack[0] ? <EachDetail detailDeck={detailDeck} showDetail={toggleDetailPack[1]} />
-      :(
-      <></>
-      )}
+      {toggleDetailPack[0] ? <EachDetail detailDeck={detailDeck} showDetail={toggleDetailPack[1]} /> : (<></>)}
     </section>
   );
 }
