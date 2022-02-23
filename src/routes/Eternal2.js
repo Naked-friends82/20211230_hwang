@@ -13,6 +13,7 @@ import EterNine from '../components/eters/EterNine';
 import EterTen from '../components/eters/EterTen';
 import Spread from '../components/Spread';
 import SwitchTakeSaveBtn from '../components/SwitchTakeSaveBtn';
+import Screenshots from '../components/Screenshots';
 
 // CSS
 import "../style/web/eternal2.css";
@@ -115,17 +116,6 @@ const screenshot_ref = useRef(null);
         <EterTen saveReck={saveReck}/>
       </div>
       <SwitchTakeSaveBtn 
-        savedReck={savedReck} 
-        showSpread={showSpread} 
-        takeScreenshot={takeScreenshotPack[2]} 
-        imgsrcToLoad={saveScreenshotPack[3]} 
-        preventEmpty={saveScreenshotPack[2]} />
-
-      <div className="eter_spreadH" ref={screenshot_ref}>
-        {takeScreenshotPack[1][1] ? <img className={saveScreenshotPack[0] === "screenshot_1"? "screenshot clickedForLoad":"screenshot"} src={takeScreenshotPack[1][1]} alt="screenshot_1" onClick={saveScreenshotPack[1]}/> : <></>}
-        {takeScreenshotPack[1][2] ? <img className={saveScreenshotPack[0] === "screenshot_2"? "screenshot clickedForLoad":"screenshot"} src={takeScreenshotPack[1][2]} alt="screenshot_2" onClick={saveScreenshotPack[1]}/> : <></>}
-        {takeScreenshotPack[1][3] ? <img className={saveScreenshotPack[0] === "screenshot_3"? "screenshot clickedForLoad":"screenshot"} src={takeScreenshotPack[1][3]} alt="screenshot_3" onClick={saveScreenshotPack[1]}/> : <></>}
-      </div>
       <div className="clicked_reck" ref={clicked_ref}>
       {savedReck.map((section,index) => 
           <img 
@@ -136,6 +126,16 @@ const screenshot_ref = useRef(null);
       )}
       </div>
       {toggleDetailPack[0] ? <EachDetail detailDeck={detailDeck} showDetail={toggleDetailPack[1]} /> : (<></>)}
+          savedReck={savedReck} 
+          showSpread={showSpread} 
+          takeScreenshot={takeScreenshotPack[2]} 
+          imgsrcToLoad={saveScreenshotPack[3]} 
+          preventEmpty={saveScreenshotPack[2]} />
+      <Screenshots 
+          screenshotReck={takeScreenshotPack[1]} 
+          toLoad={saveScreenshotPack[0]} 
+          setImgToLoad={saveScreenshotPack[1]} 
+          screenshot_ref={screenshot_ref} />
     </section>
   );
 }
