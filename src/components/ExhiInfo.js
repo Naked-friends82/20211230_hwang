@@ -13,7 +13,7 @@ const ExhiInfo = ({info}) => {
           <span className="title_detail">{info.donat}</span> <br />
         </div>
         <div className="contact">
-          skedmask@naver.com <br />
+          skekdmask@naver.com <br />
           <a href="https://www.instagram.com/kyuminq/"> @kyuminq <br /></a>
           © 2021. kyumin Hwang. All Rights Reserved.
         </div>
