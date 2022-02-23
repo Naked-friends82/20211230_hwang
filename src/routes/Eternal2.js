@@ -14,6 +14,7 @@ import EterTen from '../components/eters/EterTen';
 import Spread from '../components/Spread';
 import SwitchTakeSaveBtn from '../components/SwitchTakeSaveBtn';
 import Screenshots from '../components/Screenshots';
+import ClickedReck from '../components/ClickedReck';
 
 // CSS
 import "../style/web/eternal2.css";
@@ -116,16 +117,6 @@ const screenshot_ref = useRef(null);
         <EterTen saveReck={saveReck}/>
       </div>
       <SwitchTakeSaveBtn 
-      <div className="clicked_reck" ref={clicked_ref}>
-      {savedReck.map((section,index) => 
-          <img 
-            key = {index}
-            className="clicked_img"
-            src={section.src}
-            alt="saved Img" />
-      )}
-      </div>
-      {toggleDetailPack[0] ? <EachDetail detailDeck={detailDeck} showDetail={toggleDetailPack[1]} /> : (<></>)}
           savedReck={savedReck} 
           showSpread={showSpread} 
           takeScreenshot={takeScreenshotPack[2]} 
@@ -136,6 +127,12 @@ const screenshot_ref = useRef(null);
           toLoad={saveScreenshotPack[0]} 
           setImgToLoad={saveScreenshotPack[1]} 
           screenshot_ref={screenshot_ref} />
+      <ClickedReck 
+          savedReck={savedReck} 
+          clicked_ref={clicked_ref} />
+      {
+      toggleDetailPack[0] ? <EachDetail detailDeck={detailDeck} showDetail={toggleDetailPack[1]} /> : (<></>)
+      }
     </section>
   );
 }
