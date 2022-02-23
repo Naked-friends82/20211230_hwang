@@ -1,5 +1,4 @@
 import React, { useRef, useEffect, useState } from 'react';
-import Exhi_RECK from '../data/Exhi_RECK';
 import EachDetail from '../components/EachDetail';
 import EterZero from '../components/eters/EterZero';
 import EterOne from '../components/eters/EterOne';
@@ -13,6 +12,7 @@ import EterEight from '../components/eters/EterEight';
 import EterNine from '../components/eters/EterNine';
 import EterTen from '../components/eters/EterTen';
 import Spread from '../components/Spread';
+import SwitchTakeSaveBtn from '../components/SwitchTakeSaveBtn';
 
 // CSS
 import "../style/web/eternal2.css";
@@ -25,6 +25,8 @@ import ToggleDetail from '../function/ToggleDetail.js';
 import TakeScreenshot from '../function/TakeScreenshot';
 import SaveScreenshot from '../function/SaveScreenshot';
 
+//data
+import Exhi_RECK from '../data/Exhi_RECK';
 
 
 // 방법1 리렌더링 안되게 className으로 보였다 안보였다 하기
@@ -112,24 +114,13 @@ const screenshot_ref = useRef(null);
         <EterNine saveReck={saveReck}/>
         <EterTen saveReck={saveReck}/>
       </div>
-        <div className="eter_btns">
-            <button className="eter_btn" onClick={showSpread}>
-              {savedReck.length !== 0 ? 
-                <button className="push">
-                  {savedReck.length}
-                </button> 
-                : <></>}
-              <i className="fontAwesome fas fa-exchange-alt" />
-            </button>
-            <button className="eter_btn" onClick={takeScreenshotPack[2]}>
-              <i className="fontAwesome fas fa-camera" />
-            </button> 
-            <button className="eter_btn">
-              <a className='btn_a' href={saveScreenshotPack[3]} download onClick={saveScreenshotPack[2]}>
-                <i className="fontAwesome far fa-save" />
-              </a>
-            </button>
-        </div>
+      <SwitchTakeSaveBtn 
+        savedReck={savedReck} 
+        showSpread={showSpread} 
+        takeScreenshot={takeScreenshotPack[2]} 
+        imgsrcToLoad={saveScreenshotPack[3]} 
+        preventEmpty={saveScreenshotPack[2]} />
+
       <div className="eter_spreadH" ref={screenshot_ref}>
         {takeScreenshotPack[1][1] ? <img className={saveScreenshotPack[0] === "screenshot_1"? "screenshot clickedForLoad":"screenshot"} src={takeScreenshotPack[1][1]} alt="screenshot_1" onClick={saveScreenshotPack[1]}/> : <></>}
         {takeScreenshotPack[1][2] ? <img className={saveScreenshotPack[0] === "screenshot_2"? "screenshot clickedForLoad":"screenshot"} src={takeScreenshotPack[1][2]} alt="screenshot_2" onClick={saveScreenshotPack[1]}/> : <></>}
