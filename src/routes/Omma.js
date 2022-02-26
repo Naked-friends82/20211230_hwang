@@ -74,8 +74,8 @@ import stone_31 from '../asset/omma/stone_31.jpg';
 import stone_32 from '../asset/omma/stone_32.jpg';
 
 // CSS
-import "../style/web/omma.css";
-import "../style/mobile/omma_m.css";
+import "../style/web/route/omma.css";
+import "../style/mobile/route/omma_m.css";
 
 // 함수_리펙토링
 import ShiftThumb from '../function/ShiftThumb.js';
@@ -540,49 +540,49 @@ const Omma = () =>  {
   const detailDeck = Exhi_RECK(0)
 
   return (
-    <section className="section_omma">
-      <div className="omma_title">
+    <section className="section">
+      <div className="section_title">
         <h1>MUH EMDAP INAM MO</h1>
         <button onClick={toggleDetailPack[1]}>i</button>
       </div>
-      <div className="omma_reck">
+      <div className="section_reck">
         {FOG_RECK.map((each) => {
-          return <img className="omma_reck_each" src={each.src} alt={each.title+each.caption} ref={each.ref} />
+          return <img key={each.src} className="omma_reck_each" src={each.src} alt={each.title+each.caption} ref={each.ref} />
         })}
         {PRINT_MDF_RECK.map((each) => {
-          return <img className="omma_reck_each_print" src={each.src} alt={each.title+each.caption} ref={mdf} />
+          return <img key={each.src} className="omma_reck_each_print" src={each.src} alt={each.title+each.caption} ref={mdf} />
         })}
         {FOG_RECK2.map((each) => {
-          return <img className="omma_reck_each" src={each.src} alt={each.title+each.caption} ref={each.ref} />
+          return <img key={each.src} className="omma_reck_each" src={each.src} alt={each.title+each.caption} ref={each.ref} />
         })}
         {PRINT_PAPER_RECK.map((each) => {
-          return <img className="omma_reck_each_print" src={each.src} alt={each.title+each.caption} ref={paper} />
+          return <img key={each.src} className="omma_reck_each_print" src={each.src} alt={each.title+each.caption} ref={paper} />
         })}
         {STONE_RECK.map((each) => {
-          return <img className="omma_reck_each" src={each.src} alt={each.title+each.caption} ref={each.ref}/>
+          return <img key={each.src} className="omma_reck_each" src={each.src} alt={each.title+each.caption} ref={each.ref}/>
         })}
       </div>
       <div className="img_info">
         <span>{shiftThumbPack[0]}</span>
         </div>
-      <div className="omma_thumbnail">
+      <div className="thumbnail">
         <div className="omma_thumbnail_black">
-          {FOG_RECK.map((each) => {
-            return <img className={shiftThumbPack[0] === each.title+each.caption ? "omma_thumbnail_each": "omma_thumbnail_each filter"} src={each.src} alt={each.title+each.caption} onClick={shiftThumbPack[1]} />
+          {FOG_RECK.map((each, index) => {
+            return <img key={index} className={shiftThumbPack[0] === each.title+each.caption ? "thumbnail_each": "thumbnail_each filter"} src={each.src} alt={each.title+each.caption} onClick={shiftThumbPack[1]} />
           })}
-          {PRINT_MDF_RECK.map((each) => {
-            return <img className={shiftThumbPack[0] === each.title+each.caption ? "omma_print_thumbnail_each": "omma_print_thumbnail_each filter"} src={each.src} alt={each.title+each.caption} onClick={shiftThumbPack[1]} />
+          {PRINT_MDF_RECK.map((each, index) => {
+            return <img key={index} className={shiftThumbPack[0] === each.title+each.caption ? "omma_print_thumbnail_each": "omma_print_thumbnail_each filter"} src={each.src} alt={each.title+each.caption} onClick={shiftThumbPack[1]} />
           })}
-          {FOG_RECK2.map((each) => {
-            return <img className={shiftThumbPack[0] === each.title+each.caption ? "omma_thumbnail_each": "omma_thumbnail_each filter"} src={each.src} alt={each.title+each.caption} onClick={shiftThumbPack[1]} />
+          {FOG_RECK2.map((each, index) => {
+            return <img key={index} className={shiftThumbPack[0] === each.title+each.caption ? "thumbnail_each": "thumbnail_each filter"} src={each.src} alt={each.title+each.caption} onClick={shiftThumbPack[1]} />
           })}
         </div>
         <div className="omma_thumbnail_white">
-          {PRINT_PAPER_RECK.map((each) => {
-            return <img className={shiftThumbPack[0] === each.title+each.caption ? "omma_print_thumbnail_each": "omma_print_thumbnail_each filter"} src={each.src} alt={each.title+each.caption} onClick={shiftThumbPack[1]} />
+          {PRINT_PAPER_RECK.map((each, index) => {
+            return <img key={index} className={shiftThumbPack[0] === each.title+each.caption ? "omma_print_thumbnail_each": "omma_print_thumbnail_each filter"} src={each.src} alt={each.title+each.caption} onClick={shiftThumbPack[1]} />
           })}
-          {STONE_RECK.map((each) => {
-            return <img className={shiftThumbPack[0] === each.title+each.caption ? "omma_thumbnail_each": "omma_thumbnail_each filter"} src={each.src} alt={each.title+each.caption} onClick={shiftThumbPack[1]} />
+          {STONE_RECK.map((each, index) => {
+            return <img key={index} className={shiftThumbPack[0] === each.title+each.caption ? "thumbnail_each": "thumbnail_each filter"} src={each.src} alt={each.title+each.caption} onClick={shiftThumbPack[1]} />
           })}
 
         </div>

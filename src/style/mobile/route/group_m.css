@@ -1,0 +1,17 @@
+@media screen and (max-width: 768px) {
+  .each_group {
+    width: 90%;
+    height: auto;
+    padding: 10px 0px;
+  }
+  .group_img {
+    width: 100%;
+    height: auto;
+  }
+  .group_img_s {
+    width: 100%;
+    height: auto;
+  }
+}
+@media screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
+}

@@ -1,0 +1,30 @@
+@media screen and (max-width: 768px) {
+  .omma_reck_each {
+    width: 90%;
+    height: auto;
+    margin: 10px 0px;
+    padding: 0px 0px;
+  }
+
+  .omma_thumbnail_black {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .omma_thumbnail_white {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 8px;
+    padding-right: 16px;
+  }
+  .omma_print_thumbnail_each {
+    height: 40px;
+    margin-left: 0px;
+    margin-right: 2px;
+  }
+}
+@media screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
+}

@@ -1,11 +1,13 @@
 import React from 'react';
+import '../style/web/component/exhiInfo.css';
+import '../style/mobile/component/exhiInfo_m.css';
 
 
 const ExhiInfo = ({info}) => {
 
   return(
     <>
-      <div className="group_info">
+      <div className="works_info">
         <div className="title">
           <div className="title_title">{info.title}</div>
           <span className="title_detail">{info.date}</span> <br />

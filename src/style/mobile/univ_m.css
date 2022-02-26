@@ -1,68 +1,52 @@
-:root {
-  /* color */
-  --color-black: #13131a;
-  --color-white: #e8f1fa;
-  --color-gray: #dbdbdd;
-  --color-darkgray: #949499;
-  --color-ddarkgray: #5c5555;
-  --color-dddarkgray: #32393a;
-  /* Font size */
-  --font-mmax: 50px;
-  --font-max: 30px;
-  --font-big: 26px;
-  --font-medium: 16px;
-  --font-regular: 15px;
-  --font-small: 14px;
-  --font-min: 12px;
-  --font-sangmin: 10px;
-  /* Font weight */
-  --weight-Extra-bold: 700;
-  --weight-bold: 600;
-  --weight-medium: 400;
-  --weight-light: 300;
-  /* Font family */
-  /* Google */
-  --typo-nanum: "Nanum Myeongjo", serif;
+@media screen and (max-width: 768px) {
+  .App {
+    background-color: var(--color-gray);
+  }
+  /* --------------------------------------------- Refactoring */
+  .section {
+    align-items: center;
+  }
+  .section_title {
+    width: 100%;
+    height: 10vh;
+  }
+  .section_title h1 {
+    margin-left: 20px;
+    font-size: var(--font-max);
+  }
+  .section_title h1 span {
+    display: none;
+  }
+  .section_title button {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    font-size: var(--font-min);
+  }
+  .section_reck {
+    width: 90%;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px 0px;
+  }
+  .img_info {
+    margin: 0px 10px;
+    font-size: var(--font-small);
+  }
+  .thumbnail {
+    height: 20vh;
+    width: 100vw;
+    margin: 16px 0px;
+    white-space: nowrap;
+    overflow-x: scroll;
+  }
+  .thumbnail_each {
+    height: 90px;
+    margin-left: 10px;
+    margin-right: 16px;
+  }
 }
-/* universe */
-* {
-  box-sizing: border-box;
-}
-body {
-  margin: 0px;
-}
-/* only Head on project_content */
-h1 {
-  margin: 0px;
-}
-/* only name on About */
-h2 {
-  margin: 0px;
-}
-p {
-  margin: 0px;
-}
-button {
-  appearance: none;
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  border-radius: 0;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-}
-.App {
-  background-color: var(--color-gray);
-}
-.imgs {
-  height: 350px;
-}
-.reckImgs {
-  height: 400px;
-}
-.thumbnail {
-  height: 200px;
-}
-footer {
-  margin-left: 30px;
-  color: var(--color-darkgray);
+@media screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
 }

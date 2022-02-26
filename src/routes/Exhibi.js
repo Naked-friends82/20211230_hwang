@@ -3,8 +3,8 @@ import EachExhibi from '../components/EachExhibi.js';
 import CV from '../components/CV';
 
 // CSS
-import '../style/web/exhibi.css';
-import '../style/mobile/exhibi_m.css';
+import '../style/web/route/exhibi.css';
+import '../style/mobile/route/exhibi_m.css';
 
 // 함수_리펙토링
 import ToggleDetail from '../function/ToggleDetail.js';
@@ -17,8 +17,8 @@ const Exhibi = () =>  {
   const toggleDetailPack = ToggleDetail();
 
   return (
-    <section className="section_exhibi">
-      <div className="exhibi_title">
+    <section className="section">
+      <div className="section_title">
         <h1>Exhibitions</h1>
         <button onClick={toggleDetailPack[1]}>i</button>
       </div>

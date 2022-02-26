@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import '../style/web/eachDetail.css';
-import '../style/mobile/eachDetail_m.css';
+import '../style/web/component/eachDetail.css';
+import '../style/mobile/component/eachDetail_m.css';
 
 const EachDetail = ({detailDeck, showDetail}) => {
   const [currentDetail, setCurrentDetail] = useState(0);
