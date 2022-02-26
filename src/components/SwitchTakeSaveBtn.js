@@ -1,4 +1,6 @@
 import React from 'react';
+import '../style/web/component/switchTakeSaveBtn.css';
+import '../style/mobile/component/switchTakeSaveBtn_m.css';
 
 const SwitchTakeSaveBtn = ({savedReck, showSpread, takeScreenshot, imgsrcToLoad, preventEmpty}) => {
 

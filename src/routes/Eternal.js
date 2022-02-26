@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useRef, useState } from 'react';
 import EachDetail from '../components/EachDetail';
 import EterZero from '../components/eters/EterZero';
 import EterOne from '../components/eters/EterOne';
@@ -17,10 +17,10 @@ import Screenshots from '../components/Screenshots';
 import ClickedReck from '../components/ClickedReck';
 
 // CSS
-import "../style/web/eternal2.css";
-import "../style/mobile/eternal2_m.css";
-import "../style/web/eachEter.css";
-import "../style/mobile/eachEter_m.css";
+import "../style/web/route/eternal.css";
+import "../style/mobile/route/eternal_m.css";
+import "../style/web/component/eachEter.css";
+import "../style/mobile/component/eachEter_m.css";
 
 // 함수_리펙토링
 import ToggleDetail from '../function/ToggleDetail.js';
@@ -34,7 +34,7 @@ import Exhi_RECK from '../data/Exhi_RECK';
 // 방법1 리렌더링 안되게 className으로 보였다 안보였다 하기
 // 방법2 그냥 화면 나누기 => 안이쁘다.
 
-const Eternal2 = () =>  {
+const Eternal = () =>  {
   const [savedReck, setSavedReck] = useState([]);
 
   // 이거 수정해야 함. 리 렌더링 시 안바뀜
@@ -47,23 +47,20 @@ const Eternal2 = () =>  {
       setSavedReck(newReck);
     };
   };
-  useEffect(() => {
-    console.log("savedReck 감지",savedReck);
-  }, [savedReck])
 
-const showSpread = () => {
+  const showSpread = () => {
   if (ref.current.className === "eter_spreadH"){
-    ref.current.className = "eter_reck"
+    ref.current.className = "section_reck"
     ref2.current.className = "eter_spreadH"
     screenshot_ref.current.className = "screenshot_reck"
     clicked_ref.current.className = "eter_spreadH"
   } else{
     ref.current.className = "eter_spreadH"
-    ref2.current.className = "eter_reck"
+    ref2.current.className = "section_reck"
     screenshot_ref.current.className = "eter_spreadH"
     clicked_ref.current.className = "clicked_reck"
   };
-}
+  }
 
 const ref = useRef(null);
 const ref2 = useRef(null);
@@ -95,15 +92,15 @@ const screenshot_ref = useRef(null);
 
 
   return (
-    <section className="section_eter">
-      <div className="eter_title">
+    <section className="section">
+      <div className="section_title">
         <h1><span>Hwang's Manual of</span> Eternal Classics</h1>
         <button onClick={toggleDetailPack[1]}>i</button>
       </div>
       <div className="eter_spreadH" ref={ref}>
         <Spread savedReck={savedReck} setSavedReck={setSavedReck} / >
       </div>
-      <div className="eter_reck" ref={ref2}>
+      <div id="eter_reck" className="section_reck" ref={ref2}>
         <EterZero saveReck={saveReck}/>
         <EterFour saveReck={saveReck}/>
         <EterOne saveReck={saveReck}/>
@@ -137,5 +134,5 @@ const screenshot_ref = useRef(null);
   );
 }
 
-export default Eternal2;
+export default Eternal;
 

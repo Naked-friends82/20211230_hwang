@@ -1,11 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 import ExhiInfo from '../components/ExhiInfo';
 import hungry from '../asset/group/poster_hungry.jpg';
 import sing from '../asset/group/poster_sing.jpg';
 import hang from '../asset/group/poster_hang.jpg';
 import death from '../asset/group/poster_death.jpg';
-import '../style/web/group.css'
-import '../style/mobile/group_m.css'
+// CSS
+import '../style/web/route/group.css'
+import '../style/mobile/route/group_m.css'
 //function
 import ShiftInfo from '../function/ShiftInfo';
 //data
@@ -22,11 +23,11 @@ const Group = () =>  {
 
 
   return (
-    <section className="section_group">
-      <div className="group_title">
+    <section className="section">
+      <div className="section_title">
         <h1>Group Exhibitions</h1>
       </div>
-      <div className="group_reck">
+      <div className="section_reck">
           <div className="each_group">
             <img className="group_img" src={death} alt="나의 사인이 너와 같다면" onMouseEnter={shiftInfoPack[1]} />
           </div>

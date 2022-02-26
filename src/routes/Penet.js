@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef } from 'react';
 import EachDetail from '../components/EachDetail';
 import Exhi_RECK from '../data/Exhi_RECK';
 
@@ -25,8 +25,8 @@ import spo_3 from '../asset/penet/spotlight3.png'
 import gra_1 from '../asset/penet/grass.jpg'
 
 // CSS
-import "../style/web/penet.css";
-import "../style/mobile/penet_m.css";
+import "../style/web/route/penet.css";
+import "../style/mobile/route/penet_m.css";
 
 // 함수_리펙토링
 import ShiftThumb from '../function/ShiftThumb.js';
@@ -182,23 +182,23 @@ const Penet = () =>  {
   const detailDeck = Exhi_RECK(1)
 
   return (
-    <section className="section_penet">
-      <div className="penet_title">
+    <section className="section">
+      <div className="section_title">
         <h1>Penetrating Stone</h1>
         <button onClick={toggleDetailPack[1]}>i</button>
       </div>
-      <div className="penet_reck">
-        <iframe className='penet_reck_video' src="https://www.youtube.com/embed/0xzx0hLralY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ref={penet_video} alt="Penetrating Stone"></iframe>
-        {PENET_RECK.map((each) => {
-            return <img className="penet_reck_each" src={each.src} alt={each.title+each.caption} ref={each.ref} />
+      <div className="section_reck">
+        <iframe className='penet_reck_video' src="https://www.youtube.com/embed/0xzx0hLralY" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen ref={penet_video} alt="Penetrating Stone"></iframe>
+        {PENET_RECK.map((each, index) => {
+            return <img key={index} className="penet_reck_each" src={each.src} alt={each.title+each.caption} ref={each.ref} />
           })}
       </div>
       <div className="img_info">
         <span>{shiftThumbPack[0]}</span>
       </div>
-      <div className="penet_thumbnail">
-        {PENET_RECK.map((each) => {
-            return <img className={shiftThumbPack[0] === each.title+each.caption ? "penet_thumbnail_each":"penet_thumbnail_each filter"} src={each.src} alt={each.title+each.caption} onClick={shiftThumbPack[1]} />
+      <div className="thumbnail">
+        {PENET_RECK.map((each, index) => {
+            return <img key={index} className={shiftThumbPack[0] === each.title+each.caption ? "thumbnail_each":"thumbnail_each filter"} src={each.src} alt={each.title+each.caption} onClick={shiftThumbPack[1]} />
           })}
       </div>
       {

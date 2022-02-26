@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import ExhiInfo from '../components/ExhiInfo';
 import omma_main from '../asset/main/omma_main.png';
@@ -10,8 +10,9 @@ import eternal_sec from '../asset/main/eternal_sec.jpg';
 import group_death from '../asset/main/group_death.jpg';
 import group_hang from '../asset/main/group_hang.jpg';
 import exhibi_main from '../asset/main/exhibi_main.jpg';
-import '../style/web/works.css';
-import '../style/mobile/works_m.css';
+// CSS
+import '../style/web/route/works.css';
+import '../style/mobile/route/works_m.css';
 // function
 import { useHorizontalScroll } from "../function/scroll";
 import ShiftInfo from '../function/ShiftInfo';
@@ -28,40 +29,30 @@ const Works = () =>  {
   const scrollRef = useHorizontalScroll();
 
   return (
-    <section className="section_works">
-      <div className="works_title">
+    <section className="section">
+      <div className="section_title">
         <h1>HWANG KYU MIN</h1>
         <button>i</button>
       </div>
-      <div className="works_exhi" ref={scrollRef}>
-        <Link to='/muhmdapinammo'>
-          <div className="img_index">
+      <div className="section_reck" ref={scrollRef}>
+        <Link to='/muhmdapinammo' className="img_index">
             <img className="works_exhi_index1" src={omma_main} alt="MUH EMDAP INAM MO" />
             <img className="works_exhi_index2" src={omma_sec} alt="MUH EMDAP INAM MO" onMouseEnter={shiftInfoPack[1]} />
-          </div>
         </Link>
-        <Link to='/penetrating_stone'>
-          <div className="img_index">
+        <Link to='/penetrating_stone' className="img_index">
             <img className="works_exhi_index1" src={penet_main} alt="Penetrating Stone" />
             <img className="works_exhi_index2" src={penet_sec} alt="Penetrating Stone" onMouseEnter={shiftInfoPack[1]} />
-          </div>
         </Link>
-        <Link to='/eternal_classics'>
-          <div className="img_index">
+        <Link to='/eternal_classics' className="img_index">
             <img className="works_exhi_index1" src={eternal_main} alt="Eternal classics" />
             <img className="works_exhi_index2" src={eternal_sec} alt="Eternal classics" onMouseEnter={shiftInfoPack[1]} />
-          </div>
         </Link>
-        <Link to='/group_exhibitions' className='link_index'>
-          <div className="img_index">
+        <Link to='/group_exhibitions' className="img_index">
             <img className="works_exhi_index1" src={group_death} alt="Group Exhibitions" />
             <img className="works_exhi_index2" src={group_hang} alt="Group Exhibitions" onMouseEnter={shiftInfoPack[1]} />
-          </div>
         </Link>
-        <Link to='/exhibition'>
-          <div className="img_index">
+        <Link to='/exhibition' className="img_index">
             <img className="works_exhi_index1" src={exhibi_main} alt="Exhibition Detail" onMouseEnter={shiftInfoPack[1]} />
-          </div>
         </Link>
       </div>
       <ExhiInfo info={shiftInfoPack[0]} />

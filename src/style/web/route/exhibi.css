@@ -1,31 +1,3 @@
-.section_exhibi {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-.exhibi_title {
-  height: 10%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-.exhibi_title h1 {
-  margin-left: 30px;
-}
-.exhibi_title button {
-  width: 30px;
-  height: 30px;
-  margin-right: 20px;
-  border: none;
-  background-color: var(--color-white);
-  border-radius: 5rem;
-  cursor: pointer;
-}
-.exhibi_title button:hover {
-  transform: scale(1.16);
-  transition: all 200ms ease-in-out;
-}
 .exhibi_reck {
   height: 86%;
   display: flex;
