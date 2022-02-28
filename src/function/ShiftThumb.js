@@ -1,4 +1,6 @@
 import { useEffect, useState } from 'react';
+import { scrollIntoView } from "seamless-scroll-polyfill";
+
 
 const ShiftThumb = (initial_value, ref_deck) => {
   const [thumb, setThumb] = useState(initial_value);
@@ -6,7 +8,9 @@ const ShiftThumb = (initial_value, ref_deck) => {
   useEffect(() => {
     for(let i = 0; i < ref_deck.length; i++ ){
       if (thumb === ref_deck[i].current.alt){
-        ref_deck[i].current.scrollIntoView({behavior: "smooth", inline: "center"});
+        // safari, chrome 둘 다 작동한다.
+        scrollIntoView(ref_deck[i].current,{behavior: "smooth", block: "center", inline: "center"});
+        // ref_deck[i].current.scrollIntoView({behavior: "smooth", inline: "center"});
       }
     }
   }, [thumb])
