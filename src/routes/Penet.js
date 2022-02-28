@@ -185,7 +185,7 @@ const Penet = () =>  {
     <section className="section">
       <div className="section_title">
         <h1>Penetrating Stone</h1>
-        <button onClick={toggleDetailPack[1]}>i</button>
+        <button onClick={toggleDetailPack[1]}><span>i</span></button>
       </div>
       <div className="section_reck">
         <iframe className='penet_reck_video' src="https://www.youtube.com/embed/0xzx0hLralY" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen ref={penet_video} alt="Penetrating Stone"></iframe>

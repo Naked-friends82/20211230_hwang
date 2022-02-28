@@ -95,7 +95,7 @@ const screenshot_ref = useRef(null);
     <section className="section">
       <div className="section_title">
         <h1><span>Hwang's Manual of</span> Eternal Classics</h1>
-        <button onClick={toggleDetailPack[1]}>i</button>
+        <button onClick={toggleDetailPack[1]}><span>i</span></button>
       </div>
       <div className="eter_spreadH" ref={ref}>
         <Spread savedReck={savedReck} setSavedReck={setSavedReck} / >
