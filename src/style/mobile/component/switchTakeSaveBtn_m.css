@@ -1,10 +1,16 @@
 @media screen and (max-width: 768px) {
   .eter_btn {
     position: relative;
+    width: 32px;
+    height: 32px;
+    margin-right: 18px;
   }
   .push {
+    width: 16px;
+    height: 16px;
   }
   .fontAwesome {
+    font-size: var(--font-small);
   }
 }
 @media screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
