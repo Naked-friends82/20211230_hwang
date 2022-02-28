@@ -1,35 +1,16 @@
 @media screen and (max-width: 768px) {
-  .eter_btns {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    margin: 10px 0px;
-  }
   .eter_btn {
     position: relative;
-    width: 40px;
-    height: 40px;
-    margin-right: 20px;
-    border: none;
-    background-color: var(--color-white);
-    border-radius: 5rem;
-    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    margin-right: 18px;
   }
   .push {
-    position: absolute;
-    top: -6px;
-    right: -6px;
-    padding: 2px;
-    width: 20px;
-    height: 20px;
-    border: none;
-    border-radius: 5rem;
-    background-color: var(--color-red);
-    color: var(--color-white);
+    width: 16px;
+    height: 16px;
   }
-
   .fontAwesome {
-    font-size: var(--font-medium);
+    font-size: var(--font-small);
   }
 }
 @media screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {

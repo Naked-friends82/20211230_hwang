@@ -3,7 +3,7 @@
 }
 /* 통일성을 위해 22vh에서 16%로 변경 */
 .screenshot_reck {
-  height: 16%;
+  height: 22vh;
   display: flex;
   flex-direction: row;
   justify-content: center;

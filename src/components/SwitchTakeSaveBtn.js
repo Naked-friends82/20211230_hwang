@@ -13,15 +13,21 @@ const SwitchTakeSaveBtn = ({savedReck, showSpread, takeScreenshot, imgsrcToLoad,
             {savedReck.length}
           </button> 
           : <></>}
-        <i className="fontAwesome fas fa-exchange-alt" />
+        <span>
+          <i className="fontAwesome fas fa-exchange-alt" />
+        </span>
       </button>
       <button className="eter_btn" onClick={takeScreenshot}>
-        <i className="fontAwesome fas fa-camera" />
+        <span>
+          <i className="fontAwesome fas fa-camera" />
+        </span>
       </button> 
       <button className="eter_btn">
-        <a className='btn_a' href={imgsrcToLoad} download onClick={preventEmpty}>
-          <i className="fontAwesome far fa-save" />
-        </a>
+        <span>
+          <a href={imgsrcToLoad} download onClick={preventEmpty}>
+            <i className="fontAwesome far fa-save" />
+          </a>
+        </span>
       </button>
     </div>
     </>
