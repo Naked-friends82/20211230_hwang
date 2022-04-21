@@ -1,18 +1,28 @@
 import React from 'react';
+//redux
+import { connect } from 'react-redux';
 
-const ClickedReck = ({savedReck, clicked_ref}) => {
+const ClickedReck = ({savedReck_rdx ,clicked_ref}) => {
+  const removeAlert = () => {
+    alert("If you want remove this img, Click in upper side")
+  }
 
   return(
     <div className="clicked_reck" ref={clicked_ref}>
-      {savedReck.map((section,index) => 
+      {savedReck_rdx.map((section) => 
           <img 
-            key = {index}
+            key = {section.id}
             className="clicked_img"
+            onClick={removeAlert}
             src={section.src}
-            alt="saved Img" />
+            alt='cliced_img' />
       )}
     </div>
   )
 }
 
-export default ClickedReck
+const mapStateToProps = (state) => {
+  return {savedReck_rdx: state}
+}
+
+export default connect(mapStateToProps)(ClickedReck)

@@ -10,26 +10,27 @@ import {createStore} from 'redux';
 const ADD  = 'ADD';
 const DELETE = 'DELETE';
 
-const addImg = (src) => {
+const addImg = (imgId,src) => {
   return {
     type: ADD,
+    imgId,
     src
   }
 }
 
-const deleteImg = (id) => {
+const deleteImg = (imgId) => {
   return {
     type: DELETE,
-    id: parseInt(id)
+    imgId
   }
 }
 
 const savedReck_reducer = (state = [], action) =>{
   switch(action.type){
     case ADD:
-      return[{ src: action.src, id: Date.now() }, ...state];
+      return[...state,{ id: Date.now() , imgId: action.imgId, src: action.src }];
     case DELETE:
-      return state.filter(img => img.id !== action.id);
+      return state.filter(img => img.imgId !== action.imgId);
     default:
       return state
   }
