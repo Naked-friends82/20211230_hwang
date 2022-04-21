@@ -6,12 +6,12 @@ const convertProps = (savedReck_rdx,IMG_RECK) => {
   }
   for (const eachImg of IMG_RECK){
     if (tmp.includes(eachImg.id)){
-      if (eachImg.className[0] === 'dragablImg'){
-        eachImg.func(['dragablImg filter', 'false']);
+      if (eachImg.className === 'dragablImg'){
+        eachImg.func('dragablImg filter');
       }
     } else{
-      if (eachImg.className[0] = 'dragablImg filter'){
-        eachImg.func(['dragablImg', 'img']);
+      if (eachImg.className === 'dragablImg filter'){
+        eachImg.func('dragablImg');
       }
     }
   }

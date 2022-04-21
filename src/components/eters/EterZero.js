@@ -4,17 +4,16 @@ import zero_2 from '../../asset/eter/zero/zero_2.jpg';
 import zero_3 from '../../asset/eter/zero/zero_3.jpg';
 //redux
 import { connect } from 'react-redux';
-import { actionCreators } from '../../store.js';
 
 // 함수_리펙토링
-import convertProps from '../../function/ConvertProps.js'
+import convertProps from '../../function/ConvertProps.js';
 
 
 
 const EterZero = ({saveOrRemove,savedReck_rdx}) => {
-  const [classAlt1,setClassAlt1] = useState(['dragablImg','img']);
-  const [classAlt2,setClassAlt2] = useState(['dragablImg','img']);
-  const [classAlt3,setClassAlt3] = useState(['dragablImg','img']);
+  const [classAlt1,setClassAlt1] = useState('dragablImg');
+  const [classAlt2,setClassAlt2] = useState('dragablImg');
+  const [classAlt3,setClassAlt3] = useState('dragablImg');
 
   const ZERO_RECK = [
     {
@@ -54,13 +53,13 @@ const EterZero = ({saveOrRemove,savedReck_rdx}) => {
         
       </div>
       <div className="grid_item4">
-        <img className={classAlt1[0]} id={ZERO_RECK[0].id} onClick={saveOrRemove} src={ZERO_RECK[0].src} alt={classAlt1[2]} />
+        <img className={classAlt1} id={ZERO_RECK[0].id} onClick={saveOrRemove} src={ZERO_RECK[0].src} alt='img' />
       </div>
       <div className="grid_item5">
-        <img className={classAlt2[0]} id={ZERO_RECK[1].id} onClick={saveOrRemove} src={ZERO_RECK[1].src} alt={classAlt2[2]} />
+        <img className={classAlt2} id={ZERO_RECK[1].id} onClick={saveOrRemove} src={ZERO_RECK[1].src} alt='img' />
       </div>
       <div className="grid_item6">
-        <img className={classAlt3[0]} id={ZERO_RECK[2].id} onClick={saveOrRemove} src={ZERO_RECK[2].src} alt={classAlt3[2]} />
+        <img className={classAlt3} id={ZERO_RECK[2].id} onClick={saveOrRemove} src={ZERO_RECK[2].src} alt='img' />
       </div>
       <div className="grid_item7">
         
@@ -87,10 +86,5 @@ const EterZero = ({saveOrRemove,savedReck_rdx}) => {
 const mapStateToProps = (state,ownProps) => {
   return {savedReck_rdx: state}
 }
-const mapDispatchToProps = (dispatch,ownProps) => {
-  return {
-    addToSavedReck: (imgId) => dispatch(actionCreators.addImg(imgId))
-  };
-}
 
-export default connect(mapStateToProps,mapDispatchToProps)(EterZero);
+export default connect(mapStateToProps)(EterZero);
