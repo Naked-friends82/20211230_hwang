@@ -168,61 +168,61 @@ const EterOne = ({saveOrRemove,savedReck_rdx}) => {
       
       </div>
       <div className="grid_item2">
-        <img className={classAlt1} id={ONE_RECK[0].id} onClick={saveOrRemove} src={ONE_RECK[0].src} alt="img" />
+        <img className={ONE_RECK[0].className} id={ONE_RECK[0].id} onClick={saveOrRemove} src={ONE_RECK[0].src} alt="img" />
       </div>
       <div className="grid_item3">
-        <img className={classAlt2} id={ONE_RECK[1].id} onClick={saveOrRemove} src={ONE_RECK[1].src} alt="img" />
+        <img className={ONE_RECK[1].className} id={ONE_RECK[1].id} onClick={saveOrRemove} src={ONE_RECK[1].src} alt="img" />
       </div>
       <div className="grid_item4">
-        <img className={classAlt3} id={ONE_RECK[2].id} onClick={saveOrRemove} src={ONE_RECK[2].src} alt="img" />
+        <img className={ONE_RECK[2].className} id={ONE_RECK[2].id} onClick={saveOrRemove} src={ONE_RECK[2].src} alt="img" />
       </div>
       <div className="grid_item5">
-        <img className={classAlt4} id={ONE_RECK[3].id} onClick={saveOrRemove} src={ONE_RECK[3].src} alt="img" />
+        <img className={ONE_RECK[3].className} id={ONE_RECK[3].id} onClick={saveOrRemove} src={ONE_RECK[3].src} alt="img" />
       </div>
       <div className="grid_item6">
         
       </div>
       <div className="grid_item7">
-        <img className={classAlt5} id={ONE_RECK[4].id} onClick={saveOrRemove} src={ONE_RECK[4].src} alt="img" />
+        <img className={ONE_RECK[4].className} id={ONE_RECK[4].id} onClick={saveOrRemove} src={ONE_RECK[4].src} alt="img" />
       </div>
       <div className="grid_item8">
-        <img className={classAlt6} id={ONE_RECK[5].id} onClick={saveOrRemove} src={ONE_RECK[5].src} alt="img" />
+        <img className={ONE_RECK[5].className} id={ONE_RECK[5].id} onClick={saveOrRemove} src={ONE_RECK[5].src} alt="img" />
       </div>
       <div className="grid_item9">
-        <img className={classAlt7} id={ONE_RECK[6].id} onClick={saveOrRemove} src={ONE_RECK[6].src} alt="img" />
+        <img className={ONE_RECK[6].className} id={ONE_RECK[6].id} onClick={saveOrRemove} src={ONE_RECK[6].src} alt="img" />
       </div>
       <div className="grid_item10">
-        <img className={classAlt8} id={ONE_RECK[7].id} onClick={saveOrRemove} src={ONE_RECK[7].src} alt="img" />
+        <img className={ONE_RECK[7].className} id={ONE_RECK[7].id} onClick={saveOrRemove} src={ONE_RECK[7].src} alt="img" />
       </div>
       <div className="grid_item11">
-        <img className={classAlt9} id={ONE_RECK[8].id} onClick={saveOrRemove} src={ONE_RECK[8].src} alt="img" />
+        <img className={ONE_RECK[8].className} id={ONE_RECK[8].id} onClick={saveOrRemove} src={ONE_RECK[8].src} alt="img" />
       </div>
       <div className="grid_item12">
-        <img className={classAlt10} id={ONE_RECK[9].id} onClick={saveOrRemove} src={ONE_RECK[9].src} alt="img" />
+        <img className={ONE_RECK[9].className} id={ONE_RECK[9].id} onClick={saveOrRemove} src={ONE_RECK[9].src} alt="img" />
       </div>
       <div className="grid_item13">
-        <img className={classAlt11} id={ONE_RECK[10].id} onClick={saveOrRemove} src={ONE_RECK[10].src} alt="img" />
+        <img className={ONE_RECK[10].className} id={ONE_RECK[10].id} onClick={saveOrRemove} src={ONE_RECK[10].src} alt="img" />
       </div>
       <div className="grid_item14">
-        <img className={classAlt12} id={ONE_RECK[11].id} onClick={saveOrRemove} src={ONE_RECK[11].src} alt="img" />
+        <img className={ONE_RECK[11].className} id={ONE_RECK[11].id} onClick={saveOrRemove} src={ONE_RECK[11].src} alt="img" />
       </div>
       <div className="grid_item15">
-        <img className={classAlt13} id={ONE_RECK[12].id} onClick={saveOrRemove} src={ONE_RECK[12].src} alt="img" />
+        <img className={ONE_RECK[12].className} id={ONE_RECK[12].id} onClick={saveOrRemove} src={ONE_RECK[12].src} alt="img" />
       </div>
       <div className="grid_item16">
-        <img className={classAlt14} id={ONE_RECK[13].id} onClick={saveOrRemove} src={ONE_RECK[13].src} alt="img" />
+        <img className={ONE_RECK[13].className} id={ONE_RECK[13].id} onClick={saveOrRemove} src={ONE_RECK[13].src} alt="img" />
       </div>
       <div className="grid_item17">
-        <img className={classAlt15} id={ONE_RECK[14].id} onClick={saveOrRemove} src={ONE_RECK[14].src} alt="img" />
+        <img className={ONE_RECK[14].className} id={ONE_RECK[14].id} onClick={saveOrRemove} src={ONE_RECK[14].src} alt="img" />
       </div>
       <div className="grid_item18">
-        <img className={classAlt16} id={ONE_RECK[15].id} onClick={saveOrRemove} src={ONE_RECK[15].src} alt="img" />
+        <img className={ONE_RECK[15].className} id={ONE_RECK[15].id} onClick={saveOrRemove} src={ONE_RECK[15].src} alt="img" />
       </div>
       <div className="grid_item19">
-        <img className={classAlt17} id={ONE_RECK[16].id} onClick={saveOrRemove} src={ONE_RECK[16].src} alt="img" />
+        <img className={ONE_RECK[16].className} id={ONE_RECK[16].id} onClick={saveOrRemove} src={ONE_RECK[16].src} alt="img" />
       </div>
       <div className="grid_item20">
-        <img className={classAlt18} id={ONE_RECK[17].id} onClick={saveOrRemove} src={ONE_RECK[17].src} alt="img" />
+        <img className={ONE_RECK[17].className} id={ONE_RECK[17].id} onClick={saveOrRemove} src={ONE_RECK[17].src} alt="img" />
       </div>
     </div>
   );
