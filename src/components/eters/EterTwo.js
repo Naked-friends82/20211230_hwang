@@ -114,64 +114,64 @@ const EterTwo = ({saveOrRemove,savedReck_rdx}) => {
   return(
     <div className="eterTwo_grid_container">
       <div className="grid_item1">
-        <img className={classAlt1} id={TWO_RECK[0].id} onClick={saveOrRemove} src={TWO_RECK[0].src} alt="img" />
+        <img className={TWO_RECK[0].className} id={TWO_RECK[0].id} onClick={saveOrRemove} src={TWO_RECK[0].src} alt="img" />
       </div>
       <div className="grid_item2">
 
       </div>
       <div className="grid_item3">
-        <img className={classAlt2} id={TWO_RECK[1].id} onClick={saveOrRemove} src={TWO_RECK[1].src} alt="img" />
+        <img className={TWO_RECK[1].className} id={TWO_RECK[1].id} onClick={saveOrRemove} src={TWO_RECK[1].src} alt="img" />
       </div>
       <div className="grid_item4">
       
       </div>
       <div className="grid_item5">
-      <img className={classAlt3} id={TWO_RECK[2].id} onClick={saveOrRemove} src={TWO_RECK[2].src} alt="img" />
+      <img className={TWO_RECK[2].className} id={TWO_RECK[2].id} onClick={saveOrRemove} src={TWO_RECK[2].src} alt="img" />
       </div>
       <div className="grid_item6">
-        <img className={classAlt4} id={TWO_RECK[3].id} onClick={saveOrRemove} src={TWO_RECK[3].src} alt="img" />
+        <img className={TWO_RECK[3].className} id={TWO_RECK[3].id} onClick={saveOrRemove} src={TWO_RECK[3].src} alt="img" />
       </div>
       <div className="grid_item7">
         
       </div>
       <div className="grid_item8">
-        <img className={classAlt5} id={TWO_RECK[4].id} onClick={saveOrRemove} src={TWO_RECK[4].src} alt="img" />
+        <img className={TWO_RECK[4].className} id={TWO_RECK[4].id} onClick={saveOrRemove} src={TWO_RECK[4].src} alt="img" />
       </div>
       <div className="grid_item9">
         
       </div>
       <div className="grid_item10">
-        <img className={classAlt6} id={TWO_RECK[5].id} onClick={saveOrRemove} src={TWO_RECK[5].src} alt="img" />
+        <img className={TWO_RECK[5].className} id={TWO_RECK[5].id} onClick={saveOrRemove} src={TWO_RECK[5].src} alt="img" />
       </div>
       <div className="grid_item11">
         
       </div>
       <div className="grid_item12">
-        <img className={classAlt7} id={TWO_RECK[6].id} onClick={saveOrRemove} src={TWO_RECK[6].src} alt="img" />
+        <img className={TWO_RECK[6].className} id={TWO_RECK[6].id} onClick={saveOrRemove} src={TWO_RECK[6].src} alt="img" />
       </div>
       <div className="grid_item13">
-        <img className={classAlt8} id={TWO_RECK[7].id} onClick={saveOrRemove} src={TWO_RECK[7].src} alt="img" />
+        <img className={TWO_RECK[7].className} id={TWO_RECK[7].id} onClick={saveOrRemove} src={TWO_RECK[7].src} alt="img" />
       </div>
       <div className="grid_item14">
-        <img className={classAlt9} id={TWO_RECK[8].id} onClick={saveOrRemove} src={TWO_RECK[8].src} alt="img" />
+        <img className={TWO_RECK[8].className} id={TWO_RECK[8].id} onClick={saveOrRemove} src={TWO_RECK[8].src} alt="img" />
       </div>
       <div className="grid_item15">
         
       </div>
       <div className="grid_item16">
-        <img className={classAlt10} id={TWO_RECK[9].id} onClick={saveOrRemove} src={TWO_RECK[9].src} alt="img" />
+        <img className={TWO_RECK[9].className} id={TWO_RECK[9].id} onClick={saveOrRemove} src={TWO_RECK[9].src} alt="img" />
       </div>
       <div className="grid_item17">
         
       </div>
       <div className="grid_item18">
-        <img className={classAlt11} id={TWO_RECK[10].id} onClick={saveOrRemove} src={TWO_RECK[10].src} alt="img" />
+        <img className={TWO_RECK[10].className} id={TWO_RECK[10].id} onClick={saveOrRemove} src={TWO_RECK[10].src} alt="img" />
       </div>
       <div className="grid_item19">
         
       </div>
       <div className="grid_item20">
-        <img className={classAlt12} id={TWO_RECK[11].id} onClick={saveOrRemove} src={TWO_RECK[11].src} alt="img" />
+        <img className={TWO_RECK[11].className} id={TWO_RECK[11].id} onClick={saveOrRemove} src={TWO_RECK[11].src} alt="img" />
       </div>
       {/* <div className="grid_item21">
         
