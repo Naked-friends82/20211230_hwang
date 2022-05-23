@@ -53,13 +53,13 @@ const EterZero = ({saveOrRemove,savedReck_rdx}) => {
         
       </div>
       <div className="grid_item4">
-        <img className={classAlt1} id={ZERO_RECK[0].id} onClick={saveOrRemove} src={ZERO_RECK[0].src} alt='img' />
+        <img className={ZERO_RECK[0].className} id={ZERO_RECK[0].id} onClick={saveOrRemove} src={ZERO_RECK[0].src} alt='img' />
       </div>
       <div className="grid_item5">
-        <img className={classAlt2} id={ZERO_RECK[1].id} onClick={saveOrRemove} src={ZERO_RECK[1].src} alt='img' />
+        <img className={ZERO_RECK[1].className} id={ZERO_RECK[1].id} onClick={saveOrRemove} src={ZERO_RECK[1].src} alt='img' />
       </div>
       <div className="grid_item6">
-        <img className={classAlt3} id={ZERO_RECK[2].id} onClick={saveOrRemove} src={ZERO_RECK[2].src} alt='img' />
+        <img className={ZERO_RECK[2].className} id={ZERO_RECK[2].id} onClick={saveOrRemove} src={ZERO_RECK[2].src} alt='img' />
       </div>
       <div className="grid_item7">
         
