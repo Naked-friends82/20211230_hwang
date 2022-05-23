@@ -60,10 +60,10 @@ const EterFour = ({saveOrRemove,savedReck_rdx}) => {
     },
   ];
 
-    //savedReck_rdx의 변화감지
-    useEffect(() => {
-      convertProps(savedReck_rdx, FOUR_RECK)
-    },[savedReck_rdx]);
+  //savedReck_rdx의 변화감지
+  useEffect(() => {
+    convertProps(savedReck_rdx, FOUR_RECK)
+  },[savedReck_rdx]);
 
   return(
     <div className="eterFour_grid_container">
@@ -104,22 +104,22 @@ const EterFour = ({saveOrRemove,savedReck_rdx}) => {
         
       </div>
       <div className="grid_item13">
-        <img className={classAlt1} id={FOUR_RECK[0].id} onClick={saveOrRemove} src={FOUR_RECK[0].src} alt='img' />
+        <img className={FOUR_RECK[0].className} id={FOUR_RECK[0].id} onClick={saveOrRemove} src={FOUR_RECK[0].src} alt='img' />
       </div>
       <div className="grid_item14">
-        <img className={classAlt2} id={FOUR_RECK[1].id} onClick={saveOrRemove} src={FOUR_RECK[1].src} alt='img' />
+        <img className={FOUR_RECK[1].className} id={FOUR_RECK[1].id} onClick={saveOrRemove} src={FOUR_RECK[1].src} alt='img' />
       </div>
       <div className="grid_item15">
-        <img className={classAlt3} id={FOUR_RECK[2].id} onClick={saveOrRemove} src={FOUR_RECK[2].src} alt='img' />
+        <img className={FOUR_RECK[2].className} id={FOUR_RECK[2].id} onClick={saveOrRemove} src={FOUR_RECK[2].src} alt='img' />
       </div>
       <div className="grid_item16">
-        <img className={classAlt4} id={FOUR_RECK[3].id} onClick={saveOrRemove} src={FOUR_RECK[3].src} alt='img' />
+        <img className={FOUR_RECK[3].className} id={FOUR_RECK[3].id} onClick={saveOrRemove} src={FOUR_RECK[3].src} alt='img' />
       </div>
       <div className="grid_item17">
-        <img className={classAlt5} id={FOUR_RECK[4].id} onClick={saveOrRemove} src={FOUR_RECK[4].src} alt='img' />
+        <img className={FOUR_RECK[4].className} id={FOUR_RECK[4].id} onClick={saveOrRemove} src={FOUR_RECK[4].src} alt='img' />
       </div>
       <div className="grid_item18">
-        <img className={classAlt6} id={FOUR_RECK[5].id} onClick={saveOrRemove} src={FOUR_RECK[5].src} alt='img' />
+        <img className={FOUR_RECK[5].className} id={FOUR_RECK[5].id} onClick={saveOrRemove} src={FOUR_RECK[5].src} alt='img' />
       </div>
       <div className="grid_item19">
         
