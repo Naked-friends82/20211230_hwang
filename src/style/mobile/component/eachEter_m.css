@@ -1,125 +1,79 @@
 @media screen and (max-width: 768px) {
   .eterZero_grid_container {
-    grid-gap: 4px;
-    grid-template-columns: 70px 70px 70px;
-    grid-template-rows: 105px 105px 105px 105px;
-    margin: 0px 16px;
+    grid-gap: 3px;
+    grid-template-columns: 60px 60px 60px;
+    grid-template-rows: 90px 90px 90px 90px;
+    margin: 0px 14px;
   }
   .eterOne_grid_container {
-    grid-gap: 4px;
-    grid-template-columns: 70px 70px 70px 70px 70px;
-    grid-template-rows: 105px 105px 105px 105px;
-    margin: 0px 16px;
+    grid-gap: 3px;
+    grid-template-columns: 60px 60px 60px 60px 60px;
+    grid-template-rows: 90px 90px 90px 90px;
+    margin: 0px 14px;
   }
   .eterTwo_grid_container {
-    grid-gap: 4px;
-    grid-template-columns: 70px 70px 70px 70px 70px;
-    grid-template-rows: 105px 105px 105px 105px;
-    margin: 0px 16px;
+    grid-gap: 3px;
+    grid-template-columns: 60px 60px 60px 60px 60px;
+    grid-template-rows: 90px 90px 90px 90px;
+    margin: 0px 14px;
   }
   .eterThree_grid_container {
-    grid-gap: 4px;
-    grid-template-columns: 70px 70px 70px 70px 70px;
-    grid-template-rows: 105px 105px 105px 105px;
-    margin: 0px 16px;
+    grid-gap: 3px;
+    grid-template-columns: 60px 60px 60px 60px 60px;
+    grid-template-rows: 90px 90px 90px 90px;
+    margin: 0px 14px;
   }
   .eterFour_grid_container {
-    grid-gap: 4px;
-    grid-template-columns: 70px 70px 70px 70px 70px 70px;
-    grid-template-rows: 105px 105px 105px 105px;
-    margin: 0px 16px;
+    grid-gap: 3px;
+    grid-template-columns: 60px 60px 60px 60px 60px 60px;
+    grid-template-rows: 90px 90px 90px 90px;
+    margin: 0px 14px;
   }
   .eterFive_grid_container {
-    grid-gap: 4px;
-    grid-template-columns: 70px 70px 70px 70px 70px;
-    grid-template-rows: 105px 105px 105px 105px;
-    margin: 0px 16px;
+    grid-gap: 3px;
+    grid-template-columns: 60px 60px 60px 60px 60px;
+    grid-template-rows: 90px 90px 90px 90px;
+    margin: 0px 14px;
   }
   .eterSix_grid_container {
-    grid-gap: 4px;
-    grid-template-columns: 70px 70px 70px;
-    grid-template-rows: 105px 105px 105px 105px;
-    margin: 0px 16px;
+    grid-gap: 3px;
+    grid-template-columns: 60px 60px 60px;
+    grid-template-rows: 90px 90px 90px 90px;
+    margin: 0px 14px;
   }
   .eterSeven_grid_container {
-    grid-gap: 4px;
-    grid-template-columns: 70px 70px 70px 70px;
-    grid-template-rows: 105px 105px 105px 105px;
-    margin: 0px 16px;
+    grid-gap: 3px;
+    grid-template-columns: 60px 60px 60px 60px;
+    grid-template-rows: 90px 90px 90px 90px;
+    margin: 0px 14px;
   }
   .eterEight_grid_container {
-    grid-gap: 4px;
-    grid-template-columns: 70px 70px 70px 70px 70px;
-    grid-template-rows: 105px 105px 105px 105px;
-    margin: 0px 16px;
+    grid-gap: 3px;
+    grid-template-columns: 60px 60px 60px 60px 60px;
+    grid-template-rows: 90px 90px 90px 90px;
+    margin: 0px 14px;
   }
   .eterNine_grid_container {
-    grid-gap: 4px;
-    grid-template-columns: 70px 70px 70px 70px;
-    grid-template-rows: 105px 105px 105px 105px;
-    margin: 0px 16px;
+    grid-gap: 3px;
+    grid-template-columns: 60px 60px 60px 60px;
+    grid-template-rows: 90px 90px 90px 90px;
+    margin: 0px 14px;
   }
   .eterTen_grid_container {
-    grid-gap: 4px;
-    grid-template-columns: 70px 70px 70px 70px;
-    grid-template-rows: 105px 105px 105px 105px;
-    margin: 0px 16px;
+    grid-gap: 3px;
+    grid-template-columns: 60px 60px 60px 60px;
+    grid-template-rows: 90px 90px 90px 90px;
+    margin: 0px 14px;
   }
 
   .dragablImg {
-    width: 70px;
-    height: 105px;
+    width: 60px;
+    height: 90px;
   }
 
-  .grid_container2 {
-    grid-template-columns: 70px 70px 70px 70px 70px 70px 70px 70px 70px;
-    grid-template-rows: 105px 105px 105px 105px;
-    overflow-x: scroll;
-    overflow-y: hidden;
-    white-space: nowrap;
-  }
-  .grid_container2::-webkit-scrollbar {
-    display: none;
-  }
-  /* .grid_container2 {
-    grid-template-columns: 60px 60px 60px 60px 60px 60px 60px 60px 60px 60px;
-    grid-template-rows: 90px 90px 90px 90px;
-    overflow-y: hidden;
-  } */
-
-  .drag_box {
-    width: 70px;
-    height: 105px;
-  }
-  .drag_handle {
-    width: 70px;
-    height: 105px;
-  }
-  .dragImg {
-    width: 70px;
-    height: 105px;
-  }
 }
 @media screen and (max-width: 558px) {
-  .grid_container2 {
-    grid-template-columns: 70px 70px 70px 70px 70px 70px 70px;
-    grid-template-rows: 105px 105px 105px 105px;
-    overflow: hidden;
-    white-space: nowrap;
-  }
-  .grid_container2::-webkit-scrollbar {
-    display: none;
-  }
 }
 
 @media screen and (max-width: 400px) {
-  .grid_container2 {
-    grid-template-columns: 70px 70px 70px 70px 70px;
-    grid-template-rows: 105px 105px 105px 105px;
-    overflow: hidden;
-    white-space: nowrap;
-  }
-  .grid_container2::-webkit-scrollbar {
-    display: none;
-  }
 }
