@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useRef, useState } from 'react';
 import EachDetail from '../components/EachDetail';
 import EterZero from '../components/eters/EterZero';
 import EterOne from '../components/eters/EterOne';
@@ -32,27 +32,21 @@ import TakeScreenshot from '../function/TakeScreenshot.js';
 //data
 import Exhi_RECK from '../data/Exhi_RECK';
 
-
-// 방법1 리렌더링 안되게 className으로 보였다 안보였다 하기
-// 방법2 그냥 화면 나누기 => 안이쁘다.
-
-const Eternal = ({savedReck_rdx, addToSavedReck,deleteToSavedReck}) =>  {
-  // savedReck_rdx에 들어갔다면 class,alt 바꾸고
-  // savedReck_rdx에 없다면 class,alt 원래대로
-  const [savedReck, setSavedReck] = useState([]);
-
+const Eternal = ({addToSavedReck,deleteToSavedReck}) =>  {
+  // redux와 통신
   const saveOrRemove = (e) => {
     const {target:{id,className,src}} = e;
     if (className === 'dragablImg'){
-      console.log('add!!')
       addToSavedReck(id,src)
     } else{
-      console.log('delete!!')
-      deleteToSavedReck(id)
+      const imgId_redux = id.split('/')[0]
+      console.log('delete!!', imgId_redux)
+      deleteToSavedReck(imgId_redux)
     }
   }
-
   
+  const [onSpread, setOnSpread] = useState([]);
+
   const ref = useRef(null);
   const ref2 = useRef(null);
   const clicked_ref = useRef(null);
@@ -88,7 +82,7 @@ const Eternal = ({savedReck_rdx, addToSavedReck,deleteToSavedReck}) =>  {
         <button onClick={toggleDetailPack[1]}><span>i</span></button>
       </div>
       <div className="eter_spreadH" ref={ref}>
-        <Spread saveOrRemove={saveOrRemove} />
+        <Spread saveOrRemove={saveOrRemove} onSpread={onSpread} setOnSpread={setOnSpread} />
       </div>
       <div id="eter_reck" className="section_reck" ref={ref2}>
         <EterZero saveOrRemove={saveOrRemove}/>
@@ -113,6 +107,10 @@ const Eternal = ({savedReck_rdx, addToSavedReck,deleteToSavedReck}) =>  {
           toLoad={saveScreenshotPack[0]} 
           setImgToLoad={saveScreenshotPack[1]} 
           screenshot_ref={screenshot_ref} /> */}
+      <ClickedReck
+        clicked_ref={clicked_ref} 
+        saveOrRemove={saveOrRemove}
+        onSpread={onSpread} />
       {
       toggleDetailPack[0] ? <EachDetail detailDeck={detailDeck} showDetail={toggleDetailPack[1]} /> : (<></>)
       }
