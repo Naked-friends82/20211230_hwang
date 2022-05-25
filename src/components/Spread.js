@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import ClassImgBtn from './ClassImgBtn.js';
 
+import '../style/web/component/spread.css';
+import '../style/mobile/component/spread_m.css';
+
 //redux
 import { connect } from 'react-redux';
 
