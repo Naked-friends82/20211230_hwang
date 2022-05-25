@@ -53,11 +53,11 @@ const Eternal = ({addToSavedReck,deleteToSavedReck}) =>  {
   
   const showSpread = () => {
     if (ref.current.className === "eter_spreadH"){
-      ref.current.className = "section_reck"
+      ref.current.className = "section_reck_eter"
       ref2.current.className = "eter_spreadH"
     } else{
       ref.current.className = "eter_spreadH"
-      ref2.current.className = "section_reck"
+      ref2.current.className = "section_reck_eter"
     };
   }
   //스크린 샷 찍기
@@ -84,7 +84,7 @@ const Eternal = ({addToSavedReck,deleteToSavedReck}) =>  {
       <div className="eter_spreadH" ref={ref}>
         <Spread saveOrRemove={saveOrRemove} onSpread={onSpread} setOnSpread={setOnSpread} />
       </div>
-      <div id="eter_reck" className="section_reck" ref={ref2}>
+      <div id="eter_reck" className="section_reck_eter" ref={ref2}>
         <EterZero saveOrRemove={saveOrRemove}/>
         <EterFour saveOrRemove={saveOrRemove}/>
         <EterOne saveOrRemove={saveOrRemove}/>

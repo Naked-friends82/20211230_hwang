@@ -5,7 +5,7 @@ import ClassImgBtn from './ClassImgBtn.js';
 import { connect } from 'react-redux';
 
 
-const Spread = ({savedReck_rdx, onSpread, setOnSpread}) => {
+const Spread = ({ref, onSpread, setOnSpread}) => {
   const [removed, setRemoved] = useState([]);
   useEffect(() => {
     if (removed.length !== 0){
@@ -51,7 +51,7 @@ const Spread = ({savedReck_rdx, onSpread, setOnSpread}) => {
   }
 
   return(
-    <div className='grid_container'>
+    <div className='grid_container' ref={ref}>
       <div className='grid_container_row'>
         <div onDrop={filterDrop} onDragOver={allowDrop} className='grid_box' data-index='0_0'></div>
         <div onDrop={filterDrop} onDragOver={allowDrop} className='grid_box' data-index='0_1'></div>

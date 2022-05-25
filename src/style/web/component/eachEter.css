@@ -1,84 +1,84 @@
 .eterZero_grid_container {
   display: grid;
-  grid-gap: 6px;
-  grid-template-columns: 80px 80px 80px;
-  grid-template-rows: 120px 120px 120px 120px;
-  margin: 0px 30px;
+  grid-gap: 4px;
+  grid-template-columns: 76px 76px 76px;
+  grid-template-rows: 114px 114px 114px 114px;
+  margin: 0px 28px;
 }
 .eterOne_grid_container {
   display: grid;
-  grid-gap: 6px;
-  grid-template-columns: 80px 80px 80px 80px 80px;
-  grid-template-rows: 120px 120px 120px 120px;
-  margin: 0px 30px;
+  grid-gap: 4px;
+  grid-template-columns: 76px 76px 76px 76px 76px;
+  grid-template-rows: 114px 114px 114px 114px;
+  margin: 0px 28px;
 }
 .eterTwo_grid_container {
   display: grid;
-  grid-gap: 6px;
-  grid-template-columns: 80px 80px 80px 80px 80px;
-  grid-template-rows: 120px 120px 120px 120px;
-  margin: 0px 30px;
+  grid-gap: 4px;
+  grid-template-columns: 76px 76px 76px 76px 76px;
+  grid-template-rows: 114px 114px 114px 114px;
+  margin: 0px 28px;
 }
 .eterThree_grid_container {
   display: grid;
-  grid-gap: 6px;
-  grid-template-columns: 80px 80px 80px 80px 80px;
-  grid-template-rows: 120px 120px 120px 120px;
-  margin: 0px 30px;
+  grid-gap: 4px;
+  grid-template-columns: 76px 76px 76px 76px 76px;
+  grid-template-rows: 114px 114px 114px 114px;
+  margin: 0px 28px;
 }
 .eterFour_grid_container {
   display: grid;
-  grid-gap: 6px;
-  grid-template-columns: 80px 80px 80px 80px 80px 80px;
-  grid-template-rows: 120px 120px 120px 120px;
-  margin: 0px 30px;
+  grid-gap: 4px;
+  grid-template-columns: 76px 76px 76px 76px 76px 76px;
+  grid-template-rows: 114px 114px 114px 114px;
+  margin: 0px 28px;
 }
 .eterFive_grid_container {
   display: grid;
-  grid-gap: 6px;
-  grid-template-columns: 80px 80px 80px 80px 80px;
-  grid-template-rows: 120px 120px 120px 120px;
-  margin: 0px 30px;
+  grid-gap: 4px;
+  grid-template-columns: 76px 76px 76px 76px 76px;
+  grid-template-rows: 114px 114px 114px 114px;
+  margin: 0px 28px;
 }
 .eterSix_grid_container {
   display: grid;
-  grid-gap: 6px;
-  grid-template-columns: 80px 80px 80px;
-  grid-template-rows: 120px 120px 120px 120px;
-  margin: 0px 30px;
+  grid-gap: 4px;
+  grid-template-columns: 76px 76px 76px;
+  grid-template-rows: 114px 114px 114px 114px;
+  margin: 0px 28px;
 }
 .eterSeven_grid_container {
   display: grid;
-  grid-gap: 6px;
-  grid-template-columns: 80px 80px 80px 80px;
-  grid-template-rows: 120px 120px 120px 120px;
-  margin: 0px 30px;
+  grid-gap: 4px;
+  grid-template-columns: 76px 76px 76px 76px;
+  grid-template-rows: 114px 114px 114px 114px;
+  margin: 0px 28px;
 }
 .eterEight_grid_container {
   display: grid;
-  grid-gap: 6px;
-  grid-template-columns: 80px 80px 80px 80px 80px;
-  grid-template-rows: 120px 120px 120px 120px;
-  margin: 0px 30px;
+  grid-gap: 4px;
+  grid-template-columns: 76px 76px 76px 76px 76px;
+  grid-template-rows: 114px 114px 114px 114px;
+  margin: 0px 28px;
 }
 .eterNine_grid_container {
   display: grid;
-  grid-gap: 6px;
-  grid-template-columns: 80px 80px 80px 80px;
-  grid-template-rows: 120px 120px 120px 120px;
-  margin: 0px 30px;
+  grid-gap: 4px;
+  grid-template-columns: 76px 76px 76px 76px;
+  grid-template-rows: 114px 114px 114px 114px;
+  margin: 0px 28px;
 }
 .eterTen_grid_container {
   display: grid;
-  grid-gap: 6px;
-  grid-template-columns: 80px 80px 80px 80px;
-  grid-template-rows: 120px 120px 120px 120px;
-  margin: 0px 30px;
+  grid-gap: 4px;
+  grid-template-columns: 76px 76px 76px 76px;
+  grid-template-rows: 114px 114px 114px 114px;
+  margin: 0px 28px;
 }
 
 .dragablImg {
-  width: 80px;
-  height: 120px;
+  width: 76px;
+  height: 114px;
   position: relative;
   cursor: move;
 }

@@ -2,7 +2,7 @@
   display: none;
 }
 /* 통일성을 위해 22vh에서 16%로 변경 */
-.screenshot_reck {
+/* .screenshot_reck {
   height: 22vh;
   display: flex;
   flex-direction: row;
@@ -11,18 +11,33 @@
   background-color: var(--color-darkgray);
   white-space: nowrap;
   overflow-x: scroll;
-}
+} */
 /* 통일성을 위해 width 제어에서 height 제어로 변경 */
-.screenshot {
+/* .screenshot {
   height: 90%;
   margin: 0px 20px;
 }
 .clickedForLoad {
   border: 2px solid black;
+} */
+.section_reck_eter{
+  height: 70%;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  white-space: nowrap;
+  overflow-x: scroll;
+  padding: 0px 10px;
+  background-color: var(--color-gray);
+}
+.section_reck_eter::-webkit-scrollbar {
+  display: none;
 }
 /* 통일성을 위해 22vh에서 16%로 변경 */
 .clicked_reck {
   height: 16%;
+  min-height: 105px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -35,8 +50,8 @@
   display: none;
 }
 .clicked_img {
-  width: 80px;
-  height: 120px;
+  width: 70px;
+  height: 105px;
   margin: 0px 4px;
 }
 .grid_container{
@@ -60,10 +75,10 @@
   flex-direction: row;
 }
 .grid_box{
-  width: 80px;
-  height: 120px;
+  width: 76px;
+  height: 114px;
   cursor: pointer;
-  margin: 4px;
+  margin: 2px 8px;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
@@ -77,8 +92,8 @@
   transform: translate(-50%, -50%);
 }
 .drag_img{
-  width: 80px;
-  height: 120px;
+  width: 76px;
+  height: 114px;
   margin: 0px;
 }
 .img_btn_reck{
