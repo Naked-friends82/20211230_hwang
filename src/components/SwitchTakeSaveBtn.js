@@ -13,7 +13,9 @@ const SwitchTakeSaveBtn = ({savedReck_rdx, showSpread, takeAndSave, screenshot, 
         <i className='fontAwesome fas fa-exchange-alt'/>
         {savedReck_rdx.length !== 0 ? 
           <div className="push">
-            {savedReck_rdx.length}
+            <span>
+              {savedReck_rdx.length}
+            </span>
           </div> 
           : <></>}
       </button>
