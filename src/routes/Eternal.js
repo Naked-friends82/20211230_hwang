@@ -13,7 +13,6 @@ import EterNine from '../components/eters/EterNine';
 import EterTen from '../components/eters/EterTen';
 import Spread from '../components/Spread';
 import SwitchTakeSaveBtn from '../components/SwitchTakeSaveBtn';
-import Screenshots from '../components/Screenshots';
 import ClickedReck from '../components/ClickedReck';
 
 //redux
@@ -28,8 +27,7 @@ import "../style/mobile/component/eachEter_m.css";
 
 // 함수_리펙토링
 import ToggleDetail from '../function/ToggleDetail.js';
-import TakeScreenshot from '../function/TakeScreenshot';
-import SaveScreenshot from '../function/SaveScreenshot';
+import TakeScreenshot from '../function/TakeScreenshot.js';
 
 //data
 import Exhi_RECK from '../data/Exhi_RECK';
@@ -58,36 +56,22 @@ const Eternal = ({savedReck_rdx, addToSavedReck,deleteToSavedReck}) =>  {
   const ref = useRef(null);
   const ref2 = useRef(null);
   const clicked_ref = useRef(null);
-  const screenshot_ref = useRef(null);
   
   const showSpread = () => {
     if (ref.current.className === "eter_spreadH"){
       ref.current.className = "section_reck"
       ref2.current.className = "eter_spreadH"
-      screenshot_ref.current.className = "screenshot_reck"
-      clicked_ref.current.className = "eter_spreadH"
     } else{
       ref.current.className = "eter_spreadH"
       ref2.current.className = "section_reck"
-      screenshot_ref.current.className = "eter_spreadH"
-      clicked_ref.current.className = "clicked_reck"
     };
   }
-
   //스크린 샷 찍기
   // TakeScreenshot 사용
   // takeScreenshotPack[0]은 현재 찍은 screenshot
   // takeScreenshotPack[1]은 현재 들어있는 screenshot들
   // takeScreenshotPack[2]은 screenshot 찍는 함수
   const takeScreenshotPack = TakeScreenshot(ref);
-
-  // 이미지 저장
-  // SaveScreenshot 사용
-  // saveScreenshotPack[0]은 현재 찍은 screenshot
-  // saveScreenshotPack[1]은 다운받을 이미지 선택
-  // saveScreenshotPack[2]은 비어있는거 방지 함수
-  // saveScreenshotPack[3]은 다운받을 이미지 src
-  const saveScreenshotPack = SaveScreenshot(takeScreenshotPack[0]);
 
   // ToggleDetail 사용
   // shiftThumbPack[0]은 현재 detail
@@ -96,7 +80,6 @@ const Eternal = ({savedReck_rdx, addToSavedReck,deleteToSavedReck}) =>  {
 
   // Exhi_RECK에서 data 받아오기
   const detailDeck = Exhi_RECK(2)
-
 
   return (
     <section className="section">
@@ -121,17 +104,15 @@ const Eternal = ({savedReck_rdx, addToSavedReck,deleteToSavedReck}) =>  {
         <EterTen saveOrRemove={saveOrRemove}/>
       </div>
       <SwitchTakeSaveBtn 
-          savedReck={savedReck} 
           showSpread={showSpread} 
-          takeScreenshot={takeScreenshotPack[2]}
-          imgsrcToLoad={saveScreenshotPack[3]}
-          preventEmpty={saveScreenshotPack[2]} />
-      <Screenshots 
+          screenshot={takeScreenshotPack[0]}
+          takeAndSave = {takeScreenshotPack[1]}
+          preventEmpty={takeScreenshotPack[2]}/>
+      {/* <Screenshots 
           screenshotReck={takeScreenshotPack[1]} 
           toLoad={saveScreenshotPack[0]} 
           setImgToLoad={saveScreenshotPack[1]} 
-          screenshot_ref={screenshot_ref} />
-      <ClickedReck clicked_ref={clicked_ref} />
+          screenshot_ref={screenshot_ref} /> */}
       {
       toggleDetailPack[0] ? <EachDetail detailDeck={detailDeck} showDetail={toggleDetailPack[1]} /> : (<></>)
       }

@@ -4,27 +4,23 @@ import { useScreenshot } from 'use-react-screenshot';
 
 const TakeScreenshot = (ref) => {
   const [screenshot, takeScreenShot] = useScreenshot();
-  const [screenshotReck, setScreenshotReck] = useState([]);
-
 
   const takeescreenshot = () => {
     if (ref.current.className === "eter_spreadH"){
-      alert("Change Mode");
+      alert("카메라 왼쪽 버튼을 눌러 화면을 전환하세요.");
     }else{
       takeScreenShot(ref.current);
+      alert('화보가 완성되었습니다.');
+      alert('저장하고 싶다면 화면 오른쪽 하단 저장 버튼을 누르세요.');
     }
   };
-
-  useEffect(()=>{
-    if(screenshotReck.length < 4){
-      const newScreenshotReck = [...screenshotReck, screenshot];
-      setScreenshotReck(newScreenshotReck);
-    } else{
-      alert("Sorry, You can only get 3 screenshot Images")
+  const preventEmpty = (e) => {
+    if(screenshot === null){
+      alert('그림을 화면에 배치한 후 카메라 버튼을 눌러 화면을 저장하세요.')
     }
-  },[screenshot]);
+  }
 
-  const TakeScreenshotPack = [screenshot, screenshotReck, takeescreenshot]
+  const TakeScreenshotPack = [screenshot, takeescreenshot, preventEmpty]
 
   return TakeScreenshotPack
 }
