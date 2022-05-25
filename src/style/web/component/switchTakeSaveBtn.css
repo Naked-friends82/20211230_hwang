@@ -38,13 +38,6 @@
   background-color: var(--color-red);
   color: var(--color-white);
 }
-
-/* .btn_a {
-  position: relative;
-  padding: 13px;
-  left: -6px;
-  border-radius: 5rem;
-} */
 .fontAwesome {
   font-size: var(--font-medium);
   color: var(--color-black);

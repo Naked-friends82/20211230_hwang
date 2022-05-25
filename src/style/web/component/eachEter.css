@@ -82,38 +82,3 @@
   position: relative;
   cursor: move;
 }
-
-.grid_container2 {
-  position: relative;
-  left: 6%;
-  display: grid;
-  /* grid-gap: 10px; */
-  grid-template-columns: 80px 80px 80px 80px 80px 80px 80px 80px 80px 80px;
-  grid-template-rows: 120px 120px 120px 120px;
-}
-
-.drag_box {
-  position: relative;
-  width: 80px;
-  height: 120px;
-  float: left;
-}
-.drag_handle {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 80px;
-  height: 120px;
-  cursor: grab;
-}
-.dragImg {
-  width: 80px;
-  height: 120px;
-}
-
-.no-cursor {
-  cursor: auto;
-}
-.cursor {
-  cursor: move;
-}
