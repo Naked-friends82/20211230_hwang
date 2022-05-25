@@ -13,8 +13,11 @@ import EterNine from '../components/eters/EterNine';
 import EterTen from '../components/eters/EterTen';
 import Spread from '../components/Spread';
 import SwitchTakeSaveBtn from '../components/SwitchTakeSaveBtn';
-import Screenshots from '../components/Screenshots';
 import ClickedReck from '../components/ClickedReck';
+
+//redux
+import { connect } from 'react-redux';
+import { actionCreators } from '../store.js';
 
 // CSS
 import "../style/web/route/eternal.css";
@@ -24,63 +27,45 @@ import "../style/mobile/component/eachEter_m.css";
 
 // 함수_리펙토링
 import ToggleDetail from '../function/ToggleDetail.js';
-import TakeScreenshot from '../function/TakeScreenshot';
-import SaveScreenshot from '../function/SaveScreenshot';
+import TakeScreenshot from '../function/TakeScreenshot.js';
 
 //data
 import Exhi_RECK from '../data/Exhi_RECK';
 
-
-// 방법1 리렌더링 안되게 className으로 보였다 안보였다 하기
-// 방법2 그냥 화면 나누기 => 안이쁘다.
-
-const Eternal = () =>  {
-  const [savedReck, setSavedReck] = useState([]);
-
-  // 이거 수정해야 함. 리 렌더링 시 안바뀜
-  const saveReck = (e) => {
-    const clickedImg = e.target;
-    if (clickedImg.alt === "img"){
-      clickedImg.className = "dragablImg filter";
-      clickedImg.alt = "false";
-      const newReck = [...savedReck, clickedImg];
-      setSavedReck(newReck);
-    };
-  };
-
-  const showSpread = () => {
-  if (ref.current.className === "eter_spreadH"){
-    ref.current.className = "section_reck"
-    ref2.current.className = "eter_spreadH"
-    screenshot_ref.current.className = "screenshot_reck"
-    clicked_ref.current.className = "eter_spreadH"
-  } else{
-    ref.current.className = "eter_spreadH"
-    ref2.current.className = "section_reck"
-    screenshot_ref.current.className = "eter_spreadH"
-    clicked_ref.current.className = "clicked_reck"
-  };
+const Eternal = ({addToSavedReck,deleteToSavedReck}) =>  {
+  // redux와 통신
+  const saveOrRemove = (e) => {
+    const {target:{id,className,src}} = e;
+    if (className === 'dragablImg'){
+      addToSavedReck(id,src)
+    } else{
+      const imgId_redux = id.split('/')[0]
+      console.log('delete!!', imgId_redux)
+      deleteToSavedReck(imgId_redux)
+    }
   }
+  
+  const [onSpread, setOnSpread] = useState([]);
 
-const ref = useRef(null);
-const ref2 = useRef(null);
-const clicked_ref = useRef(null);
-const screenshot_ref = useRef(null);
-
+  const ref = useRef(null);
+  const ref2 = useRef(null);
+  const clicked_ref = useRef(null);
+  
+  const showSpread = () => {
+    if (ref.current.className === "eter_spreadH"){
+      ref.current.className = "section_reck"
+      ref2.current.className = "eter_spreadH"
+    } else{
+      ref.current.className = "eter_spreadH"
+      ref2.current.className = "section_reck"
+    };
+  }
   //스크린 샷 찍기
   // TakeScreenshot 사용
   // takeScreenshotPack[0]은 현재 찍은 screenshot
   // takeScreenshotPack[1]은 현재 들어있는 screenshot들
   // takeScreenshotPack[2]은 screenshot 찍는 함수
   const takeScreenshotPack = TakeScreenshot(ref);
-
-  // 이미지 저장
-  // SaveScreenshot 사용
-  // saveScreenshotPack[0]은 현재 찍은 screenshot
-  // saveScreenshotPack[1]은 다운받을 이미지 선택
-  // saveScreenshotPack[2]은 비어있는거 방지 함수
-  // saveScreenshotPack[3]은 다운받을 이미지 src
-  const saveScreenshotPack = SaveScreenshot(takeScreenshotPack[0]);
 
   // ToggleDetail 사용
   // shiftThumbPack[0]은 현재 detail
@@ -90,7 +75,6 @@ const screenshot_ref = useRef(null);
   // Exhi_RECK에서 data 받아오기
   const detailDeck = Exhi_RECK(2)
 
-
   return (
     <section className="section">
       <div className="section_title">
@@ -98,41 +82,52 @@ const screenshot_ref = useRef(null);
         <button onClick={toggleDetailPack[1]}><span>i</span></button>
       </div>
       <div className="eter_spreadH" ref={ref}>
-        <Spread savedReck={savedReck} setSavedReck={setSavedReck} / >
+        <Spread saveOrRemove={saveOrRemove} onSpread={onSpread} setOnSpread={setOnSpread} />
       </div>
       <div id="eter_reck" className="section_reck" ref={ref2}>
-        <EterZero saveReck={saveReck}/>
-        <EterFour saveReck={saveReck}/>
-        <EterOne saveReck={saveReck}/>
-        <EterTwo saveReck={saveReck}/>
-        <EterThree saveReck={saveReck}/>
-        <EterFive saveReck={saveReck}/>
-        <EterSix saveReck={saveReck}/>
-        <EterSeven saveReck={saveReck}/>
-        <EterEight saveReck={saveReck}/>
-        <EterNine saveReck={saveReck}/>
-        <EterTen saveReck={saveReck}/>
+        <EterZero saveOrRemove={saveOrRemove}/>
+        <EterFour saveOrRemove={saveOrRemove}/>
+        <EterOne saveOrRemove={saveOrRemove}/>
+        <EterTwo saveOrRemove={saveOrRemove}/>
+        <EterThree saveOrRemove={saveOrRemove}/>
+        <EterFive saveOrRemove={saveOrRemove}/>
+        <EterSix saveOrRemove={saveOrRemove}/>
+        <EterSeven saveOrRemove={saveOrRemove}/>
+        <EterEight saveOrRemove={saveOrRemove}/>
+        <EterNine saveOrRemove={saveOrRemove}/>
+        <EterTen saveOrRemove={saveOrRemove}/>
       </div>
       <SwitchTakeSaveBtn 
-          savedReck={savedReck} 
           showSpread={showSpread} 
-          takeScreenshot={takeScreenshotPack[2]} 
-          imgsrcToLoad={saveScreenshotPack[3]} 
-          preventEmpty={saveScreenshotPack[2]} />
-      <Screenshots 
+          screenshot={takeScreenshotPack[0]}
+          takeAndSave = {takeScreenshotPack[1]}
+          preventEmpty={takeScreenshotPack[2]}/>
+      {/* <Screenshots 
           screenshotReck={takeScreenshotPack[1]} 
           toLoad={saveScreenshotPack[0]} 
           setImgToLoad={saveScreenshotPack[1]} 
-          screenshot_ref={screenshot_ref} />
-      <ClickedReck 
-          savedReck={savedReck} 
-          clicked_ref={clicked_ref} />
+          screenshot_ref={screenshot_ref} /> */}
+      <ClickedReck
+        clicked_ref={clicked_ref} 
+        saveOrRemove={saveOrRemove}
+        onSpread={onSpread} />
       {
       toggleDetailPack[0] ? <EachDetail detailDeck={detailDeck} showDetail={toggleDetailPack[1]} /> : (<></>)
       }
     </section>
   );
+};
+
+const mapStateToProps = (state,ownProps) => {
+  return {savedReck_rdx: state}
 }
 
-export default Eternal;
+const mapDispatchToProps = (dispatch,ownProps) => {
+  return {
+    addToSavedReck: (imgId,src) => dispatch(actionCreators.addImg(imgId,src)),
+    deleteToSavedReck: (imgId) => dispatch(actionCreators.deleteImg(imgId)),
+  };
+}
+
+export default connect(mapStateToProps,mapDispatchToProps)(Eternal);
 

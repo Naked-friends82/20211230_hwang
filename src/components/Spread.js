@@ -1,92 +1,124 @@
-import React, { useState } from 'react';
-import Draggable from 'react-draggable';
-// import Media from 'react-media';
+import React, { useEffect, useState } from 'react';
+import ClassImgBtn from './ClassImgBtn.js';
 
-const Spread = ({savedReck}) => {
+//redux
+import { connect } from 'react-redux';
 
-  const [state, setState] = useState({
-    activeDrags: 0,
-    deltaPosition:{
-      x:0, y:0
-    },
-    controlledPosition: {
-      x: -400, y: 200
+
+const Spread = ({savedReck_rdx, onSpread, setOnSpread}) => {
+  const [removed, setRemoved] = useState([]);
+  useEffect(() => {
+    if (removed.length !== 0){
+      setOnSpread(onSpread.filter((item) => item !== removed))
+      setRemoved([])
     }
-  });
+  },[removed])
 
 
-  const onStart = () => {
-    setState({ activeDrags: ++state.activeDrags });
-  };
-  const onStop = () => {
-    setState({ activeDrags: --state.activeDrags });
-  };
-  const dragHandlers = {onStart: onStart, onStop: onStop};
+  const filterDrop = (e) => {
+    const {target:{className}} = e;
+    if (className === 'grid_box'){
+      drop(e)
+    }
+  }
 
+  const drop = (e) => {
+    e.preventDefault();
+    const data = e.dataTransfer.getData("Text");
+    const getData = data.split(',');
+    const imgId = getData[0]
+    const imgSrc = getData[1]
+    if (onSpread.includes(imgId)){
+      const imgreck = document.getElementById(`${imgId}/copied`);
+      e.target.appendChild(imgreck);
+    }else{
+      setOnSpread([...onSpread, imgId])
+      new ClassImgBtn({
+        target: e.target,
+        initialState:{
+          imgId,
+          src: imgSrc, 
+          rotate: 0
+        },
+        setRemoved
+      })
+    }
+    e.target.className = 'grid_box full'
+    
+  }
+  const allowDrop = (e) => {
+    e.preventDefault();
+  }
 
-  // 반응형 그리드를 위함
-  // 즉각적으로 바뀌는 걸로 수정해야 해.
-  const grid_web = [80,120]
-  const grid_mobile = [70,105]
-  const match = window.matchMedia('(max-width: 768px)').matches
   return(
-    <div className="grid_container2">
-      {savedReck.map((section, index) => (
-        // <Media query="(max-width: 768px)">
-        <Draggable 
-          className="drag_tag"
-          key={index}
-          handle="strong"
-          grid={match? grid_mobile:grid_web}
-          {...dragHandlers}>
-              <div className="drag_box" >
-                <strong><div className="drag_handle"></div></strong>
-                <img 
-                  className="dragImg"
-                  src={section.src}
-                  alt="saved Img" />
-              </div>
-        </Draggable>
-        // </Media>
-      ))}
-      
-        {/* <Draggable {...dragHandlers}>
-          <div className="demo"> 1. yeeeeh! I can Move!!!! </div>
-        </Draggable>
-        <Draggable onStart={() => false}>
-          <div className="demo"> 2. Do not Move. </div>
-        </Draggable>
-        <Draggable axis="x" {...dragHandlers}>
-          <div className="demo"> 3. x 축</div>
-        </Draggable>
-        <Draggable axis="y" {...dragHandlers}>
-          <div className="demo"> 4. y 축</div>
-        </Draggable>
-        <Draggable handle="strong" {...dragHandlers}>
-          <div className="demo no-cursor">
-            <strong className="cursor"><div>5. Drag here</div></strong>
-            <div>You must click my handle to drag me</div>
-          </div>
-        </Draggable>
-        <Draggable grid={[90,120]} {...dragHandlers}>
-          <div className="demo">
-            <img className="demoImg" src={demoImg} alt="Demooo"/>
-          </div>
-        </Draggable>
-        <Draggable grid={[90,120]} {...dragHandlers}>
-          <div className="demo2">
-            <img className="demoImg2" src={demoImg} alt="Demooo"/>
-          </div>
-        </Draggable> */}
-        {/* <Draggable handle="strong" grid={[90,120]} {...dragHandlers}>
-          <div className="demo3">
-            <strong><div className="demo3_handle"></div></strong>
-            <img className="demoImg3" src={demoImg} alt="Demooo"/>
-          </div>
-        </Draggable> */}
-
+    <div className='grid_container'>
+      <div className='grid_container_row'>
+        <div onDrop={filterDrop} onDragOver={allowDrop} className='grid_box' data-index='0_0'></div>
+        <div onDrop={filterDrop} onDragOver={allowDrop} className='grid_box' data-index='0_1'></div>
+        <div onDrop={filterDrop} onDragOver={allowDrop} className='grid_box' data-index='0_2'></div>
+        <div onDrop={filterDrop} onDragOver={allowDrop} className='grid_box' data-index='0_3'></div>
+        <div onDrop={filterDrop} onDragOver={allowDrop} className='grid_box' data-index='0_4'></div>
+        <div onDrop={filterDrop} onDragOver={allowDrop} className='grid_box' data-index='0_5'></div>
+        <div onDrop={filterDrop} onDragOver={allowDrop} className='grid_box' data-index='0_6'></div>
+        <div onDrop={filterDrop} onDragOver={allowDrop} className='grid_box' data-index='0_7'></div>
+        <div onDrop={filterDrop} onDragOver={allowDrop} className='grid_box' data-index='0_7'></div>
+        <div onDrop={filterDrop} onDragOver={allowDrop} className='grid_box' data-index='0_7'></div>
+        <div onDrop={filterDrop} onDragOver={allowDrop} className='grid_box' data-index='0_7'></div>
+        <div onDrop={filterDrop} onDragOver={allowDrop} className='grid_box' data-index='0_7'></div>
       </div>
+      <div className='grid_container_row'>
+        <div onDrop={filterDrop} onDragOver={allowDrop} className='grid_box' data-index='1_0'></div>
+        <div onDrop={filterDrop} onDragOver={allowDrop} className='grid_box' data-index='1_0'></div>
+        <div onDrop={filterDrop} onDragOver={allowDrop} className='grid_box' data-index='1_1'></div>
+        <div onDrop={filterDrop} onDragOver={allowDrop} className='grid_box' data-index='1_2'></div>
+        <div onDrop={filterDrop} onDragOver={allowDrop} className='grid_box' data-index='1_3'></div>
+        <div onDrop={filterDrop} onDragOver={allowDrop} className='grid_box' data-index='1_4'></div>
+        <div onDrop={filterDrop} onDragOver={allowDrop} className='grid_box' data-index='1_5'></div>
+        <div onDrop={filterDrop} onDragOver={allowDrop} className='grid_box' data-index='1_6'></div>
+        <div onDrop={filterDrop} onDragOver={allowDrop} className='grid_box' data-index='1_7'></div>
+        <div onDrop={filterDrop} onDragOver={allowDrop} className='grid_box' data-index='1_7'></div>
+        <div onDrop={filterDrop} onDragOver={allowDrop} className='grid_box' data-index='1_7'></div>
+        <div onDrop={filterDrop} onDragOver={allowDrop} className='grid_box' data-index='1_7'></div>
+      </div>
+      <div className='grid_container_row'>
+        <div onDrop={filterDrop} onDragOver={allowDrop} className='grid_box' data-index='2_0'></div>
+        <div onDrop={filterDrop} onDragOver={allowDrop} className='grid_box' data-index='2_1'></div>
+        <div onDrop={filterDrop} onDragOver={allowDrop} className='grid_box' data-index='2_2'></div>
+        <div onDrop={filterDrop} onDragOver={allowDrop} className='grid_box' data-index='2_2'></div>
+        <div onDrop={filterDrop} onDragOver={allowDrop} className='grid_box' data-index='2_3'></div>
+        <div onDrop={filterDrop} onDragOver={allowDrop} className='grid_box' data-index='2_4'></div>
+        <div onDrop={filterDrop} onDragOver={allowDrop} className='grid_box' data-index='2_5'></div>
+        <div onDrop={filterDrop} onDragOver={allowDrop} className='grid_box' data-index='2_6'></div>
+        <div onDrop={filterDrop} onDragOver={allowDrop} className='grid_box' data-index='2_7'></div>
+        <div onDrop={filterDrop} onDragOver={allowDrop} className='grid_box' data-index='2_7'></div>
+        <div onDrop={filterDrop} onDragOver={allowDrop} className='grid_box' data-index='2_7'></div>
+        <div onDrop={filterDrop} onDragOver={allowDrop} className='grid_box' data-index='2_7'></div>
+      </div>
+      <div className='grid_container_row'>
+        <div onDrop={filterDrop} onDragOver={allowDrop} className='grid_box' data-index='3_0'></div>
+        <div onDrop={filterDrop} onDragOver={allowDrop} className='grid_box' data-index='3_1'></div>
+        <div onDrop={filterDrop} onDragOver={allowDrop} className='grid_box' data-index='3_1'></div>
+        <div onDrop={filterDrop} onDragOver={allowDrop} className='grid_box' data-index='3_2'></div>
+        <div onDrop={filterDrop} onDragOver={allowDrop} className='grid_box' data-index='3_3'></div>
+        <div onDrop={filterDrop} onDragOver={allowDrop} className='grid_box' data-index='3_4'></div>
+        <div onDrop={filterDrop} onDragOver={allowDrop} className='grid_box' data-index='3_5'></div>
+        <div onDrop={filterDrop} onDragOver={allowDrop} className='grid_box' data-index='3_6'></div>
+        <div onDrop={filterDrop} onDragOver={allowDrop} className='grid_box' data-index='3_7'></div>
+        <div onDrop={filterDrop} onDragOver={allowDrop} className='grid_box' data-index='3_7'></div>
+        <div onDrop={filterDrop} onDragOver={allowDrop} className='grid_box' data-index='3_7'></div>
+        <div onDrop={filterDrop} onDragOver={allowDrop} className='grid_box' data-index='3_7'></div>
+      </div>
+    </div>
   )
 }
 
-export default Spread;
+const mapStateToProps = (state,ownProps) => {
+  return {savedReck_rdx: state}
+}
+
+export default connect(mapStateToProps)(Spread);
+
+
+// 내일 참고
+// https://github.com/react-grid-layout/react-grid-layout/blob/master/test/examples/6-dynamic-add-remove.jsx
+// https://taesung1993.tistory.com/93
