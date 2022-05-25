@@ -9,15 +9,17 @@ const SwitchTakeSaveBtn = ({savedReck_rdx, showSpread, takeAndSave, screenshot, 
   return(
     <>
     <div className="eter_btns">
-      <button className="eter_btn fontAwesome fas fa-exchange-alt" onClick={showSpread}>
+      <button className="eter_btn" onClick={showSpread}>
+        <i className='fontAwesome fas fa-exchange-alt'/>
         {savedReck_rdx.length !== 0 ? 
           <div className="push">
             {savedReck_rdx.length}
           </div> 
           : <></>}
       </button>
-      <button className="eter_btn fontAwesome fas fa-camera" onClick={takeAndSave} >
+      <button className="eter_btn" onClick={takeAndSave} >
         {/* <a href={imgsrcToLoad} download /> */}
+        <i className="fontAwesome fas fa-camera" />
       </button>
       <button className="eter_btn">
           <a href={screenshot} onClick={preventEmpty} download className="fontAwesome far fa-save">
