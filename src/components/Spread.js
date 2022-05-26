@@ -8,7 +8,7 @@ import '../style/mobile/component/spread_m.css';
 import { connect } from 'react-redux';
 
 
-const Spread = ({ref, onSpread, setOnSpread}) => {
+const Spread = ({ref, onSpread, setOnSpread,screenshotRef}) => {
   const [removed, setRemoved] = useState([]);
   useEffect(() => {
     if (removed.length !== 0){
@@ -47,14 +47,14 @@ const Spread = ({ref, onSpread, setOnSpread}) => {
       })
     }
     e.target.className = 'grid_box full'
-    
   }
+  
   const allowDrop = (e) => {
     e.preventDefault();
   }
 
   return(
-    <div className='grid_container' ref={ref}>
+    <div className='grid_container' ref={screenshotRef}>
       <div className='grid_container_row'>
         <div onDrop={filterDrop} onDragOver={allowDrop} className='grid_box' data-index='0_0'></div>
         <div onDrop={filterDrop} onDragOver={allowDrop} className='grid_box' data-index='0_1'></div>
