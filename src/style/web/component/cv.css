@@ -30,6 +30,11 @@
   align-items: center;
   margin-bottom: 100px;
 }
+.CVInfo_title h1{
+  font-size: var(--font-max);
+  font-weight: var(--weight-Extra-bold);
+}
+
 .CVInfo_out {
   width: 30px;
   height: 30px;
