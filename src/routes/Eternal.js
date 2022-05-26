@@ -78,7 +78,7 @@ const Eternal = ({addToSavedReck,deleteToSavedReck}) =>  {
     <section className="section">
       <div className="section_title">
         <h1><span>Hwang's Manual of</span> Eternal Classics</h1>
-        <button onClick={toggleDetailPack[1]}><span>i</span></button>
+        <button className="fa-solid fa-info" onClick={toggleDetailPack[1]}></button>
       </div>
       <div className="eter_spreadH" ref={ref}>
         <Spread saveOrRemove={saveOrRemove} onSpread={onSpread} setOnSpread={setOnSpread} screenshotRef={screenshotRef} />

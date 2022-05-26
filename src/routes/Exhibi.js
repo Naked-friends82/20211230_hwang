@@ -20,7 +20,7 @@ const Exhibi = () =>  {
     <section className="section">
       <div className="section_title">
         <h1>Exhibitions</h1>
-        <button onClick={toggleDetailPack[1]}><span>i</span></button>
+        <button className="fa-solid fa-info" onClick={toggleDetailPack[1]}></button>
       </div>
       <div className="exhibi_reck">
         <EachExhibi exhiIndex={0} />

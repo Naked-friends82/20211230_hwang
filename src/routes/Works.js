@@ -32,7 +32,7 @@ const Works = () =>  {
     <section className="section">
       <div className="section_title">
         <h1>HWANG KYU MIN</h1>
-        <button><span>i</span></button>
+        <button className="fa-solid fa-info" ></button>
       </div>
       <div className="section_reck" ref={scrollRef}>
         <Link to='/muhmdapinammo' className="img_index">
