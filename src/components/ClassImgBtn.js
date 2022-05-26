@@ -56,14 +56,6 @@ export default function ClassImgBtn({target, initialState,setRemoved}){
       <button class='img_btn rotate_btn fa-solid fa-rotate-right' data-text="R"></button>
     </div>
     `
-    // this.element.innerHTML = `
-    // <img class="clicked_img ${this.setRotateAttri()}" src="${this.state.src}" alt="clicked_img"/>
-    // <div class="img_btn_reck">
-    //   <button class='img_btn rotate_btn' data-text="L"><span><i class="fa-solid fa-rotate-left"></i></span></button>
-    //   <button class='img_btn remove_btn'> <i class="fa-solid fa-xmark"></i> </button>
-    //   <button class='img_btn rotate_btn' data-text="R"><i class="fa-solid fa-rotate-right"></i></button>
-    // </div>
-    // `
     this.rotateBtns = this.element.querySelectorAll('.rotate_btn');
     this.rotateBtns.forEach((item) => {
       item.addEventListener('click', this.rotate)

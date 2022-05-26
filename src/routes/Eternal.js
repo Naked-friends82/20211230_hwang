@@ -40,7 +40,6 @@ const Eternal = ({addToSavedReck,deleteToSavedReck}) =>  {
       addToSavedReck(id,src)
     } else{
       const imgId_redux = id.split('/')[0]
-      console.log('delete!!', imgId_redux)
       deleteToSavedReck(imgId_redux)
     }
   }
@@ -49,7 +48,6 @@ const Eternal = ({addToSavedReck,deleteToSavedReck}) =>  {
 
   const ref = useRef(null);
   const ref2 = useRef(null);
-  const clicked_ref = useRef(null);
   
   const showSpread = () => {
     if (ref.current.className === "eter_spreadH"){
@@ -108,7 +106,6 @@ const Eternal = ({addToSavedReck,deleteToSavedReck}) =>  {
           setImgToLoad={saveScreenshotPack[1]} 
           screenshot_ref={screenshot_ref} /> */}
       <ClickedReck
-        clicked_ref={clicked_ref} 
         saveOrRemove={saveOrRemove}
         onSpread={onSpread} />
       {
