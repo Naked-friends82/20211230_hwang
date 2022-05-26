@@ -20,7 +20,6 @@ const SwitchTakeSaveBtn = ({savedReck_rdx, showSpread, takeAndSave, screenshot, 
           : <></>}
       </button>
       <button className="eter_btn" onClick={takeAndSave} >
-        {/* <a href={imgsrcToLoad} download /> */}
         <i className="fontAwesome fas fa-camera" />
       </button>
       <button className="eter_btn">

@@ -2,7 +2,7 @@ import React from 'react';
 //redux
 import { connect } from 'react-redux';
 
-const ClickedReck = ({savedReck_rdx ,clicked_ref, saveOrRemove, onSpread}) => {
+const ClickedReck = ({savedReck_rdx, saveOrRemove, onSpread}) => {
   const dragStart = (e) => {
     const imgId = e.target.id.split('/')[0];
     if (onSpread.includes(imgId)){
@@ -15,7 +15,7 @@ const ClickedReck = ({savedReck_rdx ,clicked_ref, saveOrRemove, onSpread}) => {
   }
 
   return(
-    <div className="clicked_reck" ref={clicked_ref}>
+    <div className="clicked_reck">
       {savedReck_rdx.map((section) => 
           <img 
             key = {section.id}

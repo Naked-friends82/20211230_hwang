@@ -19,7 +19,7 @@ const Exhi_INFO = (index) => {
       },
       {
         title: "Eternal classics",
-        date: "준비 중",
+        date: "2022.07.01-2022.07.30",
         place: "OCI 미술관",
         donat: "OCI 2021 YOUNG CREATIVES"
       },

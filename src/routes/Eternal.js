@@ -40,7 +40,6 @@ const Eternal = ({addToSavedReck,deleteToSavedReck}) =>  {
       addToSavedReck(id,src)
     } else{
       const imgId_redux = id.split('/')[0]
-      console.log('delete!!', imgId_redux)
       deleteToSavedReck(imgId_redux)
     }
   }
@@ -49,7 +48,7 @@ const Eternal = ({addToSavedReck,deleteToSavedReck}) =>  {
 
   const ref = useRef(null);
   const ref2 = useRef(null);
-  const clicked_ref = useRef(null);
+  const screenshotRef = useRef(null);
   
   const showSpread = () => {
     if (ref.current.className === "eter_spreadH"){
@@ -65,7 +64,7 @@ const Eternal = ({addToSavedReck,deleteToSavedReck}) =>  {
   // takeScreenshotPack[0]은 현재 찍은 screenshot
   // takeScreenshotPack[1]은 현재 들어있는 screenshot들
   // takeScreenshotPack[2]은 screenshot 찍는 함수
-  const takeScreenshotPack = TakeScreenshot(ref);
+  const takeScreenshotPack = TakeScreenshot(ref,screenshotRef);
 
   // ToggleDetail 사용
   // shiftThumbPack[0]은 현재 detail
@@ -79,10 +78,10 @@ const Eternal = ({addToSavedReck,deleteToSavedReck}) =>  {
     <section className="section">
       <div className="section_title">
         <h1><span>Hwang's Manual of</span> Eternal Classics</h1>
-        <button onClick={toggleDetailPack[1]}><span>i</span></button>
+        <button className="fa-solid fa-info" onClick={toggleDetailPack[1]}></button>
       </div>
       <div className="eter_spreadH" ref={ref}>
-        <Spread saveOrRemove={saveOrRemove} onSpread={onSpread} setOnSpread={setOnSpread} />
+        <Spread saveOrRemove={saveOrRemove} onSpread={onSpread} setOnSpread={setOnSpread} screenshotRef={screenshotRef} />
       </div>
       <div id="eter_reck" className="section_reck_eter" ref={ref2}>
         <EterZero saveOrRemove={saveOrRemove}/>
@@ -108,7 +107,6 @@ const Eternal = ({addToSavedReck,deleteToSavedReck}) =>  {
           setImgToLoad={saveScreenshotPack[1]} 
           screenshot_ref={screenshot_ref} /> */}
       <ClickedReck
-        clicked_ref={clicked_ref} 
         saveOrRemove={saveOrRemove}
         onSpread={onSpread} />
       {

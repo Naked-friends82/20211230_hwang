@@ -49,7 +49,7 @@ const CV = ({showDetail}) => {
       <div className="CVInfo">
         <div className="CVInfo_title">
           <h1>{CV_DETAIL.name}</h1>
-          <button className="CVInfo_out" onClick={showDetail}>&#10094;</button>
+          <button className="CVInfo_out fa-solid fa-angle-left" onClick={showDetail} />
         </div>
         <h3>{CV_DETAIL.school}</h3>
         {CV_DETAIL.school_cont}
@@ -59,7 +59,7 @@ const CV = ({showDetail}) => {
         {CV_DETAIL.group_cont}
         <h3>{CV_DETAIL.institut}</h3>
         {CV_DETAIL.institut_cont}
-        <button className="CVInfo_out" onClick={showDetail}>&#10094;</button>
+        <button className="CVInfo_out fa-solid fa-angle-left" onClick={showDetail} />
       </div>
     </div>
     <div className="CVInfo_back"></div>

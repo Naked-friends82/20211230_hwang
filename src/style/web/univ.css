@@ -15,7 +15,7 @@
   --font-medium: 16px;
   --font-small: 14px;
   --font-min: 12px;
-  --font-sangmin: 10px;
+  --font-mmin: 10px;
   /* Font weight */
   --weight-Extra-bold: 700;
   --weight-bold: 500;
@@ -90,16 +90,11 @@ button {
   border-radius: 5rem;
   cursor: pointer;
   position: relative;
+  color: var(--color-ddarkgray);
 }
 .section_title button:hover {
   transform: scale(1.16);
   transition: all 200ms ease-in-out;
-}
-.section_title button span {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 .section_reck {
   height: 70%;
