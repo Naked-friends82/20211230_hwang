@@ -38,7 +38,7 @@ const EachDetail = ({detailDeck, showDetail}) => {
           <button className="eachDetail_out fa-solid fa-angle-left" onClick={showDetail}></button>
         </div>
         <h3>{detailDeck.author}</h3>
-        <p>{detailDeck.paper}</p>
+        {detailDeck.paper}
         <button className="eachDetail_out fa-solid fa-angle-left" onClick={showDetail}></button>
       </div>
 
