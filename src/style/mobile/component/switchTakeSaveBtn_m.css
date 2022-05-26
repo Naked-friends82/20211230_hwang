@@ -13,5 +13,11 @@
     font-size: var(--font-small);
   }
 }
+@media screen and (max-width: 558px) {
+  .fontAwesome {
+    font-size: var(--font-min);
+    transform: translate(-2%, 0%);
+  }
+}
 @media screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
 }
