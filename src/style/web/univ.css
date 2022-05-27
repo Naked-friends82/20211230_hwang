@@ -82,6 +82,7 @@ button {
   margin-left: 30px;
 }
 .section_title button {
+  position: relative;
   width: 30px;
   height: 30px;
   margin-right: 20px;
@@ -89,7 +90,6 @@ button {
   background-color: var(--color-white);
   border-radius: 5rem;
   cursor: pointer;
-  position: relative;
   color: var(--color-ddarkgray);
 }
 .section_title button:hover {

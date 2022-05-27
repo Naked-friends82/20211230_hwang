@@ -543,7 +543,7 @@ const Omma = () =>  {
     <section className="section">
       <div className="section_title">
         <h1>MUH EMDAP INAM MO</h1>
-        <button className="fa-solid fa-info" onClick={toggleDetailPack[1]}></button>
+        <button onClick={toggleDetailPack[1]}><i className="fa-solid fa-info" /></button>
       </div>
       <div className="section_reck">
         {FOG_RECK.map((each) => {
