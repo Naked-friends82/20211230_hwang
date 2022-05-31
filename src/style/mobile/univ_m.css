@@ -21,7 +21,6 @@
     width: 20px;
     height: 20px;
     margin-right: 10px;
-    font-size: var(--font-mmin);
   }
   .section_reck {
     width: 90%;
@@ -46,6 +45,12 @@
     height: 90px;
     margin-left: 10px;
     margin-right: 16px;
+  }
+}
+@media screen and (max-width: 558px) {
+  .section_title button i {
+    font-size: var(--font-min);
+    transform: translate(-2%, 0%);
   }
 }
 @media screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {

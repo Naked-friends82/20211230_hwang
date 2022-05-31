@@ -65,6 +65,18 @@
     grid-template-rows: 90px 90px 90px 90px;
     margin: 0px 14px;
   }
+  .eterEleven_grid_container {
+    grid-gap: 3px;
+    grid-template-columns: 60px 60px 60px 60px 60px 60px 60px 60px 60px 60px 60px;
+    grid-template-rows: 90px 90px 90px 90px;
+    margin: 0px 14px;
+  }
+  .eterTwelve_grid_container {
+    grid-gap: 3px;
+    grid-template-columns: 60px 60px 60px 60px 60px;
+    grid-template-rows: 90px 90px 90px 90px;
+    margin: 0px 14px;
+  }
 
   .dragablImg {
     width: 60px;

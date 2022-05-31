@@ -32,7 +32,6 @@
   .eachDetail_out {
     width: 20px;
     height: 20px;
-    font-size: var(--font-min);
   }
   .detailPaper_title h1 {
     font-size: var(--font-regular);
@@ -43,6 +42,12 @@
   }
   .detailPaper p {
     font-size: var(--font-small);
+  }
+}
+@media screen and (max-width: 558px) {
+  .eachDetail_out i {
+    font-size: var(--font-min);
+    transform: translate(-2%, 0%);
   }
 }
 @media screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {

@@ -11,6 +11,8 @@ import EterSeven from '../components/eters/EterSeven';
 import EterEight from '../components/eters/EterEight';
 import EterNine from '../components/eters/EterNine';
 import EterTen from '../components/eters/EterTen';
+import EterEleven from '../components/eters/EterEleven';
+import EterTweleve from '../components/eters/EterTweleve';
 import Spread from '../components/Spread';
 import SwitchTakeSaveBtn from '../components/SwitchTakeSaveBtn';
 import ClickedReck from '../components/ClickedReck';
@@ -78,7 +80,7 @@ const Eternal = ({addToSavedReck,deleteToSavedReck}) =>  {
     <section className="section">
       <div className="section_title">
         <h1><span>Hwang's Manual of</span> Eternal Classics</h1>
-        <button className="fa-solid fa-info" onClick={toggleDetailPack[1]}></button>
+        <button onClick={toggleDetailPack[1]}><i className="fa-solid fa-info" /></button>
       </div>
       <div className="eter_spreadH" ref={ref}>
         <Spread saveOrRemove={saveOrRemove} onSpread={onSpread} setOnSpread={setOnSpread} screenshotRef={screenshotRef} />
@@ -95,6 +97,8 @@ const Eternal = ({addToSavedReck,deleteToSavedReck}) =>  {
         <EterEight saveOrRemove={saveOrRemove}/>
         <EterNine saveOrRemove={saveOrRemove}/>
         <EterTen saveOrRemove={saveOrRemove}/>
+        <EterEleven saveOrRemove={saveOrRemove}/>
+        <EterTweleve saveOrRemove={saveOrRemove}/>
       </div>
       <SwitchTakeSaveBtn 
           showSpread={showSpread} 

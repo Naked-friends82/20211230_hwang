@@ -10,12 +10,14 @@ import eternal_sec from '../asset/main/eternal_sec.jpg';
 import group_death from '../asset/main/group_death.jpg';
 import group_hang from '../asset/main/group_hang.jpg';
 import exhibi_main from '../asset/main/exhibi_main.jpg';
+import CV from '../components/CV';
 // CSS
 import '../style/web/route/works.css';
 import '../style/mobile/route/works_m.css';
 // function
 import { useHorizontalScroll } from "../function/scroll";
 import ShiftInfo from '../function/ShiftInfo';
+import ToggleDetail from '../function/ToggleDetail.js';
 //data
 import Exhi_INFO from '../data/Exhi_INFO';
 
@@ -28,11 +30,16 @@ const Works = () =>  {
 
   const scrollRef = useHorizontalScroll();
 
+    // ToggleDetail 사용
+  // shiftThumbPack[0]은 현재 detail
+  // shiftThumbPack[1]은 detail 바꾸는 함수
+  const toggleDetailPack = ToggleDetail();
+
   return (
     <section className="section">
       <div className="section_title">
         <h1>HWANG KYU MIN</h1>
-        <button className="fa-solid fa-info" ></button>
+        <button onClick={toggleDetailPack[1]}><i className="fa-solid fa-info" /></button>
       </div>
       <div className="section_reck" ref={scrollRef}>
         <Link to='/muhmdapinammo' className="img_index">
@@ -56,6 +63,11 @@ const Works = () =>  {
         </Link>
       </div>
       <ExhiInfo info={shiftInfoPack[0]} />
+      {
+        toggleDetailPack[0] ? <CV showDetail={toggleDetailPack[1]} />
+      :(
+      <></>
+      )}
     </section>
   );
 }

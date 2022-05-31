@@ -17,7 +17,6 @@
   .CVInfo_out {
     width: 20px;
     height: 20px;
-    font-size: var(--font-min);
   }
   .CVInfo_title h1 {
     font-size: var(--font-regular);
@@ -28,6 +27,12 @@
   .CVInfo p {
     margin-bottom: 30px;
     font-size: var(--font-small);
+  }
+}
+@media screen and (max-width: 558px) {
+  .CVInfo_out i {
+    font-size: var(--font-min);
+    transform: translate(-2%, 0%);
   }
 }
 @media screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {

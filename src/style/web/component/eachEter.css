@@ -75,6 +75,20 @@
   grid-template-rows: 114px 114px 114px 114px;
   margin: 0px 28px;
 }
+.eterEleven_grid_container {
+  display: grid;
+  grid-gap: 4px;
+  grid-template-columns: 76px 76px 76px 76px 76px 76px 76px 76px 76px 76px 76px;
+  grid-template-rows: 114px 114px 114px 114px;
+  margin: 0px 28px;
+}
+.eterTwelve_grid_container {
+  display: grid;
+  grid-gap: 4px;
+  grid-template-columns: 76px 76px 76px 76px 76px;
+  grid-template-rows: 114px 114px 114px 114px;
+  margin: 0px 28px;
+}
 
 .dragablImg {
   width: 76px;
