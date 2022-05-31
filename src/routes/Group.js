@@ -4,6 +4,8 @@ import hungry from '../asset/group/poster_hungry.jpg';
 import sing from '../asset/group/poster_sing.jpg';
 import hang from '../asset/group/poster_hang.jpg';
 import death from '../asset/group/poster_death.jpg';
+import carve from '../asset/group/poster_carve.jpg';
+import shinjin from '../asset/group/poster_shinjin.jpg';
 // CSS
 import '../style/web/route/group.css'
 import '../style/mobile/route/group_m.css'
@@ -28,6 +30,12 @@ const Group = () =>  {
         <h1>Group Exhibitions</h1>
       </div>
       <div className="section_reck">
+          <div className="each_group">
+            <img className="group_img" src={shinjin} alt="믿음(しんじん, Belief)" onMouseEnter={shiftInfoPack[1]} />
+          </div>
+          <div className="each_group">
+            <img className="group_img" src={carve} alt="배 위에 새겨 두고" onMouseEnter={shiftInfoPack[1]} />
+          </div>
           <div className="each_group">
             <img className="group_img" src={death} alt="나의 사인이 너와 같다면" onMouseEnter={shiftInfoPack[1]} />
           </div>
