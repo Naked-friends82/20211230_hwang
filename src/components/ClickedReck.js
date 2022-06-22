@@ -2,16 +2,18 @@ import React from 'react';
 //redux
 import { connect } from 'react-redux';
 
-const ClickedReck = ({savedReck_rdx, saveOrRemove, onSpread}) => {
+const ClickedReck = ({savedReck_rdx, saveOrRemove, onSpread,isMobile, setDataTrans}) => {
   const dragStart = (e) => {
     const imgId = e.target.id.split('/')[0];
     if (onSpread.includes(imgId)){
       alert('사용 중인 이미지입니다.')
     } else {
-      e.dataTransfer.setData("Text", [imgId, e.target.src]);
+      setDataTrans([imgId, e.target.src])
     }
   };
   const dragEnd = (e) => {
+  }
+  const nothing = (e) => {
   }
 
   return(
@@ -23,8 +25,10 @@ const ClickedReck = ({savedReck_rdx, saveOrRemove, onSpread}) => {
             className={onSpread.includes(section.imgId) ? "clicked_img filter" : "clicked_img"}
             onClick={saveOrRemove}
             draggable="true"
-            onDragStart={dragStart}
-            onDragEnd={dragEnd}
+            onDragStart={isMobile? nothing: dragStart}
+            onDragEnd={isMobile? nothing: dragEnd}
+            onTouchStart={isMobile? dragStart: nothing}
+            onTouchEnd={isMobile? dragEnd: nothing}
             src={section.src}
             alt='clicked_img' />
       )}
