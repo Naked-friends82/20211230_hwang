@@ -61,20 +61,3 @@
   background-color: rgba(245, 237, 220, 0.8);
   cursor: pointer;
 }
-
-.rotate0{
-  transform: rotate(0);
-  transition: all 0.3s;
-}
-.rotate90{
-  transform: rotate(90deg);
-  transition: all 0.3s;
-}
-.rotate180{
-  transform: rotate(180deg);
-  transition: all 0.3s;
-}
-.rotate270{
-  transform: rotate(270deg);
-  transition: all 0.3s;
-}
