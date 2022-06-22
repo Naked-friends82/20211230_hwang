@@ -35,6 +35,9 @@ import TakeScreenshot from '../function/TakeScreenshot.js';
 import Exhi_RECK from '../data/Exhi_RECK';
 
 const Eternal = ({addToSavedReck,deleteToSavedReck}) =>  {
+  // from ClickedReck to each grid
+  const [dataTrans, setDataTrans] = useState(null);
+
   // redux와 통신
   const saveOrRemove = (e) => {
     const {target:{id,className,src}} = e;
@@ -83,7 +86,14 @@ const Eternal = ({addToSavedReck,deleteToSavedReck}) =>  {
         <button onClick={toggleDetailPack[1]}><i className="fa-solid fa-info" /></button>
       </div>
       <div className="eter_spreadH" ref={ref}>
-        <Spread saveOrRemove={saveOrRemove} onSpread={onSpread} setOnSpread={setOnSpread} screenshotRef={screenshotRef} />
+        <Spread 
+          saveOrRemove={saveOrRemove} 
+          onSpread={onSpread} 
+          setOnSpread={setOnSpread} 
+          screenshotRef={screenshotRef} 
+          dataTrans={dataTrans}
+          setDataTrans={setDataTrans}
+          />
       </div>
       <div id="eter_reck" className="section_reck_eter" ref={ref2}>
         <EterZero saveOrRemove={saveOrRemove}/>
@@ -112,7 +122,9 @@ const Eternal = ({addToSavedReck,deleteToSavedReck}) =>  {
           screenshot_ref={screenshot_ref} /> */}
       <ClickedReck
         saveOrRemove={saveOrRemove}
-        onSpread={onSpread} />
+        onSpread={onSpread} 
+        setDataTrans={setDataTrans} 
+        />
       {
       toggleDetailPack[0] ? <EachDetail detailDeck={detailDeck} showDetail={toggleDetailPack[1]} /> : (<></>)
       }
