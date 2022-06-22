@@ -38,6 +38,22 @@ const Eternal = ({addToSavedReck,deleteToSavedReck}) =>  {
   // from ClickedReck to each grid
   const [dataTrans, setDataTrans] = useState(null);
 
+  const detectMob = () => {
+    const toMatch = [
+        /Android/i,
+        /webOS/i,
+        /iPhone/i,
+        /iPad/i,
+        /iPod/i,
+        /BlackBerry/i,
+        /Windows Phone/i
+    ];
+    
+    return toMatch.some((toMatchItem) => {
+        return navigator.userAgent.match(toMatchItem);
+    });
+  }
+  const isMobile = detectMob();
   // redux와 통신
   const saveOrRemove = (e) => {
     const {target:{id,className,src}} = e;
@@ -91,6 +107,7 @@ const Eternal = ({addToSavedReck,deleteToSavedReck}) =>  {
           onSpread={onSpread} 
           setOnSpread={setOnSpread} 
           screenshotRef={screenshotRef} 
+          isMobile={isMobile} 
           dataTrans={dataTrans}
           setDataTrans={setDataTrans}
           />
@@ -123,8 +140,8 @@ const Eternal = ({addToSavedReck,deleteToSavedReck}) =>  {
       <ClickedReck
         saveOrRemove={saveOrRemove}
         onSpread={onSpread} 
-        setDataTrans={setDataTrans} 
-        />
+        isMobile={isMobile}
+        setDataTrans={setDataTrans} />
       {
       toggleDetailPack[0] ? <EachDetail detailDeck={detailDeck} showDetail={toggleDetailPack[1]} /> : (<></>)
       }

@@ -8,7 +8,7 @@ import '../style/mobile/component/spread_m.css';
 import { connect } from 'react-redux';
 
 
-const Spread = ({onSpread, setOnSpread,screenshotRef, dataTrans, setDataTrans}) => {
+const Spread = ({onSpread, setOnSpread,screenshotRef, dataTrans, setDataTrans, isMobile}) => {
   const [dragInGrid, setDragInGrid] = useState(null)
   const rowLength = []
   for(let i=0; i<12; i++){
@@ -18,22 +18,22 @@ const Spread = ({onSpread, setOnSpread,screenshotRef, dataTrans, setDataTrans}) 
     <div className='grid_container' ref={screenshotRef}>
       <div className='grid_container_row'>
         {rowLength.map((each) => {
-          return <EmptyGrid key={each} onSpread={onSpread} setOnSpread={setOnSpread} dataTrans={dataTrans} setDataTrans={setDataTrans} dragInGrid={dragInGrid} setDragInGrid={setDragInGrid} />
+          return <EmptyGrid key={each} onSpread={onSpread} setOnSpread={setOnSpread} dataTrans={dataTrans} setDataTrans={setDataTrans} dragInGrid={dragInGrid} setDragInGrid={setDragInGrid} isMobile={isMobile} />
         })}
       </div>
       <div className='grid_container_row'>
         {rowLength.map((each) => {
-          return <EmptyGrid key={each} onSpread={onSpread} setOnSpread={setOnSpread} dataTrans={dataTrans} setDataTrans={setDataTrans} dragInGrid={dragInGrid} setDragInGrid={setDragInGrid} />
+          return <EmptyGrid key={each} onSpread={onSpread} setOnSpread={setOnSpread} dataTrans={dataTrans} setDataTrans={setDataTrans} dragInGrid={dragInGrid} setDragInGrid={setDragInGrid} isMobile={isMobile} />
         })}
       </div>
       <div className='grid_container_row'>
         {rowLength.map((each) => {
-          return <EmptyGrid key={each} onSpread={onSpread} setOnSpread={setOnSpread} dataTrans={dataTrans} setDataTrans={setDataTrans} dragInGrid={dragInGrid} setDragInGrid={setDragInGrid} />
+          return <EmptyGrid key={each} onSpread={onSpread} setOnSpread={setOnSpread} dataTrans={dataTrans} setDataTrans={setDataTrans} dragInGrid={dragInGrid} setDragInGrid={setDragInGrid} isMobile={isMobile} />
         })}
       </div>
       <div className='grid_container_row'>
         {rowLength.map((each) => {
-          return <EmptyGrid key={each} onSpread={onSpread} setOnSpread={setOnSpread} dataTrans={dataTrans} setDataTrans={setDataTrans} dragInGrid={dragInGrid} setDragInGrid={setDragInGrid} />
+          return <EmptyGrid key={each} onSpread={onSpread} setOnSpread={setOnSpread} dataTrans={dataTrans} setDataTrans={setDataTrans} dragInGrid={dragInGrid} setDragInGrid={setDragInGrid} isMobile={isMobile} />
         })}
       </div>
     </div>

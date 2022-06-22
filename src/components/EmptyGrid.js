@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
 
-const EmptyGrid = ({onSpread, setOnSpread, dataTrans, setDataTrans, dragInGrid, setDragInGrid}) => {
+const EmptyGrid = ({onSpread, setOnSpread, dataTrans, setDataTrans, dragInGrid, setDragInGrid, isMobile}) => {
   const [data, setData] = useState(null);
   const draaag = (e) => {
     let tmpRotate = rotateState[0]%4
@@ -51,6 +51,9 @@ const EmptyGrid = ({onSpread, setOnSpread, dataTrans, setDataTrans, dragInGrid, 
       setDataTrans(null);
     }
   }
+  const nothing = () => {
+
+  }
 
   const allowDrop = (e) => {
     e.preventDefault();
@@ -85,7 +88,14 @@ const EmptyGrid = ({onSpread, setOnSpread, dataTrans, setDataTrans, dragInGrid, 
   },[rotateState])
 
   return(
-    <div onDragStart={draaag} onDragOver={allowDrop} onDrop={filterDrop} className='grid_box'>
+    <div 
+      onDragStart={isMobile? nothing :draaag} 
+      onDragOver={isMobile? nothing :allowDrop} 
+      onDrop={isMobile? nothing :filterDrop} 
+      onTouchStart={isMobile? draaag : nothing} 
+      onTouchMove={isMobile? allowDrop : nothing} 
+      onTouchEnd={isMobile? filterDrop : nothing} 
+      className='grid_box'>
     {data == null ? <></>:
       <div id={`${data[0]}/copied`} className='img_btn_box' draggable={true}>
         <img className="drag_img" src={data[1]} alt="clicked_img"/>

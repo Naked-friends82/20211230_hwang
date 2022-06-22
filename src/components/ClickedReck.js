@@ -2,7 +2,7 @@ import React from 'react';
 //redux
 import { connect } from 'react-redux';
 
-const ClickedReck = ({savedReck_rdx, saveOrRemove, onSpread, setDataTrans}) => {
+const ClickedReck = ({savedReck_rdx, saveOrRemove, onSpread,isMobile, setDataTrans}) => {
   const dragStart = (e) => {
     const imgId = e.target.id.split('/')[0];
     if (onSpread.includes(imgId)){
@@ -12,6 +12,8 @@ const ClickedReck = ({savedReck_rdx, saveOrRemove, onSpread, setDataTrans}) => {
     }
   };
   const dragEnd = (e) => {
+  }
+  const nothing = (e) => {
   }
 
   return(
@@ -23,11 +25,12 @@ const ClickedReck = ({savedReck_rdx, saveOrRemove, onSpread, setDataTrans}) => {
             className={onSpread.includes(section.imgId) ? "clicked_img filter" : "clicked_img"}
             onClick={saveOrRemove}
             draggable="true"
-            onDragStart={dragStart}
-            onDragEnd={dragEnd}
+            onDragStart={isMobile? nothing: dragStart}
+            onDragEnd={isMobile? nothing: dragEnd}
+            onTouchStart={isMobile? dragStart: nothing}
+            onTouchEnd={isMobile? dragEnd: nothing}
             src={section.src}
-            alt='clicked_img' 
-            />
+            alt='clicked_img' />
       )}
     </div>
   )
