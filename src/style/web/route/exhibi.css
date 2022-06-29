@@ -66,3 +66,17 @@
 .eachExhibi_Paper p {
   font-size: var(--font-medium);
 }
+.eachExhibi_Paper .quote{
+  font-size: var(--font-small);
+  font-weight: var(--weight-light);
+  font-style: oblique;
+}
+.eachExhibi_Paper .sep{
+  border: solid 0.5px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.eachExhibi_Paper .ref{
+  font-size: var(--font-min);
+  line-height: 20px;
+}

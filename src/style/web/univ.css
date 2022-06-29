@@ -47,6 +47,9 @@ h2 {
 h3 {
   margin: 0px;
 }
+h5{
+  font-weight: var(--weight-medium);
+}
 p {
   margin: 0px;
   /* font-family: var(--typo-nanum); */
