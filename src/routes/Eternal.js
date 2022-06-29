@@ -28,6 +28,7 @@ import "../style/web/component/eachEter.css";
 import "../style/mobile/component/eachEter_m.css";
 
 // 함수_리펙토링
+import { useHorizontalScroll } from "../function/scroll.js";
 import ToggleDetail from '../function/ToggleDetail.js';
 import TakeScreenshot from '../function/TakeScreenshot.js';
 
@@ -67,17 +68,20 @@ const Eternal = ({addToSavedReck,deleteToSavedReck}) =>  {
   
   const [onSpread, setOnSpread] = useState([]);
 
-  const ref = useRef(null);
-  const ref2 = useRef(null);
+  const ref = useRef(null)
   const screenshotRef = useRef(null);
+  const scrollRef = useHorizontalScroll();
   
   const showSpread = () => {
-    if (ref.current.className === "eter_spreadH"){
-      ref.current.className = "section_reck_eter"
-      ref2.current.className = "eter_spreadH"
+    const spread_comp = document.querySelector('#eter_spread');
+    const reck_comp = document.querySelector('#eter_reck');
+
+    if (spread_comp.className === "eter_spreadH"){
+      spread_comp.className = "section_reck_eter"
+      reck_comp.className = "eter_spreadH"
     } else{
-      ref.current.className = "eter_spreadH"
-      ref2.current.className = "section_reck_eter"
+      spread_comp.className = "eter_spreadH"
+      reck_comp.className = "section_reck_eter"
     };
   }
   //스크린 샷 찍기
@@ -101,7 +105,7 @@ const Eternal = ({addToSavedReck,deleteToSavedReck}) =>  {
         <h1>Hwang's Manual<span> of Eternal Classics</span></h1>
         <button onClick={toggleDetailPack[1]}><i className="fa-solid fa-info" /></button>
       </div>
-      <div className="eter_spreadH" ref={ref}>
+      <div id="eter_spread" className="eter_spreadH" ref={ref} >
         <Spread 
           saveOrRemove={saveOrRemove} 
           onSpread={onSpread} 
@@ -112,7 +116,7 @@ const Eternal = ({addToSavedReck,deleteToSavedReck}) =>  {
           setDataTrans={setDataTrans}
           />
       </div>
-      <div id="eter_reck" className="section_reck_eter" ref={ref2}>
+      <div id="eter_reck" className="section_reck_eter" ref={scrollRef}>
         <EterZero saveOrRemove={saveOrRemove}/>
         <EterFour saveOrRemove={saveOrRemove}/>
         <EterOne saveOrRemove={saveOrRemove}/>
