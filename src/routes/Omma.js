@@ -78,6 +78,7 @@ import "../style/web/route/omma.css";
 import "../style/mobile/route/omma_m.css";
 
 // 함수_리펙토링
+import { useHorizontalScroll } from "../function/scroll";
 import ShiftThumb from '../function/ShiftThumb.js';
 import ToggleDetail from '../function/ToggleDetail.js';
 
@@ -527,6 +528,10 @@ const Omma = () =>  {
     stone1,stone2,stone3,
     mdf,paper
   ]
+
+  const scrollRef = useHorizontalScroll();
+  const scrollRef2 = useHorizontalScroll();
+
   // shiftThumbPack[0]은 현재 thumb
   // shiftThumbPack[1]은 thumb 바꾸는 함수
   const shiftThumbPack = ShiftThumb(initial_value, ref_deck);
@@ -545,7 +550,7 @@ const Omma = () =>  {
         <h1>MUH EMDAP INAM MO</h1>
         <button onClick={toggleDetailPack[1]}><i className="fa-solid fa-info" /></button>
       </div>
-      <div className="section_reck">
+      <div className="section_reck" ref={scrollRef}>
         {FOG_RECK.map((each) => {
           return <img key={each.src} className="omma_reck_each" src={each.src} alt={each.title+each.caption} ref={each.ref} />
         })}
@@ -565,7 +570,7 @@ const Omma = () =>  {
       <div className="img_info">
         <span>{shiftThumbPack[0]}</span>
         </div>
-      <div className="thumbnail">
+      <div className="thumbnail" ref={scrollRef2}>
         <div className="omma_thumbnail_black">
           {FOG_RECK.map((each, index) => {
             return <img key={index} className={shiftThumbPack[0] === each.title+each.caption ? "thumbnail_each": "thumbnail_each filter"} src={each.src} alt={each.title+each.caption} onClick={shiftThumbPack[1]} />

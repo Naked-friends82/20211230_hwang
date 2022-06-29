@@ -23,6 +23,8 @@ import spo_2 from '../asset/penet/spotlight2.jpg'
 import spo_3 from '../asset/penet/spotlight3.png'
 
 import gra_1 from '../asset/penet/grass.jpg'
+// function
+import { useHorizontalScroll } from "../function/scroll.js";
 
 // CSS
 import "../style/web/route/penet.css";
@@ -171,7 +173,9 @@ const Penet = () =>  {
   // shiftThumbPack[0]은 현재 thumb
   // shiftThumbPack[1]은 thumb 바꾸는 함수
   const shiftThumbPack = ShiftThumb(initial_value, ref_deck);
-
+  
+  const scrollRef = useHorizontalScroll();
+  const scrollRef2 = useHorizontalScroll();
 
   // ToggleDetail 사용
   // shiftThumbPack[0]은 현재 detail
@@ -187,7 +191,7 @@ const Penet = () =>  {
         <h1>Penetrating Stone</h1>
         <button onClick={toggleDetailPack[1]}><i className="fa-solid fa-info" /></button>
       </div>
-      <div className="section_reck">
+      <div className="section_reck" ref={scrollRef}>
         <iframe className='penet_reck_video' src="https://www.youtube.com/embed/0xzx0hLralY" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen ref={penet_video} alt="Penetrating Stone"></iframe>
         {PENET_RECK.map((each, index) => {
             return <img key={index} className="penet_reck_each" src={each.src} alt={each.title+each.caption} ref={each.ref} />
@@ -196,7 +200,7 @@ const Penet = () =>  {
       <div className="img_info">
         <span>{shiftThumbPack[0]}</span>
       </div>
-      <div className="thumbnail">
+      <div className="thumbnail" ref={scrollRef2}>
         {PENET_RECK.map((each, index) => {
             return <img key={index} className={shiftThumbPack[0] === each.title+each.caption ? "thumbnail_each":"thumbnail_each filter"} src={each.src} alt={each.title+each.caption} onClick={shiftThumbPack[1]} />
           })}

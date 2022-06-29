@@ -13,8 +13,8 @@ import CV from '../components/CV';
 import '../style/web/route/works.css';
 import '../style/mobile/route/works_m.css';
 // function
-import { useHorizontalScroll } from "../function/scroll";
-import ShiftInfo from '../function/ShiftInfo';
+import { useHorizontalScroll } from "../function/scroll.js";
+import ShiftInfo from '../function/ShiftInfo.js';
 import ToggleDetail from '../function/ToggleDetail.js';
 //data
 import Exhi_INFO from '../data/Exhi_INFO';
