@@ -7,12 +7,10 @@ import '../style/web/route/exhibi.css';
 import '../style/mobile/route/exhibi_m.css';
 
 // 함수_리펙토링
-import { useHorizontalScroll } from "../function/scroll.js";
 import ToggleDetail from '../function/ToggleDetail.js';
 
 const Exhibi = () =>  {
 
-  const scrollRef = useHorizontalScroll();
 
   // ToggleDetail 사용
   // shiftThumbPack[0]은 현재 detail
@@ -25,7 +23,7 @@ const Exhibi = () =>  {
         <h1>Exhibitions</h1>
         <button onClick={toggleDetailPack[1]}><i className="fa-solid fa-info" /></button>
       </div>
-      <div className="exhibi_reck" ref={scrollRef}>
+      <div className="exhibi_reck">
         <EachExhibi exhiIndex={0} />
         <EachExhibi exhiIndex={1} />
         <EachExhibi exhiIndex={2} />
