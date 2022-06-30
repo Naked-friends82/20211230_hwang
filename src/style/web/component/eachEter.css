@@ -96,13 +96,6 @@
   grid-template-rows: 114px 114px 114px 114px;
   margin: 0px 28px;
 }
-.total40_grid_container {
-  display: grid;
-  grid-gap: 4px;
-  grid-template-columns: 76px 76px 76px 76px 76px 76px 76px 76px 76px 76px;
-  grid-template-rows: 114px 114px 114px 114px;
-  margin: 0px 28px;
-}
 .total32_grid_container {
   display: grid;
   grid-gap: 4px;
@@ -110,7 +103,13 @@
   grid-template-rows: 114px 114px 114px 114px;
   margin: 0px 28px;
 }
-
+.total40_grid_container {
+  display: grid;
+  grid-gap: 4px;
+  grid-template-columns: 76px 76px 76px 76px 76px 76px 76px 76px 76px 76px;
+  grid-template-rows: 114px 114px 114px 114px;
+  margin: 0px 28px;
+}
 .dragablImg {
   width: 76px;
   height: 114px;

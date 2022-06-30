@@ -103,7 +103,7 @@ const EterFive = ({saveOrRemove,savedReck_rdx}) => {
   },[savedReck_rdx]);
 
   return(
-    <div className="eterFive_grid_container">
+    <div className="total20_grid_container">
       <div className="grid_item1">
         <img className={MODULE_RECK[0].className} id={MODULE_RECK[0].id} onClick={saveOrRemove} src={MODULE_RECK[0].src} alt="img" />
       </div>

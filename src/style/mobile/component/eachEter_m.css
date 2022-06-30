@@ -1,40 +1,4 @@
 @media screen and (max-width: 768px) {
-  .eterZero_grid_container {
-    grid-gap: 3px;
-    grid-template-columns: 60px 60px 60px;
-    grid-template-rows: 90px 90px 90px 90px;
-    margin: 0px 14px;
-  }
-  .eterOne_grid_container {
-    grid-gap: 3px;
-    grid-template-columns: 60px 60px 60px 60px 60px;
-    grid-template-rows: 90px 90px 90px 90px;
-    margin: 0px 14px;
-  }
-  .eterTwo_grid_container {
-    grid-gap: 3px;
-    grid-template-columns: 60px 60px 60px 60px 60px;
-    grid-template-rows: 90px 90px 90px 90px;
-    margin: 0px 14px;
-  }
-  .eterThree_grid_container {
-    grid-gap: 3px;
-    grid-template-columns: 60px 60px 60px 60px 60px;
-    grid-template-rows: 90px 90px 90px 90px;
-    margin: 0px 14px;
-  }
-  .eterFour_grid_container {
-    grid-gap: 3px;
-    grid-template-columns: 60px 60px 60px 60px 60px 60px;
-    grid-template-rows: 90px 90px 90px 90px;
-    margin: 0px 14px;
-  }
-  .eterFive_grid_container {
-    grid-gap: 3px;
-    grid-template-columns: 60px 60px 60px 60px 60px;
-    grid-template-rows: 90px 90px 90px 90px;
-    margin: 0px 14px;
-  }
   .eterSix_grid_container {
     grid-gap: 3px;
     grid-template-columns: 60px 60px 60px;
@@ -77,7 +41,48 @@
     grid-template-rows: 90px 90px 90px 90px;
     margin: 0px 14px;
   }
-
+  .total12_grid_container {
+    display: grid;
+    grid-gap: 3px;
+    grid-template-columns: 60px 60px 60px;
+    grid-template-rows: 90px 90px 90px 90px;
+    margin: 0px 14px;
+  }
+  .total16_grid_container {
+    display: grid;
+    grid-gap: 3px;
+    grid-template-columns: 60px 60px 60px 60px;
+    grid-template-rows: 90px 90px 90px 90px;
+    margin: 0px 14px;
+  }
+  .total20_grid_container {
+    display: grid;
+    grid-gap: 3px;
+    grid-template-columns: 60px 60px 60px 60px 60px;
+    grid-template-rows: 90px 90px 90px 90px;
+    margin: 0px 14px;
+  }
+  .total24_grid_container {
+    display: grid;
+    grid-gap: 3px;
+    grid-template-columns: 60px 60px 60px 60px 60px 60px;
+    grid-template-rows: 90px 90px 90px 90px;
+    margin: 0px 14px;
+  }
+  .total32_grid_container {
+    display: grid;
+    grid-gap: 3px;
+    grid-template-columns: 60px 60px 60px 60px 60px 60px 60px 60px;
+    grid-template-rows: 90px 90px 90px 90px;
+    margin: 0px 14px;
+  }
+  .total40_grid_container {
+    display: grid;
+    grid-gap: 3px;
+    grid-template-columns: 60px 60px 60px 60px 60px 60px 60px 60px 60px 60px;
+    grid-template-rows: 90px 90px 90px 90px;
+    margin: 0px 14px;
+  }
   .dragablImg {
     width: 60px;
     height: 90px;
