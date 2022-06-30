@@ -141,7 +141,6 @@ const Eternal = ({addToSavedReck,deleteToSavedReck}) =>  {
         <EterSeven saveOrRemove={saveOrRemove}/>
         <EterEight saveOrRemove={saveOrRemove}/>
         <EterNine saveOrRemove={saveOrRemove}/>
-        <EterTen saveOrRemove={saveOrRemove}/>
         <EterEleven saveOrRemove={saveOrRemove}/>
         <EterTweleve saveOrRemove={saveOrRemove}/>
         <EterThirteen saveOrRemove={saveOrRemove}/>
@@ -156,6 +155,7 @@ const Eternal = ({addToSavedReck,deleteToSavedReck}) =>  {
         <EterTwentyTwo saveOrRemove={saveOrRemove}/>
         <EterTwentyThree saveOrRemove={saveOrRemove}/>
         <EterTwentyFour saveOrRemove={saveOrRemove}/>
+        <EterTen saveOrRemove={saveOrRemove}/>
       </div>
       <SwitchTakeSaveBtn 
           showSpread={showSpread} 
