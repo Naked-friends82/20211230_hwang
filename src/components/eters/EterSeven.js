@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from 'react';
-import seven_1 from '../../asset/eter/seven/seven_1.jpg';
-import seven_2 from '../../asset/eter/seven/seven_2.jpg';
-import seven_3 from '../../asset/eter/seven/seven_3.jpg';
-import seven_4 from '../../asset/eter/seven/seven_4.jpg';
-import seven_5 from '../../asset/eter/seven/seven_5.jpg';
-import seven_6 from '../../asset/eter/seven/seven_6.jpg';
-import seven_7 from '../../asset/eter/seven/seven_7.jpg';
-import seven_8 from '../../asset/eter/seven/seven_8.jpg';
-import seven_9 from '../../asset/eter/seven/seven_9.jpg';
-import seven_10 from '../../asset/eter/seven/seven_10.jpg';
-import seven_11 from '../../asset/eter/seven/seven_11.jpg';
-import seven_12 from '../../asset/eter/seven/seven_12.jpg';
+import module_1 from '../../asset/eter/eter_7/module_1.jpg';
+import module_2 from '../../asset/eter/eter_7/module_2.jpg';
+import module_3 from '../../asset/eter/eter_7/module_3.jpg';
+import module_4 from '../../asset/eter/eter_7/module_4.jpg';
+import module_5 from '../../asset/eter/eter_7/module_5.jpg';
+import module_6 from '../../asset/eter/eter_7/module_6.jpg';
+import module_7 from '../../asset/eter/eter_7/module_7.jpg';
+import module_8 from '../../asset/eter/eter_7/module_8.jpg';
+import module_9 from '../../asset/eter/eter_7/module_9.jpg';
+import module_10 from '../../asset/eter/eter_7/module_10.jpg';
+import module_11 from '../../asset/eter/eter_7/module_11.jpg';
+import module_12 from '../../asset/eter/eter_7/module_12.jpg';
 //redux
 import { connect } from 'react-redux';
 
@@ -32,76 +32,76 @@ const EterSeven = ({saveOrRemove,savedReck_rdx}) => {
   const [classAlt11,setClassAlt11] = useState('dragablImg');
   const [classAlt12,setClassAlt12] = useState('dragablImg');
 
-  const SEVEN_RECK = [
+  const MODULE_RECK = [
     {
       id: '7_0_1',
-      src: seven_1,
+      src: module_1,
       className: classAlt1,
       func:setClassAlt1
     },
     {
       id: '7_0_2',
-      src: seven_2,
+      src: module_2,
       className: classAlt2,
       func:setClassAlt2
     },
     {
       id: '7_0_3',
-      src: seven_3,
+      src: module_3,
       className: classAlt3,
       func:setClassAlt3,
     },
     {
       id: '7_0_4',
-      src: seven_4,
+      src: module_4,
       className: classAlt4,
       func:setClassAlt4,
     },
     {
       id: '7_0_5',
-      src: seven_5,
+      src: module_5,
       className: classAlt5,
       func:setClassAlt5,
     },
     {
       id: '7_0_6',
-      src: seven_6,
+      src: module_6,
       className: classAlt6,
       func: setClassAlt6,
     },
     {
       id: '7_0_7',
-      src: seven_7,
+      src: module_7,
       className: classAlt7,
       func: setClassAlt7,
     },
     {
       id: '7_0_8',
-      src: seven_8,
+      src: module_8,
       className: classAlt8,
       func: setClassAlt8,
     },
     {
       id: '7_0_9',
-      src: seven_9,
+      src: module_9,
       className: classAlt9,
       func: setClassAlt9,
     },
     {
       id: '7_0_10',
-      src: seven_10,
+      src: module_10,
       className: classAlt10,
       func: setClassAlt10,
     },
     {
       id: '7_0_11',
-      src: seven_11,
+      src: module_11,
       className: classAlt11,
       func: setClassAlt11,
     },
     {
       id: '7_0_12',
-      src: seven_12,
+      src: module_12,
       className: classAlt12,
       func: setClassAlt12,
     },
@@ -109,25 +109,25 @@ const EterSeven = ({saveOrRemove,savedReck_rdx}) => {
 
   //savedReck_rdx의 변화감지
   useEffect(() => {
-    convertProps(savedReck_rdx, SEVEN_RECK)
+    convertProps(savedReck_rdx, MODULE_RECK)
   },[savedReck_rdx]);
 
   return(
-    <div className="eterSeven_grid_container">
+    <div className="total16_grid_container">
       <div className="grid_item1">
-        <img className={SEVEN_RECK[0].className} id={SEVEN_RECK[0].id} onClick={saveOrRemove} src={SEVEN_RECK[0].src} alt="img" />
+        <img className={MODULE_RECK[0].className} id={MODULE_RECK[0].id} onClick={saveOrRemove} src={MODULE_RECK[0].src} alt="img" />
       </div>
       <div className="grid_item2">
-        <img className={SEVEN_RECK[1].className} id={SEVEN_RECK[1].id} onClick={saveOrRemove} src={SEVEN_RECK[1].src} alt="img" />
+        <img className={MODULE_RECK[1].className} id={MODULE_RECK[1].id} onClick={saveOrRemove} src={MODULE_RECK[1].src} alt="img" />
       </div>
       <div className="grid_item3">
-        <img className={SEVEN_RECK[2].className} id={SEVEN_RECK[2].id} onClick={saveOrRemove} src={SEVEN_RECK[2].src} alt="img" />
+        <img className={MODULE_RECK[2].className} id={MODULE_RECK[2].id} onClick={saveOrRemove} src={MODULE_RECK[2].src} alt="img" />
       </div>
       <div className="grid_item4">
-        <img className={SEVEN_RECK[3].className} id={SEVEN_RECK[3].id} onClick={saveOrRemove} src={SEVEN_RECK[3].src} alt="img" />
+        <img className={MODULE_RECK[3].className} id={MODULE_RECK[3].id} onClick={saveOrRemove} src={MODULE_RECK[3].src} alt="img" />
       </div>
       <div className="grid_item5">
-        <img className={SEVEN_RECK[4].className} id={SEVEN_RECK[4].id} onClick={saveOrRemove} src={SEVEN_RECK[4].src} alt="img" />
+        <img className={MODULE_RECK[4].className} id={MODULE_RECK[4].id} onClick={saveOrRemove} src={MODULE_RECK[4].src} alt="img" />
       </div>
       <div className="grid_item6">
         
@@ -136,10 +136,10 @@ const EterSeven = ({saveOrRemove,savedReck_rdx}) => {
         
       </div>
       <div className="grid_item8">
-        <img className={SEVEN_RECK[5].className} id={SEVEN_RECK[5].id} onClick={saveOrRemove} src={SEVEN_RECK[5].src} alt="img" />
+        <img className={MODULE_RECK[5].className} id={MODULE_RECK[5].id} onClick={saveOrRemove} src={MODULE_RECK[5].src} alt="img" />
       </div>
       <div className="grid_item9">
-        <img className={SEVEN_RECK[6].className} id={SEVEN_RECK[6].id} onClick={saveOrRemove} src={SEVEN_RECK[6].src} alt="img" />
+        <img className={MODULE_RECK[6].className} id={MODULE_RECK[6].id} onClick={saveOrRemove} src={MODULE_RECK[6].src} alt="img" />
       </div>
       <div className="grid_item10">
         
@@ -148,19 +148,19 @@ const EterSeven = ({saveOrRemove,savedReck_rdx}) => {
         
       </div>
       <div className="grid_item12">
-        <img className={SEVEN_RECK[7].className} id={SEVEN_RECK[7].id} onClick={saveOrRemove} src={SEVEN_RECK[7].src} alt="img" />
+        <img className={MODULE_RECK[7].className} id={MODULE_RECK[7].id} onClick={saveOrRemove} src={MODULE_RECK[7].src} alt="img" />
       </div>
       <div className="grid_item13">
-        <img className={SEVEN_RECK[8].className} id={SEVEN_RECK[8].id} onClick={saveOrRemove} src={SEVEN_RECK[8].src} alt="img" />
+        <img className={MODULE_RECK[8].className} id={MODULE_RECK[8].id} onClick={saveOrRemove} src={MODULE_RECK[8].src} alt="img" />
       </div>
       <div className="grid_item14">
-        <img className={SEVEN_RECK[9].className} id={SEVEN_RECK[9].id} onClick={saveOrRemove} src={SEVEN_RECK[9].src} alt="img" />
+        <img className={MODULE_RECK[9].className} id={MODULE_RECK[9].id} onClick={saveOrRemove} src={MODULE_RECK[9].src} alt="img" />
       </div>
       <div className="grid_item15">
-        <img className={SEVEN_RECK[10].className} id={SEVEN_RECK[10].id} onClick={saveOrRemove} src={SEVEN_RECK[10].src} alt="img" />
+        <img className={MODULE_RECK[10].className} id={MODULE_RECK[10].id} onClick={saveOrRemove} src={MODULE_RECK[10].src} alt="img" />
       </div>
       <div className="grid_item16">
-        <img className={SEVEN_RECK[11].className} id={SEVEN_RECK[11].id} onClick={saveOrRemove} src={SEVEN_RECK[11].src} alt="img" />
+        <img className={MODULE_RECK[11].className} id={MODULE_RECK[11].id} onClick={saveOrRemove} src={MODULE_RECK[11].src} alt="img" />
       </div>
     </div>
   );
