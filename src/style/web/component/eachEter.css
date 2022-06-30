@@ -1,70 +1,7 @@
-.eterThree_grid_container {
+.total8_grid_container {
   display: grid;
   grid-gap: 4px;
-  grid-template-columns: 76px 76px 76px 76px 76px;
-  grid-template-rows: 114px 114px 114px 114px;
-  margin: 0px 28px;
-}
-.eterFour_grid_container {
-  display: grid;
-  grid-gap: 4px;
-  grid-template-columns: 76px 76px 76px 76px 76px 76px;
-  grid-template-rows: 114px 114px 114px 114px;
-  margin: 0px 28px;
-}
-.eterFive_grid_container {
-  display: grid;
-  grid-gap: 4px;
-  grid-template-columns: 76px 76px 76px 76px 76px;
-  grid-template-rows: 114px 114px 114px 114px;
-  margin: 0px 28px;
-}
-.eterSix_grid_container {
-  display: grid;
-  grid-gap: 4px;
-  grid-template-columns: 76px 76px 76px;
-  grid-template-rows: 114px 114px 114px 114px;
-  margin: 0px 28px;
-}
-.eterSeven_grid_container {
-  display: grid;
-  grid-gap: 4px;
-  grid-template-columns: 76px 76px 76px 76px;
-  grid-template-rows: 114px 114px 114px 114px;
-  margin: 0px 28px;
-}
-.eterEight_grid_container {
-  display: grid;
-  grid-gap: 4px;
-  grid-template-columns: 76px 76px 76px 76px 76px;
-  grid-template-rows: 114px 114px 114px 114px;
-  margin: 0px 28px;
-}
-.eterNine_grid_container {
-  display: grid;
-  grid-gap: 4px;
-  grid-template-columns: 76px 76px 76px 76px;
-  grid-template-rows: 114px 114px 114px 114px;
-  margin: 0px 28px;
-}
-.eterTen_grid_container {
-  display: grid;
-  grid-gap: 4px;
-  grid-template-columns: 76px 76px 76px 76px;
-  grid-template-rows: 114px 114px 114px 114px;
-  margin: 0px 28px;
-}
-.eterEleven_grid_container {
-  display: grid;
-  grid-gap: 4px;
-  grid-template-columns: 76px 76px 76px 76px 76px 76px 76px 76px 76px 76px 76px;
-  grid-template-rows: 114px 114px 114px 114px;
-  margin: 0px 28px;
-}
-.eterTwelve_grid_container {
-  display: grid;
-  grid-gap: 4px;
-  grid-template-columns: 76px 76px 76px 76px 76px;
+  grid-template-columns: 76px 76px;
   grid-template-rows: 114px 114px 114px 114px;
   margin: 0px 28px;
 }
@@ -107,6 +44,13 @@
   display: grid;
   grid-gap: 4px;
   grid-template-columns: 76px 76px 76px 76px 76px 76px 76px 76px 76px 76px;
+  grid-template-rows: 114px 114px 114px 114px;
+  margin: 0px 28px;
+}
+.total44_grid_container {
+  display: grid;
+  grid-gap: 4px;
+  grid-template-columns: 76px 76px 76px 76px 76px 76px 76px 76px 76px 76px 76px;
   grid-template-rows: 114px 114px 114px 114px;
   margin: 0px 28px;
 }

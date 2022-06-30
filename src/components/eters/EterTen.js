@@ -73,7 +73,7 @@ const EterTen = ({saveOrRemove,savedReck_rdx}) => {
   },[savedReck_rdx]);
 
   return(
-    <div className="etermodule_grid_container">
+    <div className="total16_grid_container">
       <div className="grid_item1">
       
       </div>

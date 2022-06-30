@@ -66,7 +66,7 @@ const EterSix = ({saveOrRemove,savedReck_rdx}) => {
   },[savedReck_rdx]);
 
   return(
-    <div className="eterSix_grid_container">
+    <div className="total12_grid_container">
       <div className="grid_item1">
       
       </div>
