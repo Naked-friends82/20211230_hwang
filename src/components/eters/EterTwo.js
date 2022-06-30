@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from 'react';
-import module_1 from '../../asset/eter/eter_1/module_1.jpg';
-import module_2 from '../../asset/eter/eter_1/module_2.jpg';
-import module_3 from '../../asset/eter/eter_1/module_3.jpg';
-import module_4 from '../../asset/eter/eter_1/module_4.jpg';
-import module_5 from '../../asset/eter/eter_1/module_5.jpg';
-import module_6 from '../../asset/eter/eter_1/module_6.jpg';
-import module_7 from '../../asset/eter/eter_1/module_7.jpg';
-import module_8 from '../../asset/eter/eter_1/module_8.jpg';
-import module_9 from '../../asset/eter/eter_1/module_9.jpg';
-import module_10 from '../../asset/eter/eter_1/module_10.jpg';
-import module_11 from '../../asset/eter/eter_1/module_11.jpg';
-import module_12 from '../../asset/eter/eter_1/module_12.jpg';
+import module_1 from '../../asset/eter/eter_2/module_1.jpg';
+import module_2 from '../../asset/eter/eter_2/module_2.jpg';
+import module_3 from '../../asset/eter/eter_2/module_3.jpg';
+import module_4 from '../../asset/eter/eter_2/module_4.jpg';
+import module_5 from '../../asset/eter/eter_2/module_5.jpg';
+import module_6 from '../../asset/eter/eter_2/module_6.jpg';
+import module_7 from '../../asset/eter/eter_2/module_7.jpg';
+import module_8 from '../../asset/eter/eter_2/module_8.jpg';
+import module_9 from '../../asset/eter/eter_2/module_9.jpg';
+import module_10 from '../../asset/eter/eter_2/module_10.jpg';
+import module_11 from '../../asset/eter/eter_2/module_11.jpg';
+import module_12 from '../../asset/eter/eter_2/module_12.jpg';
 //redux
 import { connect } from 'react-redux';
 
