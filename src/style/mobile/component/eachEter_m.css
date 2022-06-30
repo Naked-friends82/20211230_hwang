@@ -55,6 +55,13 @@
     grid-template-rows: 90px 90px 90px 90px;
     margin: 0px 14px;
   }
+  .total44_grid_container {
+    display: grid;
+    grid-gap: 3px;
+    grid-template-columns: 60px 60px 60px 60px 60px 60px 60px 60px 60px 60px 60px 60px;
+    grid-template-rows: 90px 90px 90px 90px;
+    margin: 0px 14px;
+  }
   .dragablImg {
     width: 60px;
     height: 90px;
