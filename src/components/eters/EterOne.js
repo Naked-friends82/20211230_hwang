@@ -1,22 +1,22 @@
 import React, { useEffect, useState } from 'react';
-import one_1 from '../../asset/eter/one/one_1.jpg';
-import one_2 from '../../asset/eter/one/one_2.jpg';
-import one_3 from '../../asset/eter/one/one_3.jpg';
-import one_4 from '../../asset/eter/one/one_4.jpg';
-import one_5 from '../../asset/eter/one/one_5.jpg';
-import one_6 from '../../asset/eter/one/one_6.jpg';
-import one_7 from '../../asset/eter/one/one_7.jpg';
-import one_8 from '../../asset/eter/one/one_8.jpg';
-import one_9 from '../../asset/eter/one/one_9.jpg';
-import one_10 from '../../asset/eter/one/one_10.jpg';
-import one_11 from '../../asset/eter/one/one_11.jpg';
-import one_12 from '../../asset/eter/one/one_12.jpg';
-import one_13 from '../../asset/eter/one/one_13.jpg';
-import one_14 from '../../asset/eter/one/one_14.jpg';
-import one_15 from '../../asset/eter/one/one_15.jpg';
-import one_16 from '../../asset/eter/one/one_16.jpg';
-import one_17 from '../../asset/eter/one/one_17.jpg';
-import one_18 from '../../asset/eter/one/one_18.jpg';
+import module_1 from '../../asset/eter/eter_1/module_1.jpg';
+import module_2 from '../../asset/eter/eter_1/module_2.jpg';
+import module_3 from '../../asset/eter/eter_1/module_3.jpg';
+import module_4 from '../../asset/eter/eter_1/module_4.jpg';
+import module_5 from '../../asset/eter/eter_1/module_5.jpg';
+import module_6 from '../../asset/eter/eter_1/module_6.jpg';
+import module_7 from '../../asset/eter/eter_1/module_7.jpg';
+import module_8 from '../../asset/eter/eter_1/module_8.jpg';
+import module_9 from '../../asset/eter/eter_1/module_9.jpg';
+import module_10 from '../../asset/eter/eter_1/module_10.jpg';
+import module_11 from '../../asset/eter/eter_1/module_11.jpg';
+import module_12 from '../../asset/eter/eter_1/module_12.jpg';
+import module_13 from '../../asset/eter/eter_1/module_13.jpg';
+import module_14 from '../../asset/eter/eter_1/module_14.jpg';
+import module_15 from '../../asset/eter/eter_1/module_15.jpg';
+import module_16 from '../../asset/eter/eter_1/module_16.jpg';
+import module_17 from '../../asset/eter/eter_1/module_17.jpg';
+import module_18 from '../../asset/eter/eter_1/module_18.jpg';
 //redux
 import { connect } from 'react-redux';
 
@@ -45,113 +45,113 @@ const EterOne = ({saveOrRemove,savedReck_rdx}) => {
   const [classAlt17,setClassAlt17] = useState('dragablImg');
   const [classAlt18,setClassAlt18] = useState('dragablImg');
 
-  const ONE_RECK = [
+  const MODULE_RECK = [
     {
       id: '1_0_1',
-      src: one_1,
+      src: module_1,
       className: classAlt1,
       func:setClassAlt1
     },
     {
       id: '1_0_2',
-      src: one_2,
+      src: module_2,
       className: classAlt2,
       func:setClassAlt2
     },
     {
       id: '1_0_3',
-      src: one_3,
+      src: module_3,
       className: classAlt3,
       func:setClassAlt3,
     },
     {
       id: '1_0_4',
-      src: one_4,
+      src: module_4,
       className: classAlt4,
       func:setClassAlt4,
     },
     {
       id: '1_0_5',
-      src: one_5,
+      src: module_5,
       className: classAlt5,
       func:setClassAlt5,
     },
     {
       id: '1_0_6',
-      src: one_6,
+      src: module_6,
       className: classAlt6,
       func: setClassAlt6,
     },
     {
       id: '1_0_7',
-      src: one_7,
+      src: module_7,
       className: classAlt7,
       func: setClassAlt7,
     },
     {
       id: '1_0_8',
-      src: one_8,
+      src: module_8,
       className: classAlt8,
       func: setClassAlt8,
     },
     {
       id: '1_0_9',
-      src: one_9,
+      src: module_9,
       className: classAlt9,
       func: setClassAlt9,
     },
     {
       id: '1_0_10',
-      src: one_10,
+      src: module_10,
       className: classAlt10,
       func: setClassAlt10,
     },
     {
       id: '1_0_11',
-      src: one_11,
+      src: module_11,
       className: classAlt11,
       func: setClassAlt11,
     },
     {
       id: '1_0_12',
-      src: one_12,
+      src: module_12,
       className: classAlt12,
       func: setClassAlt12,
     },
     {
       id: '1_0_13',
-      src: one_13,
+      src: module_13,
       className: classAlt13,
       func: setClassAlt13,
     },
     {
       id: '1_0_14',
-      src: one_14,
+      src: module_14,
       className: classAlt14,
       func: setClassAlt14,
     },
     {
       id: '1_0_15',
-      src: one_15,
+      src: module_15,
       className: classAlt15,
       func: setClassAlt15,
     },
     {
       id: '1_0_16',
-      src: one_16,
+      src: module_16,
       className: classAlt16,
       func: setClassAlt16,
     },
 
     {
       id: '1_0_17',
-      src: one_17,
+      src: module_17,
       className: classAlt17,
       func: setClassAlt17,
     },
     {
       id: '1_0_18',
-      src: one_18,
+      src: module_18,
       className: classAlt18,
       func: setClassAlt18,
     },
@@ -159,70 +159,70 @@ const EterOne = ({saveOrRemove,savedReck_rdx}) => {
 
   //savedReck_rdx의 변화감지
   useEffect(() => {
-    convertProps(savedReck_rdx, ONE_RECK)
+    convertProps(savedReck_rdx, MODULE_RECK)
   },[savedReck_rdx]);
   
   return(
-    <div className="eterOne_grid_container">
+    <div className="total20_grid_container">
       <div className="grid_item1">
       
       </div>
       <div className="grid_item2">
-        <img className={ONE_RECK[0].className} id={ONE_RECK[0].id} onClick={saveOrRemove} src={ONE_RECK[0].src} alt="img" />
+        <img className={MODULE_RECK[0].className} id={MODULE_RECK[0].id} onClick={saveOrRemove} src={MODULE_RECK[0].src} alt="img" />
       </div>
       <div className="grid_item3">
-        <img className={ONE_RECK[1].className} id={ONE_RECK[1].id} onClick={saveOrRemove} src={ONE_RECK[1].src} alt="img" />
+        <img className={MODULE_RECK[1].className} id={MODULE_RECK[1].id} onClick={saveOrRemove} src={MODULE_RECK[1].src} alt="img" />
       </div>
       <div className="grid_item4">
-        <img className={ONE_RECK[2].className} id={ONE_RECK[2].id} onClick={saveOrRemove} src={ONE_RECK[2].src} alt="img" />
+        <img className={MODULE_RECK[2].className} id={MODULE_RECK[2].id} onClick={saveOrRemove} src={MODULE_RECK[2].src} alt="img" />
       </div>
       <div className="grid_item5">
-        <img className={ONE_RECK[3].className} id={ONE_RECK[3].id} onClick={saveOrRemove} src={ONE_RECK[3].src} alt="img" />
+        <img className={MODULE_RECK[3].className} id={MODULE_RECK[3].id} onClick={saveOrRemove} src={MODULE_RECK[3].src} alt="img" />
       </div>
       <div className="grid_item6">
         
       </div>
       <div className="grid_item7">
-        <img className={ONE_RECK[4].className} id={ONE_RECK[4].id} onClick={saveOrRemove} src={ONE_RECK[4].src} alt="img" />
+        <img className={MODULE_RECK[4].className} id={MODULE_RECK[4].id} onClick={saveOrRemove} src={MODULE_RECK[4].src} alt="img" />
       </div>
       <div className="grid_item8">
-        <img className={ONE_RECK[5].className} id={ONE_RECK[5].id} onClick={saveOrRemove} src={ONE_RECK[5].src} alt="img" />
+        <img className={MODULE_RECK[5].className} id={MODULE_RECK[5].id} onClick={saveOrRemove} src={MODULE_RECK[5].src} alt="img" />
       </div>
       <div className="grid_item9">
-        <img className={ONE_RECK[6].className} id={ONE_RECK[6].id} onClick={saveOrRemove} src={ONE_RECK[6].src} alt="img" />
+        <img className={MODULE_RECK[6].className} id={MODULE_RECK[6].id} onClick={saveOrRemove} src={MODULE_RECK[6].src} alt="img" />
       </div>
       <div className="grid_item10">
-        <img className={ONE_RECK[7].className} id={ONE_RECK[7].id} onClick={saveOrRemove} src={ONE_RECK[7].src} alt="img" />
+        <img className={MODULE_RECK[7].className} id={MODULE_RECK[7].id} onClick={saveOrRemove} src={MODULE_RECK[7].src} alt="img" />
       </div>
       <div className="grid_item11">
-        <img className={ONE_RECK[8].className} id={ONE_RECK[8].id} onClick={saveOrRemove} src={ONE_RECK[8].src} alt="img" />
+        <img className={MODULE_RECK[8].className} id={MODULE_RECK[8].id} onClick={saveOrRemove} src={MODULE_RECK[8].src} alt="img" />
       </div>
       <div className="grid_item12">
-        <img className={ONE_RECK[9].className} id={ONE_RECK[9].id} onClick={saveOrRemove} src={ONE_RECK[9].src} alt="img" />
+        <img className={MODULE_RECK[9].className} id={MODULE_RECK[9].id} onClick={saveOrRemove} src={MODULE_RECK[9].src} alt="img" />
       </div>
       <div className="grid_item13">
-        <img className={ONE_RECK[10].className} id={ONE_RECK[10].id} onClick={saveOrRemove} src={ONE_RECK[10].src} alt="img" />
+        <img className={MODULE_RECK[10].className} id={MODULE_RECK[10].id} onClick={saveOrRemove} src={MODULE_RECK[10].src} alt="img" />
       </div>
       <div className="grid_item14">
-        <img className={ONE_RECK[11].className} id={ONE_RECK[11].id} onClick={saveOrRemove} src={ONE_RECK[11].src} alt="img" />
+        <img className={MODULE_RECK[11].className} id={MODULE_RECK[11].id} onClick={saveOrRemove} src={MODULE_RECK[11].src} alt="img" />
       </div>
       <div className="grid_item15">
-        <img className={ONE_RECK[12].className} id={ONE_RECK[12].id} onClick={saveOrRemove} src={ONE_RECK[12].src} alt="img" />
+        <img className={MODULE_RECK[12].className} id={MODULE_RECK[12].id} onClick={saveOrRemove} src={MODULE_RECK[12].src} alt="img" />
       </div>
       <div className="grid_item16">
-        <img className={ONE_RECK[13].className} id={ONE_RECK[13].id} onClick={saveOrRemove} src={ONE_RECK[13].src} alt="img" />
+        <img className={MODULE_RECK[13].className} id={MODULE_RECK[13].id} onClick={saveOrRemove} src={MODULE_RECK[13].src} alt="img" />
       </div>
       <div className="grid_item17">
-        <img className={ONE_RECK[14].className} id={ONE_RECK[14].id} onClick={saveOrRemove} src={ONE_RECK[14].src} alt="img" />
+        <img className={MODULE_RECK[14].className} id={MODULE_RECK[14].id} onClick={saveOrRemove} src={MODULE_RECK[14].src} alt="img" />
       </div>
       <div className="grid_item18">
-        <img className={ONE_RECK[15].className} id={ONE_RECK[15].id} onClick={saveOrRemove} src={ONE_RECK[15].src} alt="img" />
+        <img className={MODULE_RECK[15].className} id={MODULE_RECK[15].id} onClick={saveOrRemove} src={MODULE_RECK[15].src} alt="img" />
       </div>
       <div className="grid_item19">
-        <img className={ONE_RECK[16].className} id={ONE_RECK[16].id} onClick={saveOrRemove} src={ONE_RECK[16].src} alt="img" />
+        <img className={MODULE_RECK[16].className} id={MODULE_RECK[16].id} onClick={saveOrRemove} src={MODULE_RECK[16].src} alt="img" />
       </div>
       <div className="grid_item20">
-        <img className={ONE_RECK[17].className} id={ONE_RECK[17].id} onClick={saveOrRemove} src={ONE_RECK[17].src} alt="img" />
+        <img className={MODULE_RECK[17].className} id={MODULE_RECK[17].id} onClick={saveOrRemove} src={MODULE_RECK[17].src} alt="img" />
       </div>
     </div>
   );

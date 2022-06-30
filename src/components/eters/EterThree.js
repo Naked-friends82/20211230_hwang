@@ -1,17 +1,17 @@
 import React, { useEffect, useState } from 'react';
-import three_1 from '../../asset/eter/three/three_1.jpg';
-import three_2 from '../../asset/eter/three/three_2.jpg';
-import three_3 from '../../asset/eter/three/three_3.jpg';
-import three_4 from '../../asset/eter/three/three_4.jpg';
-import three_5 from '../../asset/eter/three/three_5.jpg';
-import three_6 from '../../asset/eter/three/three_6.jpg';
-import three_7 from '../../asset/eter/three/three_7.jpg';
-import three_8 from '../../asset/eter/three/three_8.jpg';
-import three_9 from '../../asset/eter/three/three_9.jpg';
-import three_10 from '../../asset/eter/three/three_10.jpg';
-import three_11 from '../../asset/eter/three/three_11.jpg';
-import three_12 from '../../asset/eter/three/three_12.jpg';
-import three_13 from '../../asset/eter/three/three_13.jpg';
+import module_1 from '../../asset/eter/eter_3/module_1.jpg';
+import module_2 from '../../asset/eter/eter_3/module_2.jpg';
+import module_3 from '../../asset/eter/eter_3/module_3.jpg';
+import module_4 from '../../asset/eter/eter_3/module_4.jpg';
+import module_5 from '../../asset/eter/eter_3/module_5.jpg';
+import module_6 from '../../asset/eter/eter_3/module_6.jpg';
+import module_7 from '../../asset/eter/eter_3/module_7.jpg';
+import module_8 from '../../asset/eter/eter_3/module_8.jpg';
+import module_9 from '../../asset/eter/eter_3/module_9.jpg';
+import module_10 from '../../asset/eter/eter_3/module_10.jpg';
+import module_11 from '../../asset/eter/eter_3/module_11.jpg';
+import module_12 from '../../asset/eter/eter_3/module_12.jpg';
+import module_13 from '../../asset/eter/eter_3/module_13.jpg';
 //redux
 import { connect } from 'react-redux';
 
@@ -35,82 +35,82 @@ const EterThree = ({saveOrRemove,savedReck_rdx}) => {
   const [classAlt13,setClassAlt13] = useState('dragablImg');
 
 
-  const THREE_RECK = [
+  const MODULE_RECK = [
     {
       id: '3_0_1',
-      src: three_1,
+      src: module_1,
       className: classAlt1,
       func:setClassAlt1
     },
     {
       id: '3_0_2',
-      src: three_2,
+      src: module_2,
       className: classAlt2,
       func:setClassAlt2
     },
     {
       id: '3_0_3',
-      src: three_3,
+      src: module_3,
       className: classAlt3,
       func:setClassAlt3,
     },
     {
       id: '3_0_4',
-      src: three_4,
+      src: module_4,
       className: classAlt4,
       func:setClassAlt4,
     },
     {
       id: '3_0_5',
-      src: three_5,
+      src: module_5,
       className: classAlt5,
       func:setClassAlt5,
     },
     {
       id: '3_0_6',
-      src: three_6,
+      src: module_6,
       className: classAlt6,
       func: setClassAlt6,
     },
     {
       id: '3_0_7',
-      src: three_7,
+      src: module_7,
       className: classAlt7,
       func: setClassAlt7,
     },
     {
       id: '3_0_8',
-      src: three_8,
+      src: module_8,
       className: classAlt8,
       func: setClassAlt8,
     },
     {
       id: '3_0_9',
-      src: three_9,
+      src: module_9,
       className: classAlt9,
       func: setClassAlt9,
     },
     {
       id: '3_0_10',
-      src: three_10,
+      src: module_10,
       className: classAlt10,
       func: setClassAlt10,
     },
     {
       id: '3_0_11',
-      src: three_11,
+      src: module_11,
       className: classAlt11,
       func: setClassAlt11,
     },
     {
       id: '3_0_12',
-      src: three_12,
+      src: module_12,
       className: classAlt12,
       func: setClassAlt12,
     },
     {
       id: '3_0_13',
-      src: three_13,
+      src: module_13,
       className: classAlt13,
       func: setClassAlt13,
     },
@@ -118,85 +118,70 @@ const EterThree = ({saveOrRemove,savedReck_rdx}) => {
 
   //savedReck_rdx의 변화감지
   useEffect(() => {
-    convertProps(savedReck_rdx, THREE_RECK)
+    convertProps(savedReck_rdx, MODULE_RECK)
   },[savedReck_rdx]);
 
   return(
-    <div className="eterThree_grid_container">
-      {/* <div className="grid_item1">
-        
-      </div>
-      <div className="grid_item2">
-
-      </div>
-      <div className="grid_item3">
-
-      </div>
-      <div className="grid_item4">
-      
-      </div>
-      <div className="grid_item5">
-        <img className="dragablImg" onClick={saveReck} src={three_1} alt="img" />
-      </div> */}
+    <div className="total20_grid_container">
       <div className="grid_item6">
-        <img className={classAlt2} id={THREE_RECK[1].id} onClick={saveOrRemove} src={THREE_RECK[1].src} alt="img" />
+        <img className={MODULE_RECK[1].className} id={MODULE_RECK[1].id} onClick={saveOrRemove} src={MODULE_RECK[1].src} alt="img" />
       </div>
       <div className="grid_item7">
         
       </div>
       <div className="grid_item8">
-        <img className={classAlt3} id={THREE_RECK[2].id} onClick={saveOrRemove} src={THREE_RECK[2].src} alt="img" />
+        <img className={MODULE_RECK[2].className} id={MODULE_RECK[2].id} onClick={saveOrRemove} src={MODULE_RECK[2].src} alt="img" />
       </div>
       <div className="grid_item9">
         
       </div>
       <div className="grid_item10">
-        <img className={classAlt4} id={THREE_RECK[3].id} onClick={saveOrRemove} src={THREE_RECK[3].src} alt="img" />
+        <img className={MODULE_RECK[3].className} id={MODULE_RECK[3].id} onClick={saveOrRemove} src={MODULE_RECK[3].src} alt="img" />
       </div>
       <div className="grid_item11">
         
       </div>
       <div className="grid_item12">
-        <img className={classAlt5} id={THREE_RECK[4].id} onClick={saveOrRemove} src={THREE_RECK[4].src} alt="img" />
+        <img className={MODULE_RECK[4].className} id={MODULE_RECK[4].id} onClick={saveOrRemove} src={MODULE_RECK[4].src} alt="img" />
       </div>
       <div className="grid_item13">
-        <img className={classAlt6} id={THREE_RECK[5].id} onClick={saveOrRemove} src={THREE_RECK[5].src} alt="img" />
+        <img className={MODULE_RECK[5].className} id={MODULE_RECK[5].id} onClick={saveOrRemove} src={MODULE_RECK[5].src} alt="img" />
       </div>
       <div className="grid_item14">
-        <img className={classAlt7} id={THREE_RECK[6].id} onClick={saveOrRemove} src={THREE_RECK[6].src} alt="img" />
+        <img className={MODULE_RECK[6].className} id={MODULE_RECK[6].id} onClick={saveOrRemove} src={MODULE_RECK[6].src} alt="img" />
       </div>
       <div className="grid_item15">
         
       </div>
       <div className="grid_item16">
-        <img className={classAlt8} id={THREE_RECK[7].id} onClick={saveOrRemove} src={THREE_RECK[7].src} alt="img" />
+        <img className={MODULE_RECK[7].className} id={MODULE_RECK[7].id} onClick={saveOrRemove} src={MODULE_RECK[7].src} alt="img" />
       </div>
       <div className="grid_item17">
         
       </div>
       <div className="grid_item18">
-        <img className={classAlt9} id={THREE_RECK[8].id} onClick={saveOrRemove} src={THREE_RECK[8].src} alt="img" />
+        <img className={MODULE_RECK[8].className} id={MODULE_RECK[8].id} onClick={saveOrRemove} src={MODULE_RECK[8].src} alt="img" />
       </div>
       <div className="grid_item19">
         
       </div>
       <div className="grid_item20">
-        <img className={classAlt10} id={THREE_RECK[9].id} onClick={saveOrRemove} src={THREE_RECK[9].src} alt="img" />
+        <img className={MODULE_RECK[9].className} id={MODULE_RECK[9].id} onClick={saveOrRemove} src={MODULE_RECK[9].src} alt="img" />
       </div>
       <div className="grid_item21">
-        <img className={classAlt11} id={THREE_RECK[10].id} onClick={saveOrRemove} src={THREE_RECK[10].src} alt="img" />
+        <img className={MODULE_RECK[10].className} id={MODULE_RECK[10].id} onClick={saveOrRemove} src={MODULE_RECK[10].src} alt="img" />
       </div>
       <div className="grid_item22">
         
       </div>
       <div className="grid_item23">
-        <img className={classAlt12} id={THREE_RECK[11].id} onClick={saveOrRemove} src={THREE_RECK[11].src} alt="img" />
+        <img className={MODULE_RECK[11].className} id={MODULE_RECK[11].id} onClick={saveOrRemove} src={MODULE_RECK[11].src} alt="img" />
       </div>
       <div className="grid_item24">
         
       </div>
       <div className="grid_item25">
-        <img className={classAlt13} id={THREE_RECK[12].id} onClick={saveOrRemove} src={THREE_RECK[12].src} alt="img" />
+        <img className={MODULE_RECK[12].className} id={MODULE_RECK[12].id} onClick={saveOrRemove} src={MODULE_RECK[12].src} alt="img" />
       </div>
     </div>
   );
