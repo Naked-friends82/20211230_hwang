@@ -26,6 +26,7 @@ import EterTwentyOne from '../components/eters/EterTwentyOne';
 import EterTwentyTwo from '../components/eters/EterTwentyTwo';
 import EterTwentyThree from '../components/eters/EterTwentyThree';
 import EterTwentyFour from '../components/eters/EterTwentyFour';
+import EterTwentyFive from '../components/eters/EterTwentyFive';
 import Spread from '../components/Spread';
 import SwitchTakeSaveBtn from '../components/SwitchTakeSaveBtn';
 import ClickedReck from '../components/ClickedReck';
@@ -156,6 +157,7 @@ const Eternal = ({addToSavedReck,deleteToSavedReck}) =>  {
         <EterTwentyThree saveOrRemove={saveOrRemove}/>
         <EterTwentyFour saveOrRemove={saveOrRemove}/>
         <EterTen saveOrRemove={saveOrRemove}/>
+        <EterTwentyFive saveOrRemove={saveOrRemove}/>
       </div>
       <SwitchTakeSaveBtn 
           showSpread={showSpread} 

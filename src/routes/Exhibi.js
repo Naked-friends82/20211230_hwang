@@ -10,8 +10,6 @@ import '../style/mobile/route/exhibi_m.css';
 import ToggleDetail from '../function/ToggleDetail.js';
 
 const Exhibi = () =>  {
-
-
   // ToggleDetail 사용
   // shiftThumbPack[0]은 현재 detail
   // shiftThumbPack[1]은 detail 바꾸는 함수
