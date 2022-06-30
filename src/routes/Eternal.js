@@ -1,6 +1,7 @@
 import React, { useRef, useState } from 'react';
 import EachDetail from '../components/EachDetail';
 import EterZero from '../components/eters/EterZero';
+import EterZeroOne from '../components/eters/EterZeroOne';
 import EterOne from '../components/eters/EterOne';
 import EterTwo from '../components/eters/EterTwo';
 import EterThree from '../components/eters/EterThree';
@@ -13,6 +14,18 @@ import EterNine from '../components/eters/EterNine';
 import EterTen from '../components/eters/EterTen';
 import EterEleven from '../components/eters/EterEleven';
 import EterTweleve from '../components/eters/EterTweleve';
+import EterThirteen from '../components/eters/EterThirteen';
+import EterFourteen from '../components/eters/EterFourteen';
+import EterFifteen from '../components/eters/EterFifteen';
+import EterSixteen from '../components/eters/EterSixteen';
+import EterSeventeen from '../components/eters/EterSeventeen';
+import EterEighteen from '../components/eters/EterEighteen';
+import EterNineteen from '../components/eters/EterNineteen';
+import EterTwenty from '../components/eters/EterTwenty';
+import EterTwentyOne from '../components/eters/EterTwentyOne';
+import EterTwentyTwo from '../components/eters/EterTwentyTwo';
+import EterTwentyThree from '../components/eters/EterTwentyThree';
+import EterTwentyFour from '../components/eters/EterTwentyFour';
 import Spread from '../components/Spread';
 import SwitchTakeSaveBtn from '../components/SwitchTakeSaveBtn';
 import ClickedReck from '../components/ClickedReck';
@@ -118,6 +131,7 @@ const Eternal = ({addToSavedReck,deleteToSavedReck}) =>  {
       </div>
       <div id="eter_reck" className="section_reck_eter" ref={scrollRef}>
         <EterZero saveOrRemove={saveOrRemove}/>
+        <EterZeroOne saveOrRemove={saveOrRemove}/>
         <EterFour saveOrRemove={saveOrRemove}/>
         <EterOne saveOrRemove={saveOrRemove}/>
         <EterTwo saveOrRemove={saveOrRemove}/>
@@ -130,6 +144,18 @@ const Eternal = ({addToSavedReck,deleteToSavedReck}) =>  {
         <EterTen saveOrRemove={saveOrRemove}/>
         <EterEleven saveOrRemove={saveOrRemove}/>
         <EterTweleve saveOrRemove={saveOrRemove}/>
+        <EterThirteen saveOrRemove={saveOrRemove}/>
+        <EterFourteen saveOrRemove={saveOrRemove}/>
+        <EterFifteen saveOrRemove={saveOrRemove}/>
+        <EterSixteen saveOrRemove={saveOrRemove}/>
+        <EterSeventeen saveOrRemove={saveOrRemove}/>
+        <EterEighteen saveOrRemove={saveOrRemove}/>
+        <EterNineteen saveOrRemove={saveOrRemove}/>
+        <EterTwenty saveOrRemove={saveOrRemove}/>
+        <EterTwentyOne saveOrRemove={saveOrRemove}/>
+        <EterTwentyTwo saveOrRemove={saveOrRemove}/>
+        <EterTwentyThree saveOrRemove={saveOrRemove}/>
+        <EterTwentyFour saveOrRemove={saveOrRemove}/>
       </div>
       <SwitchTakeSaveBtn 
           showSpread={showSpread} 
