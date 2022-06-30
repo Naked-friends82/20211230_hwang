@@ -1,6 +1,7 @@
 import React, { useRef, useState } from 'react';
 import EachDetail from '../components/EachDetail';
 import EterZero from '../components/eters/EterZero';
+import EterZeroOne from '../components/eters/EterZeroOne';
 import EterOne from '../components/eters/EterOne';
 import EterTwo from '../components/eters/EterTwo';
 import EterThree from '../components/eters/EterThree';
@@ -13,6 +14,18 @@ import EterNine from '../components/eters/EterNine';
 import EterTen from '../components/eters/EterTen';
 import EterEleven from '../components/eters/EterEleven';
 import EterTweleve from '../components/eters/EterTweleve';
+import EterThirteen from '../components/eters/EterThirteen';
+import EterFourteen from '../components/eters/EterFourteen';
+import EterFifteen from '../components/eters/EterFifteen';
+import EterSixteen from '../components/eters/EterSixteen';
+import EterSeventeen from '../components/eters/EterSeventeen';
+import EterEighteen from '../components/eters/EterEighteen';
+import EterNineteen from '../components/eters/EterNineteen';
+import EterTwenty from '../components/eters/EterTwenty';
+import EterTwentyOne from '../components/eters/EterTwentyOne';
+import EterTwentyTwo from '../components/eters/EterTwentyTwo';
+import EterTwentyThree from '../components/eters/EterTwentyThree';
+import EterTwentyFour from '../components/eters/EterTwentyFour';
 import Spread from '../components/Spread';
 import SwitchTakeSaveBtn from '../components/SwitchTakeSaveBtn';
 import ClickedReck from '../components/ClickedReck';
@@ -28,6 +41,7 @@ import "../style/web/component/eachEter.css";
 import "../style/mobile/component/eachEter_m.css";
 
 // 함수_리펙토링
+import { useHorizontalScroll } from "../function/scroll.js";
 import ToggleDetail from '../function/ToggleDetail.js';
 import TakeScreenshot from '../function/TakeScreenshot.js';
 
@@ -67,17 +81,20 @@ const Eternal = ({addToSavedReck,deleteToSavedReck}) =>  {
   
   const [onSpread, setOnSpread] = useState([]);
 
-  const ref = useRef(null);
-  const ref2 = useRef(null);
+  const ref = useRef(null)
   const screenshotRef = useRef(null);
+  const scrollRef = useHorizontalScroll();
   
   const showSpread = () => {
-    if (ref.current.className === "eter_spreadH"){
-      ref.current.className = "section_reck_eter"
-      ref2.current.className = "eter_spreadH"
+    const spread_comp = document.querySelector('#eter_spread');
+    const reck_comp = document.querySelector('#eter_reck');
+
+    if (spread_comp.className === "eter_spreadH"){
+      spread_comp.className = "section_reck_eter"
+      reck_comp.className = "eter_spreadH"
     } else{
-      ref.current.className = "eter_spreadH"
-      ref2.current.className = "section_reck_eter"
+      spread_comp.className = "eter_spreadH"
+      reck_comp.className = "section_reck_eter"
     };
   }
   //스크린 샷 찍기
@@ -98,10 +115,10 @@ const Eternal = ({addToSavedReck,deleteToSavedReck}) =>  {
   return (
     <section className="section">
       <div className="section_title">
-        <h1><span>Hwang's Manual of</span> Eternal Classics</h1>
+        <h1>Hwang's Manual<span> of Eternal Classics</span></h1>
         <button onClick={toggleDetailPack[1]}><i className="fa-solid fa-info" /></button>
       </div>
-      <div className="eter_spreadH" ref={ref}>
+      <div id="eter_spread" className="eter_spreadH" ref={ref} >
         <Spread 
           saveOrRemove={saveOrRemove} 
           onSpread={onSpread} 
@@ -112,8 +129,9 @@ const Eternal = ({addToSavedReck,deleteToSavedReck}) =>  {
           setDataTrans={setDataTrans}
           />
       </div>
-      <div id="eter_reck" className="section_reck_eter" ref={ref2}>
+      <div id="eter_reck" className="section_reck_eter" ref={scrollRef}>
         <EterZero saveOrRemove={saveOrRemove}/>
+        <EterZeroOne saveOrRemove={saveOrRemove}/>
         <EterFour saveOrRemove={saveOrRemove}/>
         <EterOne saveOrRemove={saveOrRemove}/>
         <EterTwo saveOrRemove={saveOrRemove}/>
@@ -123,9 +141,21 @@ const Eternal = ({addToSavedReck,deleteToSavedReck}) =>  {
         <EterSeven saveOrRemove={saveOrRemove}/>
         <EterEight saveOrRemove={saveOrRemove}/>
         <EterNine saveOrRemove={saveOrRemove}/>
-        <EterTen saveOrRemove={saveOrRemove}/>
         <EterEleven saveOrRemove={saveOrRemove}/>
         <EterTweleve saveOrRemove={saveOrRemove}/>
+        <EterThirteen saveOrRemove={saveOrRemove}/>
+        <EterFourteen saveOrRemove={saveOrRemove}/>
+        <EterFifteen saveOrRemove={saveOrRemove}/>
+        <EterSixteen saveOrRemove={saveOrRemove}/>
+        <EterSeventeen saveOrRemove={saveOrRemove}/>
+        <EterEighteen saveOrRemove={saveOrRemove}/>
+        <EterNineteen saveOrRemove={saveOrRemove}/>
+        <EterTwenty saveOrRemove={saveOrRemove}/>
+        <EterTwentyOne saveOrRemove={saveOrRemove}/>
+        <EterTwentyTwo saveOrRemove={saveOrRemove}/>
+        <EterTwentyThree saveOrRemove={saveOrRemove}/>
+        <EterTwentyFour saveOrRemove={saveOrRemove}/>
+        <EterTen saveOrRemove={saveOrRemove}/>
       </div>
       <SwitchTakeSaveBtn 
           showSpread={showSpread} 

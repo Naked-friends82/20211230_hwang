@@ -95,7 +95,24 @@
 }
 .detailPaper p {
   margin-bottom: 20px;
+  line-height: 26px;
 }
+
+.detailPaper .quote{
+  font-size: var(--font-small);
+  font-weight: var(--weight-light);
+  font-style: oblique;
+}
+.detailPaper .sep{
+  border: solid 0.5px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.detailPaper .ref{
+  font-size: var(--font-min);
+  line-height: 20px;
+}
+
 .eachDetail_back {
   display: block;
   position: fixed;

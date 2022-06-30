@@ -7,22 +7,21 @@ import penet_main from '../asset/main/penet_main.jpg';
 import penet_sec from '../asset/main/penet_sec.jpg';
 import eternal_main from '../asset/main/eternal_main.jpg';
 import eternal_sec from '../asset/main/eternal_sec.jpg';
-import group_death from '../asset/main/group_death.jpg';
-import group_hang from '../asset/main/group_hang.jpg';
 import exhibi_main from '../asset/main/exhibi_main.jpg';
 import CV from '../components/CV';
 // CSS
 import '../style/web/route/works.css';
 import '../style/mobile/route/works_m.css';
 // function
-import { useHorizontalScroll } from "../function/scroll";
-import ShiftInfo from '../function/ShiftInfo';
+import { useHorizontalScroll } from "../function/scroll.js";
+import ShiftInfo from '../function/ShiftInfo.js';
 import ToggleDetail from '../function/ToggleDetail.js';
 //data
 import Exhi_INFO from '../data/Exhi_INFO';
 
 const Works = () =>  {
   const EXHI = Exhi_INFO(0);
+  const thumbImgs  = Exhi_INFO(1);
 
   // shiftInfoPack[0]은 현재 info
   // shiftInfoPack[1]은 info 바꾸는 함수
@@ -51,12 +50,12 @@ const Works = () =>  {
             <img className="works_exhi_index2" src={penet_sec} alt="Penetrating Stone" onMouseEnter={shiftInfoPack[1]} />
         </Link>
         <Link to='/eternal_classics' className="img_index">
-            <img className="works_exhi_index1" src={eternal_main} alt="Eternal classics" />
-            <img className="works_exhi_index2" src={eternal_sec} alt="Eternal classics" onMouseEnter={shiftInfoPack[1]} />
+            <img className="works_exhi_index1" src={eternal_main} alt="황씨화보 (Eternal classics)" />
+            <img className="works_exhi_index2" src={eternal_sec} alt="황씨화보 (Eternal classics)" onMouseEnter={shiftInfoPack[1]} />
         </Link>
         <Link to='/group_exhibitions' className="img_index">
-            <img className="works_exhi_index1" src={group_death} alt="Group Exhibitions" />
-            <img className="works_exhi_index2" src={group_hang} alt="Group Exhibitions" onMouseEnter={shiftInfoPack[1]} />
+            <img className="works_exhi_index1" src={thumbImgs[0].imgSrc} alt="Group Exhibitions" />
+            <img className="works_exhi_index2" src={thumbImgs[1].imgSrc} alt="Group Exhibitions" onMouseEnter={shiftInfoPack[1]} />
         </Link>
         <Link to='/exhibition' className="img_index">
             <img className="works_exhi_index1" src={exhibi_main} alt="Exhibition Detail" onMouseEnter={shiftInfoPack[1]} />

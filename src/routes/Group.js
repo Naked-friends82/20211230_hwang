@@ -10,6 +10,7 @@ import shinjin from '../asset/group/poster_shinjin.jpg';
 import '../style/web/route/group.css'
 import '../style/mobile/route/group_m.css'
 //function
+import { useHorizontalScroll } from "../function/scroll.js";
 import ShiftInfo from '../function/ShiftInfo';
 //data
 import Exhi_INFO from '../data/Exhi_INFO';
@@ -18,6 +19,8 @@ import Exhi_INFO from '../data/Exhi_INFO';
 
 const Group = () =>  {
   const EXHI = Exhi_INFO(1);
+
+  const scrollRef = useHorizontalScroll();
   
   // shiftInfoPack[0]은 현재 info
   // shiftInfoPack[1]은 info 바꾸는 함수
@@ -29,7 +32,7 @@ const Group = () =>  {
       <div className="section_title">
         <h1>Group Exhibitions</h1>
       </div>
-      <div className="section_reck">
+      <div className="section_reck" ref={scrollRef}>
           <div className="each_group">
             <img className="group_img" src={shinjin} alt="믿음(しんじん, Belief)" onMouseEnter={shiftInfoPack[1]} />
           </div>

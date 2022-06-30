@@ -1,6 +1,8 @@
 import React from 'react';
 //redux
 import { connect } from 'react-redux';
+// 함수_리펙토링
+import { useHorizontalScroll } from "../function/scroll.js";
 
 const ClickedReck = ({savedReck_rdx, saveOrRemove, onSpread,isMobile, setDataTrans}) => {
   const dragStart = (e) => {
@@ -16,8 +18,10 @@ const ClickedReck = ({savedReck_rdx, saveOrRemove, onSpread,isMobile, setDataTra
   const nothing = (e) => {
   }
 
+  const scrollRef = useHorizontalScroll();
+
   return(
-    <div className="clicked_reck">
+    <div className="clicked_reck" ref={scrollRef}>
       {savedReck_rdx.map((section) => 
           <img 
             key = {section.id}
