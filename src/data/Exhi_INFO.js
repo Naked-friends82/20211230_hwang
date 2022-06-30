@@ -1,5 +1,4 @@
 import React from 'react';
-import ExhiInfo from '../components/ExhiInfo';
 import hungry from '../asset/group/poster_hungry.jpg';
 import sing from '../asset/group/poster_sing.jpg';
 import hang from '../asset/group/poster_hang.jpg';
