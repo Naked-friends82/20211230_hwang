@@ -21,14 +21,14 @@ const Exhi_INFO = (index) => {
       {
         title: "Penetrating Stone",
         date: "2020.04.23-2020.05.27",
-        place: "KSD 갤러리 - 서울시 영등포구 여의나루로4길 23",
+        place: "KSD 갤러리 - 서울 영등포구 여의나루로4길 23",
         donat: "서울문화재단 서교예술실험센터",
       },
       {
-        title: "Eternal classics",
+        title: "황씨화보 (Eternal classics)",
         date: "2022.07.01-2022.07.30",
-        place: "OCI 미술관",
-        donat: "OCI 2021 YOUNG CREATIVES"
+        place: "OCI 미술관 - 서울 종로구 수송동 우정국로 45-14",
+        donat: "OCI 2022 YOUNG CREATIVES"
       },
       {
         title: "Group Exhibitions",

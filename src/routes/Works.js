@@ -50,8 +50,8 @@ const Works = () =>  {
             <img className="works_exhi_index2" src={penet_sec} alt="Penetrating Stone" onMouseEnter={shiftInfoPack[1]} />
         </Link>
         <Link to='/eternal_classics' className="img_index">
-            <img className="works_exhi_index1" src={eternal_main} alt="Eternal classics" />
-            <img className="works_exhi_index2" src={eternal_sec} alt="Eternal classics" onMouseEnter={shiftInfoPack[1]} />
+            <img className="works_exhi_index1" src={eternal_main} alt="황씨화보 (Eternal classics)" />
+            <img className="works_exhi_index2" src={eternal_sec} alt="황씨화보 (Eternal classics)" onMouseEnter={shiftInfoPack[1]} />
         </Link>
         <Link to='/group_exhibitions' className="img_index">
             <img className="works_exhi_index1" src={thumbImgs[0].imgSrc} alt="Group Exhibitions" />
