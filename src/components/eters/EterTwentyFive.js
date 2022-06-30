@@ -44,18 +44,16 @@ const EterTwentyFive = ({saveOrRemove,savedReck_rdx}) => {
       <div className="grid_item3">
       </div>
       <div className="grid_item4">
-        
       </div>
       <div className="grid_item5">
       </div>
       <div className="grid_item6">
-        <img className={MODULE_RECK[1].className} id={MODULE_RECK[1].id} onClick={saveOrRemove} src={MODULE_RECK[1].src} alt='img' />
       </div>
       <div className="grid_item7">
         
       </div>
       <div className="grid_item8">
-        
+        <img className={MODULE_RECK[1].className} id={MODULE_RECK[1].id} onClick={saveOrRemove} src={MODULE_RECK[1].src} alt='img' />
       </div>
     </div>
   );
