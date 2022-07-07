@@ -1,0 +1,39 @@
+@media screen and (max-width: 768px) {
+  .CV {
+    width: 100%;
+    height: 80vh;
+  }
+  .CVImg {
+    width: 100%;
+    margin-top: 20px;
+  }
+  .CVInfo {
+    margin: 20px;
+    line-height: 20px;
+  }
+  .CVInfo_title {
+    margin-bottom: 50px;
+  }
+  .CVInfo_out {
+    width: 20px;
+    height: 20px;
+  }
+  .CVInfo_title h1 {
+    font-size: var(--font-regular);
+  }
+  .CVInfo h3 {
+    font-size: var(--font-medium);
+  }
+  .CVInfo p {
+    margin-bottom: 30px;
+    font-size: var(--font-small);
+  }
+}
+@media screen and (max-width: 558px) {
+  .CVInfo_out i {
+    font-size: var(--font-min);
+    transform: translate(-2%, 0%);
+  }
+}
+@media screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
+}
