@@ -1,0 +1,24 @@
+@media screen and (max-width: 768px) {
+  .omma_reck_each {
+    width: 80vw;
+    height: 100%;
+    padding: 10px 0px;
+  }
+  .omma_reck_each_print {
+    width: 18vw;
+    height: 100%;
+    padding: 1px 0px;
+  }
+  .omma_thumbnail_black {
+    padding-left: 16px;
+    padding-right: 8px;
+  }
+  .omma_thumbnail_white {
+    padding-left: 8px;
+    padding-right: 16px;
+  }
+  .omma_print_thumbnail_each {
+    height: 45%;
+    margin: 0 1px;
+  }
+}

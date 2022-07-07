@@ -74,8 +74,8 @@ import stone_31 from '../asset/omma/stone_31.jpg';
 import stone_32 from '../asset/omma/stone_32.jpg';
 
 // CSS
-import "../style/web/route/omma.css";
-import "../style/mobile/route/omma_m.css";
+import '../styles/web/omma/omma.css';
+import '../styles/mobile/omma/omma_m.css';
 
 // 함수_리펙토링
 import { useHorizontalScroll } from "../function/scroll";

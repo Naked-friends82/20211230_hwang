@@ -1,0 +1,12 @@
+@media screen and (max-width: 768px) {
+  .penet_reck_video {
+    width: 80vw;
+    height: 100%;
+    margin: 0 0px;
+  }
+  .penet_reck_each {
+    width: 80vw;
+    height: 100%;
+    margin: 10px 0px;
+  }
+}

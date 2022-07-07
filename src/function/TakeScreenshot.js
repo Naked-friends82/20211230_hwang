@@ -6,13 +6,18 @@ const TakeScreenshot = (ref,screenshotRef) => {
   const [screenshot, takeScreenShot] = useScreenshot();
 
   const takeescreenshot = () => {
-    if (ref.current.className === "eter_spreadH"){
-      alert("카메라 왼쪽 버튼을 눌러 화면을 전환하세요.");
-    }else{
-      takeScreenShot(screenshotRef.current);
-      alert('화보가 완성되었습니다.');
-      alert('저장하고 싶다면 화면 오른쪽 하단 저장 버튼을 누르세요.');
-    }
+    console.log(screenshotRef.current)
+    takeScreenShot(screenshotRef.current);
+    alert('화보가 완성되었습니다.');
+    alert('저장하고 싶다면 화면 오른쪽 하단 저장 버튼을 누르세요.');
+    // if (ref.current.className === "eter_spreadH"){
+    //   alert("카메라 왼쪽 버튼을 눌러 화면을 전환하세요.");
+    // }else{
+    //   console.log(screenshotRef.current)
+    //   takeScreenShot(screenshotRef.current);
+    //   alert('화보가 완성되었습니다.');
+    //   alert('저장하고 싶다면 화면 오른쪽 하단 저장 버튼을 누르세요.');
+    // }
   };
   const preventEmpty = (e) => {
     if(screenshot === null){

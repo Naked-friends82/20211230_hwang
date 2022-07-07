@@ -1,0 +1,119 @@
+:root {
+  /* color */
+  --color-black: #13131a;
+  --color-white: #dbe4ee;
+  --color-gray: #dbdbdd;
+  --color-darkgray: #949499;
+  --color-ddarkgray: #5c5555;
+  --color-dddarkgray: #32393a;
+  --color-line: rgba(178, 177, 174, 0.3);
+  --color-yellow: rgba(245, 237, 220, 0.8);
+  --color-red: #e04d4d;
+  /* Font size */
+  --font-mmmax: 50px;
+  --font-mmax: 40px;
+  --font-max: 22px;
+  --font-big: 18px;
+  --font-regular: 15px;
+  --font-small: 14px;
+  --font-min: 12px;
+  --font-mmin: 10px;
+  /* Font weight */
+  --weight-Extra-bold: 700;
+  --weight-bold: 600;
+  --weight-medium: 400;
+  --weight-light: 300;
+  /* Font family */
+  /* Google */
+  --typo-nanum: "Nanum Myeongjo", serif;
+}
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700&display=swap");
+
+/* universe */
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0px;
+  background-color: var(--color-gray);
+  overflow: hidden;
+}
+/* only Head on project_content */
+h1 {
+  margin: 0px;
+}
+/* only name on About */
+h2 {
+  margin: 0px;
+}
+p {
+  margin: 0px;
+}
+button {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+}
+.section{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+}
+.section_title{
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.section_title h1{
+  font-size: var(--font-mmmax);
+  margin-left: 30px;
+}
+.section_title button {
+  width: 30px;
+  height: 30px;
+  margin-right: 20px;
+  border: none;
+  border-radius: 5rem;
+  color: var(--color-ddarkgray);
+  background-color: var(--color-white);
+  cursor: pointer;
+}
+.section_reck{
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  padding: 0px 10px;
+  margin-bottom: 0.8rem;
+  overflow-x: scroll;
+}
+.section_reck::-webkit-scrollbar {
+  display: none;
+}
+.img_info{
+  text-align: center;
+  font-size: var(--font-medium);
+}
+.thumbnail {
+  height: 16vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  white-space: nowrap;
+  overflow-x: scroll;
+  background-color: var(--color-darkgray);
+}
+.thumbnail::-webkit-scrollbar {
+  display: none;
+}
+.thumbnail_each {
+  height: 90%;
+  margin: 0 16px;
+}
+.filter {
+  filter: contrast(50%);
+}

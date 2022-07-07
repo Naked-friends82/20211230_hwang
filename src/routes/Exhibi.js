@@ -3,8 +3,8 @@ import EachExhibi from '../components/EachExhibi.js';
 import CV from '../components/CV';
 
 // CSS
-import '../style/web/route/exhibi.css';
-import '../style/mobile/route/exhibi_m.css';
+import '../styles/web/exhibi/exhibi.css';
+import '../styles/mobile/exhibi/exhibi_m.css';
 
 // 함수_리펙토링
 import ToggleDetail from '../function/ToggleDetail.js';

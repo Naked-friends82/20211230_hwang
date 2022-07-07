@@ -27,8 +27,8 @@ import gra_1 from '../asset/penet/grass.jpg'
 import { useHorizontalScroll } from "../function/scroll.js";
 
 // CSS
-import "../style/web/route/penet.css";
-import "../style/mobile/route/penet_m.css";
+import '../styles/web/penet/penet.css';
+import '../styles/mobile/penet/penet_m.css';
 
 // 함수_리펙토링
 import ShiftThumb from '../function/ShiftThumb.js';

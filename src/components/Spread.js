@@ -1,9 +1,6 @@
 import React, { useState } from 'react';
 import EmptyGrid from './EmptyGrid.js';
 
-import '../style/web/component/spread.css';
-import '../style/mobile/component/spread_m.css';
-
 //redux
 import { connect } from 'react-redux';
 
@@ -16,6 +13,16 @@ const Spread = ({onSpread, setOnSpread,screenshotRef, dataTrans, setDataTrans, i
   }
   return(
     <div className='grid_container' ref={screenshotRef}>
+      <div className='grid_container_row' >
+        {rowLength.map((each) => {
+          return <EmptyGrid key={each} onSpread={onSpread} setOnSpread={setOnSpread} dataTrans={dataTrans} setDataTrans={setDataTrans} dragInGrid={dragInGrid} setDragInGrid={setDragInGrid} isMobile={isMobile} />
+        })}
+      </div>
+      <div className='grid_container_row'>
+        {rowLength.map((each) => {
+          return <EmptyGrid key={each} onSpread={onSpread} setOnSpread={setOnSpread} dataTrans={dataTrans} setDataTrans={setDataTrans} dragInGrid={dragInGrid} setDragInGrid={setDragInGrid} isMobile={isMobile} />
+        })}
+      </div>
       <div className='grid_container_row'>
         {rowLength.map((each) => {
           return <EmptyGrid key={each} onSpread={onSpread} setOnSpread={setOnSpread} dataTrans={dataTrans} setDataTrans={setDataTrans} dragInGrid={dragInGrid} setDragInGrid={setDragInGrid} isMobile={isMobile} />
