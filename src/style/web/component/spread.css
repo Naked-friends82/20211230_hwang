@@ -1,15 +1,17 @@
 .grid_container{
   display: flex;
   flex-direction: column;
-  justify-content:center;
   align-items: flex-end;
   width: 1100px;
-  height: 500px;
+  height: 92%;
+  /* 규민이 6줄 요청 */
+  /* justify-content:center; */
+  /* height: 560px; */
   position: relative;
   top: 0%;
-  left: 50%;
-  transform: translate(-50%, 0%);
-  background-color: var(--color-gray) ;
+  left: 26%;
+  transform: translate(-26%, 0%);
+  background-color: var(--color-gray);
 }
 .grid_container:hover .grid_box{
   background-color: rgb(225, 216, 206);
@@ -21,10 +23,14 @@
   flex-direction: row;
 }
 .grid_box{
-  width: 76px;
-  height: 114px;
+  width: 70px;
+  height: 105px;
+  margin: 2px 6px;
+  /* 규민이 6줄 요청 */
+  /* width: 76px; */
+  /* height: 114px; */
+  /* margin: 2px 8px; */
   cursor: pointer;
-  margin: 2px 8px;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
@@ -38,8 +44,11 @@
   transform: translate(-50%, -50%);
 }
 .drag_img{
-  width: 76px;
-  height: 114px;
+  width: 100%;
+  height: 100%;
+  /* 규민이 6줄 요청 */
+  /* width: 76px; */
+  /* height: 114px; */
   margin: 0px;
 }
 .img_btn_reck{

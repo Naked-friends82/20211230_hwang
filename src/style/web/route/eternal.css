@@ -27,7 +27,8 @@
   flex-direction: row;
   align-items: center;
   white-space: nowrap;
-  overflow-x: scroll;
+  /* 규민이 6줄 요청 */
+  overflow: scroll;
   padding: 0px 10px;
   background-color: var(--color-gray);
 }

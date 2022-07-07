@@ -36,6 +36,16 @@ const Spread = ({onSpread, setOnSpread,screenshotRef, dataTrans, setDataTrans, i
           return <EmptyGrid key={each} onSpread={onSpread} setOnSpread={setOnSpread} dataTrans={dataTrans} setDataTrans={setDataTrans} dragInGrid={dragInGrid} setDragInGrid={setDragInGrid} isMobile={isMobile} />
         })}
       </div>
+      <div className='grid_container_row'>
+        {rowLength.map((each) => {
+          return <EmptyGrid key={each} onSpread={onSpread} setOnSpread={setOnSpread} dataTrans={dataTrans} setDataTrans={setDataTrans} dragInGrid={dragInGrid} setDragInGrid={setDragInGrid} isMobile={isMobile} />
+        })}
+      </div>
+      <div className='grid_container_row'>
+        {rowLength.map((each) => {
+          return <EmptyGrid key={each} onSpread={onSpread} setOnSpread={setOnSpread} dataTrans={dataTrans} setDataTrans={setDataTrans} dragInGrid={dragInGrid} setDragInGrid={setDragInGrid} isMobile={isMobile} />
+        })}
+      </div>
     </div>
   )
 }
