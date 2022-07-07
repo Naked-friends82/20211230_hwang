@@ -1,0 +1,13 @@
+@media screen and (max-width: 768px) {
+  .each_group {
+    width: 60vw;
+    padding: 10px 0px;
+  }
+  .group_img {
+    width: 100%;
+  }
+  .group_img_s {
+    width: 100%;
+    height: auto;
+  }
+}

@@ -1,7 +1,5 @@
 import React from 'react';
 import cvImg from '../asset/main/cvImg.jpg';
-import '../style/web/component/cv.css';
-import '../style/mobile/component/cv_m.css';
 
 const CV = ({showDetail}) => {
 

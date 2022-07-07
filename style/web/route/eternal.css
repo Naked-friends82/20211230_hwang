@@ -1,25 +1,6 @@
 .eter_spreadH {
   display: none;
 }
-/* 통일성을 위해 22vh에서 16%로 변경 */
-/* .screenshot_reck {
-  height: 22vh;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--color-darkgray);
-  white-space: nowrap;
-  overflow-x: scroll;
-} */
-/* 통일성을 위해 width 제어에서 height 제어로 변경 */
-/* .screenshot {
-  height: 90%;
-  margin: 0px 20px;
-}
-.clickedForLoad {
-  border: 2px solid black;
-} */
 .section_reck_eter{
   height: 70%;
   width: 100vw;

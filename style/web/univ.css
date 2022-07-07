@@ -133,7 +133,7 @@ button {
 }
 .thumbnail_each {
   height: 90%;
-  margin-left: 20px;
+  margin: 0 20px;
   margin-right: 30px;
 }
 .filter {

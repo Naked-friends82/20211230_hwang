@@ -36,10 +36,8 @@ import { connect } from 'react-redux';
 import { actionCreators } from '../store.js';
 
 // CSS
-import "../style/web/route/eternal.css";
-import "../style/mobile/route/eternal_m.css";
-import "../style/web/component/eachEter.css";
-import "../style/mobile/component/eachEter_m.css";
+import '../styles/web/eternal/eternal.css';
+import '../styles/mobile/eternal/eternal_m.css';
 
 // 함수_리펙토링
 import { useHorizontalScroll } from "../function/scroll.js";
@@ -120,6 +118,7 @@ const Eternal = ({addToSavedReck,deleteToSavedReck}) =>  {
         <button onClick={toggleDetailPack[1]}><i className="fa-solid fa-info" /></button>
       </div>
       <div id="eter_spread" className="eter_spreadH" ref={ref} >
+        <div className='spreadWindow' >
         <Spread 
           saveOrRemove={saveOrRemove} 
           onSpread={onSpread} 
@@ -129,8 +128,10 @@ const Eternal = ({addToSavedReck,deleteToSavedReck}) =>  {
           dataTrans={dataTrans}
           setDataTrans={setDataTrans}
           />
+        </div>
       </div>
       <div id="eter_reck" className="section_reck_eter" ref={scrollRef}>
+        <div className='showWindow'>
         <EterZero saveOrRemove={saveOrRemove}/>
         <EterZeroOne saveOrRemove={saveOrRemove}/>
         <EterFour saveOrRemove={saveOrRemove}/>
@@ -158,6 +159,7 @@ const Eternal = ({addToSavedReck,deleteToSavedReck}) =>  {
         <EterTwentyFour saveOrRemove={saveOrRemove}/>
         <EterTen saveOrRemove={saveOrRemove}/>
         <EterTwentyFive saveOrRemove={saveOrRemove}/>
+        </div>
       </div>
       <SwitchTakeSaveBtn 
           showSpread={showSpread} 

@@ -1,17 +1,21 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import ExhiInfo from '../components/ExhiInfo';
+import Works_info from '../components/works/Works_info';
 import omma_main from '../asset/main/omma_main.png';
-import omma_sec from '../asset/main/omma_sec.png';
 import penet_main from '../asset/main/penet_main.jpg';
-import penet_sec from '../asset/main/penet_sec.jpg';
 import eternal_main from '../asset/main/eternal_main.jpg';
-import eternal_sec from '../asset/main/eternal_sec.jpg';
 import exhibi_main from '../asset/main/exhibi_main.jpg';
 import CV from '../components/CV';
 // CSS
-import '../style/web/route/works.css';
-import '../style/mobile/route/works_m.css';
+import '../styles/web/univ.css';
+import '../styles/web/works/works.css';
+import '../styles/web/eachExhiDetail.css';
+import '../styles/web/cv.css';
+
+import '../styles/mobile/univ_m.css';
+import '../styles/mobile/works/works_m.css';
+import '../styles/mobile/eachExhiDetail_m.css';
+import '../styles/mobile/cv_m.css';
 // function
 import { useHorizontalScroll } from "../function/scroll.js";
 import ShiftInfo from '../function/ShiftInfo.js';
@@ -42,26 +46,22 @@ const Works = () =>  {
       </div>
       <div className="section_reck" ref={scrollRef}>
         <Link to='/muhmdapinammo' className="img_index">
-            <img className="works_exhi_index1" src={omma_main} alt="MUH EMDAP INAM MO" />
-            <img className="works_exhi_index2" src={omma_sec} alt="MUH EMDAP INAM MO" onMouseEnter={shiftInfoPack[1]} />
+            <img className="works_exhi_index1" src={omma_main} alt="MUH EMDAP INAM MO" onMouseEnter={shiftInfoPack[1]} />
         </Link>
         <Link to='/penetrating_stone' className="img_index">
-            <img className="works_exhi_index1" src={penet_main} alt="Penetrating Stone" />
-            <img className="works_exhi_index2" src={penet_sec} alt="Penetrating Stone" onMouseEnter={shiftInfoPack[1]} />
+            <img className="works_exhi_index1" src={penet_main} alt="Penetrating Stone" onMouseEnter={shiftInfoPack[1]} />
         </Link>
         <Link to='/eternal_classics' className="img_index">
-            <img className="works_exhi_index1" src={eternal_main} alt="황씨화보 (Eternal classics)" />
-            <img className="works_exhi_index2" src={eternal_sec} alt="황씨화보 (Eternal classics)" onMouseEnter={shiftInfoPack[1]} />
+            <img className="works_exhi_index1" src={eternal_main} alt="황씨화보 (Eternal classics)" onMouseEnter={shiftInfoPack[1]} />
         </Link>
         <Link to='/group_exhibitions' className="img_index">
-            <img className="works_exhi_index1" src={thumbImgs[0].imgSrc} alt="Group Exhibitions" />
-            <img className="works_exhi_index2" src={thumbImgs[1].imgSrc} alt="Group Exhibitions" onMouseEnter={shiftInfoPack[1]} />
+            <img className="works_exhi_index1" src={thumbImgs[0].imgSrc} alt="Group Exhibitions" onMouseEnter={shiftInfoPack[1]} />
         </Link>
         <Link to='/exhibition' className="img_index">
             <img className="works_exhi_index1" src={exhibi_main} alt="Exhibition Detail" onMouseEnter={shiftInfoPack[1]} />
         </Link>
       </div>
-      <ExhiInfo info={shiftInfoPack[0]} />
+      <Works_info info={shiftInfoPack[0]} />
       {
         toggleDetailPack[0] ? <CV showDetail={toggleDetailPack[1]} />
       :(

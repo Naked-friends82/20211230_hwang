@@ -31,9 +31,9 @@ const Exhi_INFO = (index) => {
       },
       {
         title: "Group Exhibitions",
-        date: "나의 사인이 너와 같다면 외 3회",
-        place: "",
-        donat: ""
+        date: "믿음(しんじん, Belief)",
+        place: "배 위에 새겨 두고",
+        donat: "나의 사인이 너와 같다면 외 3회"
       },
       {
         title: "Exhibition Detail",

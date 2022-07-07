@@ -1,5 +1,5 @@
 import React from 'react';
-import ExhiInfo from '../components/ExhiInfo';
+import Works_info from '../components/works/Works_info';
 import hungry from '../asset/group/poster_hungry.jpg';
 import sing from '../asset/group/poster_sing.jpg';
 import hang from '../asset/group/poster_hang.jpg';
@@ -7,8 +7,8 @@ import death from '../asset/group/poster_death.jpg';
 import carve from '../asset/group/poster_carve.jpg';
 import shinjin from '../asset/group/poster_shinjin.jpg';
 // CSS
-import '../style/web/route/group.css'
-import '../style/mobile/route/group_m.css'
+import '../styles/web/group/group.css'
+import '../styles/mobile/group/group_m.css'
 //function
 import { useHorizontalScroll } from "../function/scroll.js";
 import ShiftInfo from '../function/ShiftInfo';
@@ -55,7 +55,7 @@ const Group = () =>  {
             <img className="group_img_s" src={hungry} alt="어쨌든 아주 배가 고팠던 모양이구나" onMouseEnter={shiftInfoPack[1]} />
           </div>
       </div>
-      <ExhiInfo info={shiftInfoPack[0]} />
+      <Works_info info={shiftInfoPack[0]} />
     </section>
   );
 }

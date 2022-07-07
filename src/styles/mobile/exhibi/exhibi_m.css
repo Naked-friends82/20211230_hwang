@@ -1,0 +1,50 @@
+@media screen and (max-width: 768px) {
+.exhibi_reck {
+  width: 90vw;
+  flex-direction: column;
+}
+.eachExhibi {
+  width: 100%;
+  height: 80vh;
+  margin: 0px;
+}
+.eachExhibi_img {
+  width: 100%;
+}
+.eachExhibi_btn {
+  width: 100%;
+}
+.btn {
+  padding: 10px 5px;
+  font-size: var(--font-small);
+}
+
+.eachExhibi_Paper {
+  height: 54%;
+  margin: 16px 0px;
+  line-height: 20px;
+  padding-bottom: 10px;
+}
+.eachExhibi_Paper h1 {
+  font-size: var(--font-regular);
+  margin-bottom: 16px;
+}
+.eachExhibi_Paper h3 {
+  font-size: var(--font-small);
+  margin-bottom: 10px;
+}
+.eachExhibi_Paper h4 {
+  font-size: var(--font-small);
+  margin-bottom: 10px;
+}
+.eachExhibi_Paper p {
+  font-size: var(--font-small);
+}
+.eachExhibi_Paper .quote{
+  font-size: var(--font-min);
+}
+.eachExhibi_Paper .ref{
+  font-size: var(--font-mmin);
+  line-height: 16px;
+}
+}

@@ -1,9 +1,6 @@
 import React from 'react';
-import '../style/web/component/exhiInfo.css';
-import '../style/mobile/component/exhiInfo_m.css';
 
-
-const ExhiInfo = ({info}) => {
+const Works_info = ({info}) => {
 
   return(
     <>
@@ -24,4 +21,4 @@ const ExhiInfo = ({info}) => {
   )
 }
 
-export default ExhiInfo
+export default Works_info
