@@ -190,10 +190,10 @@ const EterSeventeen = ({saveOrRemove,savedReck_rdx}) => {
         
       </div>
       <div className="grid_item18">
-        <img className={MODULE_RECK[12].className} id={MODULE_RECK[11].id} onClick={saveOrRemove} src={MODULE_RECK[11].src} alt='img' />
+        <img className={MODULE_RECK[12].className} id={MODULE_RECK[12].id} onClick={saveOrRemove} src={MODULE_RECK[12].src} alt='img' />
       </div>
       <div className="grid_item19">
-        <img className={MODULE_RECK[13].className} id={MODULE_RECK[11].id} onClick={saveOrRemove} src={MODULE_RECK[11].src} alt='img' />
+        <img className={MODULE_RECK[13].className} id={MODULE_RECK[13].id} onClick={saveOrRemove} src={MODULE_RECK[13].src} alt='img' />
       </div>
       <div className="grid_item20">
       </div>
