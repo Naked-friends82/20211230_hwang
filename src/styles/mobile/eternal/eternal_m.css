@@ -31,6 +31,9 @@
 
 
 /* showWindow */
+.showWindow{
+  width: 90vw;
+}
 .total8_grid_container {
   display: grid;
   grid-gap: 3px;
