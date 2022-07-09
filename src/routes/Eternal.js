@@ -131,8 +131,8 @@ const Eternal = ({addToSavedReck,deleteToSavedReck}) =>  {
           />
         </div>
       </div>
-      <div id="eter_reck" className="section_reck_eter" ref={scrollRef}>
-        <div className='showWindow'>
+      <div id="eter_reck" className="section_reck_eter" >
+        <div className='showWindow' ref={scrollRef}>
         <EterZero saveOrRemove={saveOrRemove}/>
         <EterZeroOne saveOrRemove={saveOrRemove}/>
         <EterFour saveOrRemove={saveOrRemove}/>
@@ -168,11 +168,6 @@ const Eternal = ({addToSavedReck,deleteToSavedReck}) =>  {
           screenshot={takeScreenshotPack[0]}
           takeAndSave = {takeScreenshotPack[1]}
           preventEmpty={takeScreenshotPack[2]}/>
-      {/* <Screenshots 
-          screenshotReck={takeScreenshotPack[1]} 
-          toLoad={saveScreenshotPack[0]} 
-          setImgToLoad={saveScreenshotPack[1]} 
-          screenshot_ref={screenshot_ref} /> */}
       <ClickedReck
         saveOrRemove={saveOrRemove}
         onSpread={onSpread} 
