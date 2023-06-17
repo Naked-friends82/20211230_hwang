@@ -32,9 +32,9 @@ const Exhi_INFO = (index) => {
       },
       {
         title: "Group Exhibitions",
-        date: "믿음(しんじん, Belief)",
-        place: "배 위에 새겨 두고",
-        donat: "나의 사인이 너와 같다면 외 3회"
+        date: "다시 그린 세계: 한국화의 단절과 연속",
+        place: "믿음(しんじん, Belief)",
+        donat: "배 위에 새겨 두고",
       },
       {
         title: "Exhibition Detail",

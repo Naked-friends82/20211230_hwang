@@ -25,6 +25,7 @@ const Exhibi = () =>  {
         <EachExhibi exhiIndex={0} />
         <EachExhibi exhiIndex={1} />
         <EachExhibi exhiIndex={2} />
+        <EachExhibi exhiIndex={3} />
       </div>
       {
         toggleDetailPack[0] ? <CV showDetail={toggleDetailPack[1]} />
