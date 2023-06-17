@@ -6,6 +6,7 @@ import hang from '../asset/group/poster_hang.jpg';
 import death from '../asset/group/poster_death.jpg';
 import carve from '../asset/group/poster_carve.jpg';
 import shinjin from '../asset/group/poster_shinjin.jpg';
+import ilmin from '../asset/group/poster_ilmin.jpg';
 // CSS
 import '../styles/web/group/group.css'
 import '../styles/mobile/group/group_m.css'
@@ -33,6 +34,9 @@ const Group = () =>  {
         <h1>Group Exhibitions</h1>
       </div>
       <div className="section_reck" ref={scrollRef}>
+          <div className="each_group">
+            <img className="group_img" src={ilmin} alt="다시 그린 세계: 한국화의 단절과 연속" onMouseEnter={shiftInfoPack[1]} />
+          </div>
           <div className="each_group">
             <img className="group_img" src={shinjin} alt="믿음(しんじん, Belief)" onMouseEnter={shiftInfoPack[1]} />
           </div>
