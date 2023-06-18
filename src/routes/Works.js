@@ -45,14 +45,14 @@ const Works = () =>  {
         <button onClick={toggleDetailPack[1]}><i className="fa-solid fa-info" /></button>
       </div>
       <div className="section_reck" ref={scrollRef}>
-        <Link to='/muhmdapinammo' className="img_index">
-            <img className="works_exhi_index1" src={omma_main} alt="MUH EMDAP INAM MO" onMouseEnter={shiftInfoPack[1]} />
+        <Link to='/eternal_classics' className="img_index">
+            <img className="works_exhi_index1" src={eternal_main} alt="황씨화보 (Eternal classics)" onMouseEnter={shiftInfoPack[1]} />
         </Link>
         <Link to='/penetrating_stone' className="img_index">
             <img className="works_exhi_index1" src={penet_main} alt="Penetrating Stone" onMouseEnter={shiftInfoPack[1]} />
         </Link>
-        <Link to='/eternal_classics' className="img_index">
-            <img className="works_exhi_index1" src={eternal_main} alt="황씨화보 (Eternal classics)" onMouseEnter={shiftInfoPack[1]} />
+        <Link to='/muhmdapinammo' className="img_index">
+            <img className="works_exhi_index1" src={omma_main} alt="MUH EMDAP INAM MO" onMouseEnter={shiftInfoPack[1]} />
         </Link>
         <Link to='/group_exhibitions' className="img_index">
             <img className="works_exhi_index1" src={thumbImgs[0].imgSrc} alt="Group Exhibitions" onMouseEnter={shiftInfoPack[1]} />
