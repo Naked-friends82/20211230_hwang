@@ -5,6 +5,7 @@ import hang from '../asset/group/poster_hang.jpg';
 import death from '../asset/group/poster_death.jpg';
 import carve from '../asset/group/poster_carve.jpg';
 import shinjin from '../asset/group/poster_shinjin.jpg';
+import ilmin from '../asset/group/poster_ilmin.jpg';
 
 const Exhi_INFO = (index) => {
   // EXHI_INFO[0]는 Work.js를 위한 데이터
@@ -31,9 +32,9 @@ const Exhi_INFO = (index) => {
       },
       {
         title: "Group Exhibitions",
-        date: "믿음(しんじん, Belief)",
-        place: "배 위에 새겨 두고",
-        donat: "나의 사인이 너와 같다면 외 3회"
+        date: "다시 그린 세계: 한국화의 단절과 연속",
+        place: "믿음(しんじん, Belief)",
+        donat: "배 위에 새겨 두고",
       },
       {
         title: "Exhibition Detail",
@@ -43,6 +44,13 @@ const Exhi_INFO = (index) => {
       },
     ],
     [
+      {
+        title: "다시 그린 세계: 한국화의 단절과 연속",
+        date: "2022.10.28-2023.1.8",
+        place: "황규민, 노한솔, 로랑 그라소 (총 13명)",
+        donat: "일민미술관",
+        imgSrc: ilmin
+      },
       {
         title: "믿음(しんじん, Belief)",
         date: "2022.04.30-2022.05.29",

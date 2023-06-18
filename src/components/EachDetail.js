@@ -1,17 +1,16 @@
 import React, { useState } from 'react';
+import Exhi_RECK from '../data/Exhi_RECK';
 
 const EachDetail = ({detailDeck, showDetail}) => {
+  const EXHI_RECK = Exhi_RECK(null);
   const [currentDetail, setCurrentDetail] = useState(0);
 
   const shiftDetail = (e) => {
     const {target: {value}} = e;
     if(value === "prev" && currentDetail !== 0){
       setCurrentDetail(currentDetail -1);
-    } else if(value === "next" && currentDetail !== 2){
+    } else if(value === "next" && currentDetail !== (EXHI_RECK[currentDetail].detailExhi.length -1)){
       setCurrentDetail(currentDetail +1);
-    } else if(value === "0"){setCurrentDetail(0);
-    } else if(value === "1"){setCurrentDetail(1);
-    } else if(value === "2"){setCurrentDetail(2);
     }
   };
 
@@ -23,11 +22,6 @@ const EachDetail = ({detailDeck, showDetail}) => {
         <div className="detailImg_btn">
           <button className="eachBtn" value="prev" onClick={shiftDetail}>&#10094;</button>
           <button className="eachBtn" value="next" onClick={shiftDetail}>&#10095;</button>
-        </div>
-        <div className="detailImg_dot">
-          <button className="dot" value="0" onClick={shiftDetail}></button>
-          <button className="dot" value="1" onClick={shiftDetail}></button>
-          <button className="dot" value="2" onClick={shiftDetail}></button>
         </div>
       </div>
       <div className="detailPaper">

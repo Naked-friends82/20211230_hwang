@@ -560,7 +560,7 @@ const Omma = () =>  {
         {FOG_RECK2.map((each) => {
           return <img key={each.src} className="omma_reck_each" src={each.src} alt={each.title+each.caption} ref={each.ref} />
         })}
-        {PRINT_PAPER_RECK.map((each) => {
+        {PRINT_PAPER_RECK.reverse().map((each) => {
           return <img key={each.src} className="omma_reck_each_print" src={each.src} alt={each.title+each.caption} ref={paper} />
         })}
         {STONE_RECK.map((each) => {
@@ -583,7 +583,7 @@ const Omma = () =>  {
           })}
         </div>
         <div className="omma_thumbnail_white">
-          {PRINT_PAPER_RECK.map((each, index) => {
+          {PRINT_PAPER_RECK.reverse().map((each, index) => {
             return <img key={index} className={shiftThumbPack[0] === each.title+each.caption ? "omma_print_thumbnail_each": "omma_print_thumbnail_each filter"} src={each.src} alt={each.title+each.caption} onClick={shiftThumbPack[1]} />
           })}
           {STONE_RECK.map((each, index) => {
