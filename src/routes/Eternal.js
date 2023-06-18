@@ -28,6 +28,16 @@ import EterTwentyThree from '../components/eters/EterTwentyThree';
 import EterTwentyFour from '../components/eters/EterTwentyFour';
 import EterTwentyFive from '../components/eters/EterTwentyFive';
 import EterTwentySix from '../components/eters/EterTwentySix';
+
+import WatTwo from '../components/wat/WatTwo';
+import WatEight from '../components/wat/WatEight';
+import WatFive from '../components/wat/WatFive';
+import WatFour from '../components/wat/WatFour';
+import WatSeven from '../components/wat/WatSeven';
+import WatSix from '../components/wat/WatSix';
+import WatThree from '../components/wat/WatThree';
+import WatOne from '../components/wat/WatOne';
+
 import Spread from '../components/Spread';
 import SwitchTakeSaveBtn from '../components/SwitchTakeSaveBtn';
 import ClickedReck from '../components/ClickedReck';
@@ -47,6 +57,7 @@ import TakeScreenshot from '../function/TakeScreenshot.js';
 
 //data
 import Exhi_RECK from '../data/Exhi_RECK';
+
 
 const Eternal = ({addToSavedReck,deleteToSavedReck}) =>  {
   // from ClickedReck to each grid
@@ -146,6 +157,16 @@ const Eternal = ({addToSavedReck,deleteToSavedReck}) =>  {
         <EterNine saveOrRemove={saveOrRemove}/>
         <EterEleven saveOrRemove={saveOrRemove}/>
         <EterTweleve saveOrRemove={saveOrRemove}/>
+
+        <WatOne saveOrRemove={saveOrRemove} />
+        <WatTwo saveOrRemove={saveOrRemove} />
+        <WatThree saveOrRemove={saveOrRemove} />
+        <WatFour saveOrRemove={saveOrRemove} />
+        <WatFive saveOrRemove={saveOrRemove} />
+        <WatSix saveOrRemove={saveOrRemove} />
+        <WatSeven saveOrRemove={saveOrRemove} />
+        <WatEight saveOrRemove={saveOrRemove} />
+
         <EterTwentySix saveOrRemove={saveOrRemove}/>
         <EterThirteen saveOrRemove={saveOrRemove}/>
         <EterFourteen saveOrRemove={saveOrRemove}/>
