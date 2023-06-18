@@ -1,4 +1,4 @@
-import React from 'react';
+import { useRef }  from 'react';
 import wat_001_01 from '../asset/wat/wat_1/wat_001_01.jpg';
 import wat_001_02 from '../asset/wat/wat_1/wat_001_02.jpg';
 
@@ -21,6 +21,12 @@ import wat_003_05 from '../asset/wat/wat_3/wat_003_05.jpg';
 import wat_003_06 from '../asset/wat/wat_3/wat_003_06.jpg';
 import wat_003_07 from '../asset/wat/wat_3/wat_003_07.jpg';
 import wat_003_08 from '../asset/wat/wat_3/wat_003_08.jpg';
+import wat_003_09 from '../asset/wat/wat_3/wat_003_09.jpg';
+import wat_003_10 from '../asset/wat/wat_3/wat_003_10.jpg';
+import wat_003_11 from '../asset/wat/wat_3/wat_003_11.jpg';
+import wat_003_12 from '../asset/wat/wat_3/wat_003_12.jpg';
+import wat_003_13 from '../asset/wat/wat_3/wat_003_13.jpg';
+import wat_003_14 from '../asset/wat/wat_3/wat_003_14.jpg';
 
 import wat_004_01 from '../asset/wat/wat_4/wat_004_01.jpg';
 import wat_004_02 from '../asset/wat/wat_4/wat_004_02.jpg';
@@ -78,6 +84,82 @@ import wat_008_11 from '../asset/wat/wat_8/wat_008_11.jpg';
 
 
 const Wat_SET = () => {
+    const wat00101 = useRef();
+    const wat00102 = useRef();
+    const wat00201 = useRef();
+    const wat00202 = useRef();
+    const wat00203 = useRef();
+    const wat00204 = useRef();
+    const wat00205 = useRef();
+    const wat00206 = useRef();
+    const wat00207 = useRef();
+    const wat00208 = useRef();
+    const wat00209 = useRef();
+    const wat00210 = useRef();
+    const wat00301 = useRef();
+    const wat00302 = useRef();
+    const wat00303 = useRef();
+    const wat00304 = useRef();
+    const wat00305 = useRef();
+    const wat00306 = useRef();
+    const wat00307 = useRef();
+    const wat00308 = useRef();
+    const wat00309 = useRef();
+    const wat00310 = useRef();
+    const wat00311 = useRef();
+    const wat00312 = useRef();
+    const wat00313 = useRef();
+    const wat00314 = useRef();
+    const wat00401 = useRef();
+    const wat00402 = useRef();
+    const wat00403 = useRef();
+    const wat00404 = useRef();
+    const wat00405 = useRef();
+    const wat00406 = useRef();
+    const wat00407 = useRef();
+    const wat00408 = useRef();
+    const wat00409 = useRef();
+    const wat00410 = useRef();
+    const wat00411 = useRef();
+    const wat00412 = useRef();
+    const wat00501 = useRef();
+    const wat00502 = useRef();
+    const wat00503 = useRef();
+    const wat00504 = useRef();
+    const wat00505 = useRef();
+    const wat00506 = useRef();
+    const wat00507 = useRef();
+    const wat00508 = useRef();
+    const wat00509 = useRef();
+    const wat00510 = useRef();
+    const wat00511 = useRef();
+    const wat00601 = useRef();
+    const wat00602 = useRef();
+    const wat00603 = useRef();
+    const wat00604 = useRef();
+    const wat00605 = useRef();
+    const wat00606 = useRef();
+    const wat00607 = useRef();
+    const wat00608 = useRef();
+    const wat00701 = useRef();
+    const wat00702 = useRef();
+    const wat00703 = useRef();
+    const wat00704 = useRef();
+    const wat00705 = useRef();
+    const wat00706 = useRef();
+    const wat00707 = useRef();
+    const wat00801 = useRef();
+    const wat00802 = useRef();
+    const wat00803 = useRef();
+    const wat00804 = useRef();
+    const wat00805 = useRef();
+    const wat00806 = useRef();
+    const wat00807 = useRef();
+    const wat00808 = useRef();
+    const wat00809 = useRef();
+    const wat00810 = useRef();
+    const wat00811 = useRef();
+
     const WAT_SET = [
         {
             title:"화보-다시 들어가며-1",
@@ -530,7 +612,86 @@ const Wat_SET = () => {
             ref: wat00811,
         },
     ];
-    return WAT_SET;
+
+    const wat_ref_deck = [
+        wat00101,
+        wat00102,
+        wat00201,
+        wat00202,
+        wat00203,
+        wat00204,
+        wat00205,
+        wat00206,
+        wat00207,
+        wat00208,
+        wat00209,
+        wat00210,
+        wat00301,
+        wat00302,
+        wat00303,
+        wat00304,
+        wat00305,
+        wat00306,
+        wat00307,
+        wat00308,
+        wat00309,
+        wat00310,
+        wat00311,
+        wat00312,
+        wat00313,
+        wat00314,
+        wat00401,
+        wat00402,
+        wat00403,
+        wat00404,
+        wat00405,
+        wat00406,
+        wat00407,
+        wat00408,
+        wat00409,
+        wat00410,
+        wat00411,
+        wat00412,
+        wat00501,
+        wat00502,
+        wat00503,
+        wat00504,
+        wat00505,
+        wat00506,
+        wat00507,
+        wat00508,
+        wat00509,
+        wat00510,
+        wat00511,
+        wat00601,
+        wat00602,
+        wat00603,
+        wat00604,
+        wat00605,
+        wat00606,
+        wat00607,
+        wat00608,
+        wat00701,
+        wat00702,
+        wat00703,
+        wat00704,
+        wat00705,
+        wat00706,
+        wat00707,
+        wat00801,
+        wat00802,
+        wat00803,
+        wat00804,
+        wat00805,
+        wat00806,
+        wat00807,
+        wat00808,
+        wat00809,
+        wat00810,
+        wat00811
+    ];
+
+    return {WAT_SET, wat_ref_deck};
 }
 
 export default Wat_SET;
