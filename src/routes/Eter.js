@@ -31,11 +31,17 @@ const Eter = ({shuffledData, TOTAL_REF_DATA}) =>  {
   // Exhi_RECK에서 data 받아오기
   const detailDeck = Exhi_RECK(1);
 
+  const moveToOtherPage = () => {
+    window.location.href = '/eternal_classics/make';
+  }
   return (
     <section className="section">
       <div className="section_title">
         <h1>황씨화보 Eternal Classics</h1>
-        <button onClick={toggleDetailPack[1]}><i className="fa-solid fa-info" /></button>
+        <div className="section_btns">
+          <button onClick={moveToOtherPage}><i className='fontAwesome fas fa-exchange-alt'/></button>
+          <button onClick={toggleDetailPack[1]}><i className="fa-solid fa-info" /></button>
+        </div>
       </div>
       <div className="section_reck" ref={scrollRef}>
         {shuffledData.map((each, index) => {

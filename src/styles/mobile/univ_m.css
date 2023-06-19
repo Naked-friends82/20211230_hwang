@@ -1,24 +1,30 @@
 @media screen and (max-width: 768px) {
+
   /* universe */
   * {
     box-sizing: border-box;
   }
+
   body {
     margin: 0px;
     background-color: var(--color-gray);
     overflow: hidden;
   }
+
   /* only Head on project_content */
   h1 {
     margin: 0px;
   }
+
   /* only name on About */
   h2 {
     margin: 0px;
   }
+
   p {
     margin: 0px;
   }
+
   button {
     appearance: none;
     -moz-appearance: none;
@@ -27,48 +33,63 @@
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
   }
-  .section{
+
+  .section {
     height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  .section_title{
+
+  .section_title {
     height: 9vh;
     width: 100vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-  .section_title h1{
+
+  .section_title h1 {
     font-size: var(--font-max);
     margin-left: 20px;
   }
+
   .section_title h1 span {
     display: none;
   }
+
   .section_title button {
     width: 20px;
     height: 20px;
     margin-right: 10px;
     font-size: var(--font-min);
   }
-  .section_reck{
+
+  .section_btns .fontAwesome {
+    font-size: var(--font-mmin);
+    font-weight: var(--weight-bold);
+  }
+
+  .section_reck {
     width: 90vw;
     flex-direction: column;
     padding: 0px 0px;
     overflow-y: scroll;
   }
+
   .section_reck::-webkit-scrollbar {
     display: none;
   }
-  .img_info{
+
+  .img_info {
     margin: 4px 0px;
     font-size: var(--font-small);
   }
+
   .thumbnail {
     width: 100vw;
   }
+
   .thumbnail_each {
     height: 90%;
     margin: 0 6px;
