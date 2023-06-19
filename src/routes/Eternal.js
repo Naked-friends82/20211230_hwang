@@ -123,11 +123,18 @@ const Eternal = ({addToSavedReck,deleteToSavedReck}) =>  {
   // Exhi_RECK에서 data 받아오기
   const detailDeck = Exhi_RECK(2)
 
+  const moveToOtherPage = () => {
+    window.location.href = '/eternal_classics';
+  }
+
   return (
     <section className="section">
       <div className="section_title">
         <h1>Hwang's Manual<span> of Eternal Classics</span></h1>
-        <button onClick={toggleDetailPack[1]}><i className="fa-solid fa-info" /></button>
+        <div className="section_btns">
+          <button onClick={moveToOtherPage}><i className='fontAwesome fas fa-exchange-alt'/></button>
+          <button onClick={toggleDetailPack[1]}><i className="fa-solid fa-info" /></button>
+        </div>
       </div>
       <div id="eter_spread" className="eter_spreadH" ref={ref} >
         <div className='spreadWindow' >

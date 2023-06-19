@@ -27,28 +27,34 @@
   /* Google */
   --typo-nanum: "Nanum Myeongjo", serif;
 }
+
 @import url("https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700&display=swap");
 
 /* universe */
 * {
   box-sizing: border-box;
 }
+
 body {
   margin: 0px;
   background-color: var(--color-gray);
   overflow: hidden;
 }
+
 /* only Head on project_content */
 h1 {
   margin: 0px;
 }
+
 /* only name on About */
 h2 {
   margin: 0px;
 }
+
 p {
   margin: 0px;
 }
+
 button {
   appearance: none;
   -moz-appearance: none;
@@ -57,22 +63,37 @@ button {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
 }
-.section{
+
+.section {
   height: 100vh;
   width: 100vw;
   display: flex;
   flex-direction: column;
 }
-.section_title{
+
+.section_title {
   height: 10vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.section_title h1{
+
+.section_title h1 {
   font-size: var(--font-mmmax);
   margin-left: 30px;
 }
+
+.section_btns {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.section_btns .fontAwesome {
+  font-size: var(--font-min);
+  font-weight: var(--weight-bold);
+}
+
 .section_title button {
   width: 30px;
   height: 30px;
@@ -83,7 +104,8 @@ button {
   background-color: var(--color-white);
   cursor: pointer;
 }
-.section_reck{
+
+.section_reck {
   height: 70vh;
   display: flex;
   align-items: center;
@@ -91,13 +113,16 @@ button {
   margin-bottom: 0.8rem;
   overflow-x: scroll;
 }
+
 .section_reck::-webkit-scrollbar {
   display: none;
 }
-.img_info{
+
+.img_info {
   text-align: center;
   font-size: var(--font-medium);
 }
+
 .thumbnail {
   height: 16vh;
   display: flex;
@@ -107,13 +132,16 @@ button {
   overflow-x: scroll;
   background-color: var(--color-darkgray);
 }
+
 .thumbnail::-webkit-scrollbar {
   display: none;
 }
+
 .thumbnail_each {
   height: 90%;
   margin: 0 16px;
 }
+
 .filter {
   filter: contrast(50%);
 }
