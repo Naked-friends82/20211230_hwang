@@ -164,6 +164,14 @@ const Eternal = ({addToSavedReck,deleteToSavedReck}) =>  {
         <EterNine saveOrRemove={saveOrRemove}/>
         <EterEleven saveOrRemove={saveOrRemove}/>
         <EterTweleve saveOrRemove={saveOrRemove}/>
+        <EterTwentySix saveOrRemove={saveOrRemove}/>
+        <EterThirteen saveOrRemove={saveOrRemove}/>
+        <EterFourteen saveOrRemove={saveOrRemove}/>
+        <EterFifteen saveOrRemove={saveOrRemove}/>
+        <EterSixteen saveOrRemove={saveOrRemove}/>
+        <EterSeventeen saveOrRemove={saveOrRemove}/>
+        <EterEighteen saveOrRemove={saveOrRemove}/>
+        <EterNineteen saveOrRemove={saveOrRemove}/>
 
         <WatOne saveOrRemove={saveOrRemove} />
         <WatTwo saveOrRemove={saveOrRemove} />
@@ -173,15 +181,7 @@ const Eternal = ({addToSavedReck,deleteToSavedReck}) =>  {
         <WatSix saveOrRemove={saveOrRemove} />
         <WatSeven saveOrRemove={saveOrRemove} />
         <WatEight saveOrRemove={saveOrRemove} />
-
-        <EterTwentySix saveOrRemove={saveOrRemove}/>
-        <EterThirteen saveOrRemove={saveOrRemove}/>
-        <EterFourteen saveOrRemove={saveOrRemove}/>
-        <EterFifteen saveOrRemove={saveOrRemove}/>
-        <EterSixteen saveOrRemove={saveOrRemove}/>
-        <EterSeventeen saveOrRemove={saveOrRemove}/>
-        <EterEighteen saveOrRemove={saveOrRemove}/>
-        <EterNineteen saveOrRemove={saveOrRemove}/>
+        
         <EterTwenty saveOrRemove={saveOrRemove}/>
         <EterTwentyOne saveOrRemove={saveOrRemove}/>
         <EterTwentyTwo saveOrRemove={saveOrRemove}/>
