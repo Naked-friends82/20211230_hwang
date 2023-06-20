@@ -45,7 +45,7 @@ const Eter = ({shuffledData, TOTAL_REF_DATA}) =>  {
       </div>
       <div className="section_reck" ref={scrollRef}>
         {shuffledData.map((each, index) => {
-            return <img key={index} className="penet_reck_each" src={each.src} alt={each.title+each.caption} ref={each.ref} />
+            return <img key={index} className="penet_reck_each" src={each.src} alt={each.title+each.caption} ref={each.ref} onMouseEnter={shiftThumbPack[1]}  />
           })}
       </div>
       <div className="img_info">
