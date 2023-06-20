@@ -32,12 +32,12 @@ const Eter = ({shuffledData, TOTAL_REF_DATA}) =>  {
   const detailDeck = Exhi_RECK(1);
 
   const moveToOtherPage = () => {
-    window.location.href = '/eternal_classics/make';
+    window.location.href = '/eternal_classics';
   }
   return (
     <section className="section">
       <div className="section_title">
-        <h1>황씨화보 Eternal Classics</h1>
+      <h1>Hwang's Manual<span> of Eternal Classics</span></h1>
         <div className="section_btns">
           <button onClick={moveToOtherPage}><i className='fontAwesome fas fa-exchange-alt'/></button>
           <button onClick={toggleDetailPack[1]}><i className="fa-solid fa-info" /></button>
@@ -45,7 +45,7 @@ const Eter = ({shuffledData, TOTAL_REF_DATA}) =>  {
       </div>
       <div className="section_reck" ref={scrollRef}>
         {shuffledData.map((each, index) => {
-            return <img key={index} className="penet_reck_each" src={each.src} alt={each.title+each.caption} ref={each.ref} />
+            return <img key={index} className="penet_reck_each" src={each.src} alt={each.title+each.caption} ref={each.ref} onMouseEnter={shiftThumbPack[1]}  />
           })}
       </div>
       <div className="img_info">

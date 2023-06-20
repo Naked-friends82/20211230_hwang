@@ -192,9 +192,9 @@ const Penet = () =>  {
         <button onClick={toggleDetailPack[1]}><i className="fa-solid fa-info" /></button>
       </div>
       <div className="section_reck" ref={scrollRef}>
-        <iframe className='penet_reck_video' src="https://www.youtube.com/embed/0xzx0hLralY" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen ref={penet_video} alt="Penetrating Stone"></iframe>
+        <iframe className='penet_reck_video' src="https://www.youtube.com/embed/0xzx0hLralY" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen ref={penet_video} alt="Penetrating Stone" onMouseEnter={shiftThumbPack[1]}></iframe>
         {PENET_RECK.map((each, index) => {
-            return <img key={index} className="penet_reck_each" src={each.src} alt={each.title+each.caption} ref={each.ref} />
+            return <img key={index} className="penet_reck_each" src={each.src} alt={each.title+each.caption} ref={each.ref} onMouseEnter={shiftThumbPack[1]} />
           })}
       </div>
       <div className="img_info">
