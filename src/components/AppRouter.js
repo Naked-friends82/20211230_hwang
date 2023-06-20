@@ -20,8 +20,8 @@ const AppRouter = () =>  {
         <Route exact path='/' element={<Works />} />
         <Route exact path='/muhmdapinammo' element={<Omma />} />
         <Route exact path='/penetrating_stone' element={<Penet />} />
-        <Route exact path='/eternal_classics' element={<EternalTemp shuffledData={shuffledData} TOTAL_REF_DATA={TOTAL_REF_DATA}/>} />
-        <Route exact path='/eternal_classics/make' element={<Eternal />} />
+        <Route exact path='/eternal_classics' element={<Eternal />} />
+        <Route exact path='/eternal_classics/make' element={<EternalTemp shuffledData={shuffledData} TOTAL_REF_DATA={TOTAL_REF_DATA}/>} />
         <Route exact path='/group_exhibitions' element={<Group />} />
         <Route exact path='/exhibition' element={<Exhibi />} />
       </Routes>

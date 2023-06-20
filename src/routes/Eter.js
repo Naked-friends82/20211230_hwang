@@ -32,7 +32,7 @@ const Eter = ({shuffledData, TOTAL_REF_DATA}) =>  {
   const detailDeck = Exhi_RECK(1);
 
   const moveToOtherPage = () => {
-    window.location.href = '/eternal_classics/make';
+    window.location.href = '/eternal_classics';
   }
   return (
     <section className="section">

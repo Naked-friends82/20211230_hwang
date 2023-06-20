@@ -124,7 +124,7 @@ const Eternal = ({addToSavedReck,deleteToSavedReck}) =>  {
   const detailDeck = Exhi_RECK(2)
 
   const moveToOtherPage = () => {
-    window.location.href = '/eternal_classics';
+    window.location.href = '/eternal_classics/make';
   }
 
   return (
