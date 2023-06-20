@@ -86,6 +86,7 @@ const WatTwo = ({saveOrRemove,savedReck_rdx}) => {
       <div className="grid_item1">
       </div>
       <div className="grid_item2">
+        <img className={MODULE_RECK[0].className} id={MODULE_RECK[0].id} onClick={saveOrRemove} src={MODULE_RECK[0].src} alt='img' />
       </div>
       <div className="grid_item3">
       </div>
@@ -96,41 +97,41 @@ const WatTwo = ({saveOrRemove,savedReck_rdx}) => {
       <div className="grid_item6">
       </div>
       <div className="grid_item7">
+        <img className={MODULE_RECK[1].className} id={MODULE_RECK[1].id} onClick={saveOrRemove} src={MODULE_RECK[1].src} alt='img' />
       </div>
       <div className="grid_item8">
+        <img className={MODULE_RECK[2].className} id={MODULE_RECK[2].id} onClick={saveOrRemove} src={MODULE_RECK[2].src} alt='img' />
       </div>
       <div className="grid_item9">
-        <img className={MODULE_RECK[0].className} id={MODULE_RECK[0].id} onClick={saveOrRemove} src={MODULE_RECK[0].src} alt='img' />
+        <img className={MODULE_RECK[3].className} id={MODULE_RECK[3].id} onClick={saveOrRemove} src={MODULE_RECK[3].src} alt='img' />
       </div>
       <div className="grid_item10">
+        <img className={MODULE_RECK[4].className} id={MODULE_RECK[4].id} onClick={saveOrRemove} src={MODULE_RECK[4].src} alt='img' />
       </div>
       <div className="grid_item11">
+        <img className={MODULE_RECK[5].className} id={MODULE_RECK[5].id} onClick={saveOrRemove} src={MODULE_RECK[5].src} alt='img' />
       </div>
       <div className="grid_item12">
+        <img className={MODULE_RECK[6].className} id={MODULE_RECK[6].id} onClick={saveOrRemove} src={MODULE_RECK[6].src} alt='img' />
       </div>
       <div className="grid_item13">
       </div>
       <div className="grid_item14">
-        <img className={MODULE_RECK[1].className} id={MODULE_RECK[1].id} onClick={saveOrRemove} src={MODULE_RECK[1].src} alt='img' />
       </div>
       <div className="grid_item15">
-        <img className={MODULE_RECK[2].className} id={MODULE_RECK[2].id} onClick={saveOrRemove} src={MODULE_RECK[2].src} alt='img' />
       </div>
       <div className="grid_item16">
-        <img className={MODULE_RECK[3].className} id={MODULE_RECK[3].id} onClick={saveOrRemove} src={MODULE_RECK[3].src} alt='img' />
       </div>
       <div className="grid_item17">
-        <img className={MODULE_RECK[4].className} id={MODULE_RECK[4].id} onClick={saveOrRemove} src={MODULE_RECK[4].src} alt='img' />
       </div>
       <div className="grid_item18">
-        <img className={MODULE_RECK[5].className} id={MODULE_RECK[5].id} onClick={saveOrRemove} src={MODULE_RECK[5].src} alt='img' />
       </div>
       <div className="grid_item19">
-        <img className={MODULE_RECK[6].className} id={MODULE_RECK[6].id} onClick={saveOrRemove} src={MODULE_RECK[6].src} alt='img' />
       </div>
       <div className="grid_item20">
       </div>
       <div className="grid_item21">
+        <img className={MODULE_RECK[7].className} id={MODULE_RECK[7].id} onClick={saveOrRemove} src={MODULE_RECK[7].src} alt='img' />
       </div>
       <div className="grid_item22">
       </div>
@@ -145,7 +146,6 @@ const WatTwo = ({saveOrRemove,savedReck_rdx}) => {
       <div className="grid_item27">
       </div>
       <div className="grid_item28">
-        <img className={MODULE_RECK[7].className} id={MODULE_RECK[7].id} onClick={saveOrRemove} src={MODULE_RECK[7].src} alt='img' />
       </div>
     </div>
   );
