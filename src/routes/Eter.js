@@ -37,7 +37,7 @@ const Eter = ({shuffledData, TOTAL_REF_DATA}) =>  {
   return (
     <section className="section">
       <div className="section_title">
-        <h1>황씨화보 Eternal Classics</h1>
+      <h1>Hwang's Manual<span> of Eternal Classics</span></h1>
         <div className="section_btns">
           <button onClick={moveToOtherPage}><i className='fontAwesome fas fa-exchange-alt'/></button>
           <button onClick={toggleDetailPack[1]}><i className="fa-solid fa-info" /></button>
