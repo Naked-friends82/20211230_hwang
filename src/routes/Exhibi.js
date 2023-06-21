@@ -16,7 +16,7 @@ const Exhibi = () =>  {
   // shiftThumbPack[1]은 detail 바꾸는 함수
   const toggleDetailPack = ToggleDetail();
 
-  const scrollRef = useHorizontalScroll();
+  //const scrollRef = useHorizontalScroll();
 
   return (
     <section className="section">
@@ -24,7 +24,7 @@ const Exhibi = () =>  {
         <h1>Exhibitions</h1>
         <button onClick={toggleDetailPack[1]}><i className="fa-solid fa-info" /></button>
       </div>
-      <div className="exhibi_reck" ref={scrollRef}>
+      <div className="exhibi_reck">
         <EachExhibi exhiIndex={0} />
         <EachExhibi exhiIndex={1} />
         <EachExhibi exhiIndex={2} />

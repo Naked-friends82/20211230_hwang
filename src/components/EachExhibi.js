@@ -26,10 +26,17 @@ const EachExhibi = ({exhiIndex}) => {
           </div>
         </div>
         <div className="eachExhibi_Paper">
-          <h1>{EXHI_RECK[exhiIndex].title}</h1>
-          <h3>{EXHI_RECK[exhiIndex].author}</h3>
-          {EXHI_RECK[exhiIndex].paper}
+        {
+          EXHI_RECK[exhiIndex].descriptions.map((each) => 
+              <div className="eachDesc" key={each.title}>
+                <h1>{each.title}</h1>
+                <h3>{each.author}</h3>
+                {each.paper}
+              </div>
+              )
+          }
         </div>
+
       </div>
     </>
   )

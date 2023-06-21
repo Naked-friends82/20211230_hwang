@@ -202,7 +202,7 @@ const Penet = () =>  {
       </div>
       <div className="thumbnail" ref={scrollRef2}>
         {PENET_RECK.map((each, index) => {
-            return <img key={index} className={shiftThumbPack[0] === each.title+each.caption ? "thumbnail_each":"thumbnail_each filter"} src={each.src} alt={each.title+each.caption} onClick={shiftThumbPack[1]} />
+            return <img key={index} className={shiftThumbPack[0] === each.title+each.caption ? "thumbnail_each":"thumbnail_each filter"} src={each.src} alt={each.title+each.caption} onClick={shiftThumbPack[2]} />
           })}
       </div>
       {
