@@ -4,20 +4,25 @@
   flex-direction: row;
   overflow-x: scroll;
 }
+
 .exhibi_reck::-webkit-scrollbar {
   display: none;
 }
+
 .eachExhibi {
   width: 530px;
   height: 100%;
   margin: 0px 30px;
 }
+
 .eachExhibi_img_reck {
   position: relative;
 }
+
 .eachExhibi_img {
   width: 530px;
 }
+
 .eachExhibi_btn {
   width: 530px;
   display: flex;
@@ -27,6 +32,7 @@
   top: 52%;
   transform: translate(0%, -50%);
 }
+
 .btn {
   padding: 14px 7px;
   font-size: var(--font-medium);
@@ -36,6 +42,7 @@
   transition: 0.6s ease;
   cursor: pointer;
 }
+
 .btn:hover {
   background-color: var(--color-darkgray);
 }
@@ -47,9 +54,15 @@
   line-height: 24px;
   padding-bottom: 16px;
 }
+
 .eachExhibi_Paper::-webkit-scrollbar {
   display: none;
 }
+
+.eachExhibi_Paper .eachDesc {
+  margin-bottom: 50px;
+}
+
 .eachExhibi_Paper h1 {
   font-size: var(--font-big);
   /* font-family: var(--typo-nanum); */
@@ -57,25 +70,30 @@
   padding-top: 6px;
   margin-bottom: 30px;
 }
+
 .eachExhibi_Paper h3 {
   font-size: var(--font-regular);
   font-weight: var(--weight-Extra-bold);
   margin-bottom: 20px;
 }
+
 .eachExhibi_Paper p {
   font-size: var(--font-medium);
 }
-.eachExhibi_Paper .quote{
+
+.eachExhibi_Paper .quote {
   font-size: var(--font-small);
   font-weight: var(--weight-light);
   font-style: oblique;
 }
-.eachExhibi_Paper .sep{
+
+.eachExhibi_Paper .sep {
   border: solid 0.5px;
   margin-top: 20px;
   margin-bottom: 10px;
 }
-.eachExhibi_Paper .ref{
+
+.eachExhibi_Paper .ref {
   font-size: var(--font-min);
   line-height: 20px;
 }
