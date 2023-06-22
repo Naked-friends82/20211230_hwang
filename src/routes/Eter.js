@@ -29,7 +29,7 @@ const Eter = ({shuffledData, TOTAL_REF_DATA}) =>  {
   const toggleDetailPack = ToggleDetail();
 
   // Exhi_RECK에서 data 받아오기
-  const detailDeck = Exhi_RECK(1);
+  const detailDeck = Exhi_RECK(0);
 
   const moveToOtherPage = () => {
     window.location.href = '/eternal_classics';

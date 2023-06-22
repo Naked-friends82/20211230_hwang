@@ -25,15 +25,22 @@ const EachDetail = ({detailDeck, showDetail}) => {
         </div>
       </div>
       <div className="detailPaper">
-        <div className="detailPaper_title">
-          <h2>{detailDeck.title}</h2>
-          <button className="eachDetail_out" onClick={showDetail}><i className="fa-solid fa-angle-left" /></button>
-        </div>
-        <h3>{detailDeck.author}</h3>
-        {detailDeck.paper}
+        {
+          detailDeck.descriptions.map((each) => 
+              <div className="eachDesc" key={each.title}>
+                <div className="detailPaper_title">
+                  <h1>{each.title}</h1>
+                  <button className="eachDetail_out" onClick={showDetail}><i className="fa-solid fa-angle-left" /></button>
+                </div>
+                <h3>{each.author}</h3>
+                <div className="eachPaper">
+                  {each.paper}
+                </div>
+              </div>
+              )
+            }
         <button className="eachDetail_out" onClick={showDetail}><i className='fa-solid fa-angle-left' /></button>
       </div>
-
     </div>
     <div className="eachDetail_back"></div>
     </>
