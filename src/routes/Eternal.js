@@ -121,7 +121,7 @@ const Eternal = ({addToSavedReck,deleteToSavedReck}) =>  {
   const toggleDetailPack = ToggleDetail();
 
   // Exhi_RECK에서 data 받아오기
-  const detailDeck = Exhi_RECK(2)
+  const detailDeck = Exhi_RECK(1)
 
   const moveToOtherPage = () => {
     window.location.href = '/eternal_classics/make';
